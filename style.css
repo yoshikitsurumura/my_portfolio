@@ -1,0 +1,428 @@
+/* General Styles - Cyber Theme */
+body {
+    font-family: 'Roboto Mono', 'Segoe UI', monospace;
+    line-height: 1.7; /* Slightly reduced for a tighter feel */
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; /* Light gray for text */
+    background-color: #1a1a2e; /* Dark blue/purple background */
+    overflow-x: hidden; /* Prevent horizontal scroll on animations */
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px; /* Slightly narrower max-width for a more focused look */
+    margin: auto;
+    overflow: hidden;
+    padding: 30px 0; /* Slightly reduced padding */
+    position: relative; /* For z-index context */
+    z-index: 10;
+}
+
+h1, h2, h3 {
+    color: #00f0ff; /* Neon blue accent */
+    text-shadow: 0 0 6px rgba(0, 240, 255, 0.4); /* Slightly softer shadow */
+    text-transform: uppercase;
+    letter-spacing: 2.5px; /* Slightly increased for sharpness */
+}
+
+.highlight {
+    color: #ff007f; /* Neon pink for highlights */
+    text-shadow: 0 0 6px rgba(255, 0, 127, 0.4); /* Slightly softer shadow */
+}
+
+a {
+    color: #ff007f; /* Neon pink accent */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00f0ff;
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #00f0ff, #ff007f);
+    color: #fff;
+    padding: 10px 22px; /* Slightly reduced padding */
+    border-radius: 4px; /* Slightly sharper corners */
+    text-decoration: none;
+    margin-top: 18px; /* Slightly reduced margin */
+    font-weight: bold;
+    letter-spacing: 1.2px; /* Slightly increased */
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.4); /* Slightly softer shadow */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #ff007f, #00f0ff);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6); /* Slightly softer shadow */
+    transform: translateY(-2px); /* Slightly reduced lift */
+}
+
+.btn-small {
+    display: inline-block;
+    background: #3a3a5a;
+    color: #fff;
+    padding: 7px 12px; /* Slightly reduced padding */
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.85em; /* Slightly smaller */
+    transition: background 0.3s ease;
+}
+
+.btn-small:hover {
+    background: #00f0ff;
+    text-decoration: none;
+}
+
+.section-bg {
+    background-color: #2a2a4a;
+}
+
+.sub-heading {
+    font-size: 1.1em; /* Slightly smaller */
+    color: #bbb;
+    margin-top: -10px; /* Adjusted margin */
+    margin-bottom: 25px; /* Adjusted margin */
+}
+
+/* Prevent line breaks for specific phrases */
+.no-break {
+    white-space: nowrap;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); } /* Slightly reduced translateY */
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 4px rgba(0, 240, 255, 0.4); }
+    50% { box-shadow: 0 0 16px rgba(0, 240, 255, 0.7); }
+    100% { box-shadow: 0 0 4px rgba(0, 240, 255, 0.4); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.6); }
+    70% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(0, 240, 255, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+}
+
+/* Header */
+header {
+    background: #1a1a2e;
+    color: #fff;
+    padding-top: 25px; /* Slightly reduced padding */
+    min-height: 80px; /* Slightly reduced min-height */
+    border-bottom: 1.5px solid #00f0ff; /* Thinner border */
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.15); /* Softer shadow */
+    animation: fadeIn 0.8s ease-out; /* Slightly faster animation */
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Slightly reduced margin */
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 2.2em; /* Slightly smaller */
+    text-align: left;
+}
+
+header p {
+    text-align: center;
+    margin-top: 8px; /* Slightly reduced margin */
+    font-size: 1.1em; /* Slightly smaller */
+    color: #aaa;
+    line-height: 1.4; /* Tighter line-height */
+}
+
+.header-social a {
+    color: #00f0ff;
+    font-size: 1.4em; /* Slightly smaller */
+    margin-left: 12px; /* Slightly reduced margin */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.header-social a:hover {
+    color: #ff007f;
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.7); /* Softer shadow */
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-top: 18px; /* Slightly reduced margin */
+}
+
+header nav li {
+    display: inline;
+    padding: 0 18px; /* Slightly reduced padding */
+}
+
+header nav a {
+    color: #00f0ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.05em; /* Slightly smaller */
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff007f;
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.7); /* Softer shadow */
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    min-height: 450px; /* Slightly reduced min-height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #1a1a2e;
+    padding: 70px 0; /* Slightly reduced padding */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    animation: fadeIn 1.2s ease-out; /* Slightly faster animation */
+}
+
+.hero-content h2 {
+    color: #00f0ff;
+    font-size: 3em; /* Slightly smaller */
+    margin-bottom: 18px; /* Slightly reduced margin */
+    line-height: 1.15; /* Tighter line-height */
+}
+
+.hero-content p {
+    font-size: 1.3em; /* Slightly smaller */
+    margin-bottom: 25px; /* Slightly reduced margin */
+    color: #ccc;
+    line-height: 1.5; /* Tighter line-height */
+}
+
+.profile-img {
+    width: 180px; /* Slightly smaller */
+    height: 180px; /* Slightly smaller */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px; /* Slightly reduced margin */
+    border: 4px solid #ff007f; /* Thinner border */
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6); /* Softer shadow */
+    animation: glow 2.5s infinite alternate; /* Slightly faster animation */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 25px; /* Slightly reduced margin */
+    background-color: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Sections */
+section {
+    padding: 50px 0; /* Slightly reduced padding */
+}
+
+section h2 {
+    margin-bottom: 30px; /* Adjusted margin */
+}
+
+.service-grid, .achievement-grid, .problem-grid, .solution-grid, .price-grid, .flow-grid, .feature-grid, .voice-grid {
+    gap: 30px; /* Slightly reduced gap */
+    margin-top: 40px; /* Slightly reduced margin */
+}
+
+.service-item, .achievement-item, .profile-content, #contact form, .problem-item, .solution-item, .price-item, .flow-item, .feature-item, .voice-item, .vision-content {
+    padding: 35px; /* Slightly reduced padding */
+    border-radius: 8px; /* Slightly sharper corners */
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.08); /* Softer shadow */
+    border: 1px solid #3a3a5a; /* Thinner border */
+}
+
+.service-item:hover, .achievement-item:hover {
+    transform: translateY(-8px); /* Slightly reduced lift */
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.3); /* Softer shadow */
+}
+
+.service-item h3, .achievement-item h3, .problem-item h3, .solution-item h3, .price-item h3, .flow-item h3, .feature-item h3, .voice-item h3 {
+    font-size: 1.6em; /* Slightly smaller */
+    margin-top: 0;
+}
+
+.service-item p, .achievement-item p, .profile-content p, .vision-content p, .solution-item p, .price-item p, .flow-item p, .feature-item p, .voice-item p, #lp-problems li, #lp-features li, #lp-faq dd, .ps-text {
+    line-height: 1.5; /* Tighter line-height for body text */
+    letter-spacing: 0.5px; /* Slightly increased letter-spacing for readability */
+}
+
+.price-estimate {
+    font-size: 1.8em; /* Slightly smaller */
+    margin-top: 18px; /* Slightly reduced margin */
+}
+
+.price-item ul {
+    margin-top: 18px; /* Slightly reduced margin */
+}
+
+.price-item li {
+    margin-bottom: 8px; /* Slightly reduced margin */
+}
+
+.note {
+    font-size: 0.85em; /* Slightly smaller */
+    margin-top: 25px; /* Slightly reduced margin */
+}
+
+.flow-number {
+    font-size: 2.8em; /* Slightly smaller */
+    margin-bottom: 12px; /* Slightly reduced margin */
+}
+
+#lp-faq dt {
+    font-size: 1.05em; /* Slightly smaller */
+    margin-top: 18px; /* Slightly reduced margin */
+    margin-bottom: 4px; /* Slightly reduced margin */
+}
+
+#lp-faq dd {
+    margin-left: 18px; /* Slightly reduced margin */
+    margin-bottom: 12px; /* Slightly reduced margin */
+}
+
+.case-study-content {
+    margin-top: 40px; /* Slightly reduced margin */
+}
+
+.case-study-img {
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.3); /* Softer shadow */
+    margin-bottom: 25px; /* Slightly reduced margin */
+}
+
+.case-study-content li {
+    padding: 12px; /* Slightly reduced padding */
+    border-left: 3px solid #00f0ff; /* Thinner border */
+}
+
+.voice-img {
+    width: 70px; /* Slightly smaller */
+    height: 70px; /* Slightly smaller */
+    margin-bottom: 12px; /* Slightly reduced margin */
+    border: 2px solid #ff007f; /* Thinner border */
+}
+
+.voice-text {
+    margin-bottom: 8px; /* Slightly reduced margin */
+}
+
+.voice-meta {
+    font-size: 0.85em; /* Slightly smaller */
+}
+
+.ps-text {
+    font-size: 1.05em; /* Slightly smaller */
+    margin-top: 35px; /* Slightly reduced margin */
+    padding-left: 18px; /* Slightly reduced padding */
+}
+
+/* Icons for problem/solution items */
+.problem-item i, .solution-item i, .feature-item i {
+    font-size: 2.2em; /* Slightly smaller */
+    margin-bottom: 12px; /* Slightly reduced margin */
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.6); /* Softer shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px 0; /* Further reduced padding */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Further reduced font size */
+    }
+
+    header p {
+        font-size: 0.9em; /* Further reduced font size */
+    }
+
+    header nav li {
+        padding: 4px 0;
+    }
+
+    #hero {
+        padding: 30px 0; /* Further reduced padding */
+    }
+
+    .hero-content h2 {
+        font-size: 2.2em; /* Further reduced font size */
+    }
+
+    .hero-content p {
+        font-size: 1em; /* Further reduced font size */
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    section {
+        padding: 40px 0; /* Further reduced padding */
+    }
+
+    .service-item, .achievement-item, .profile-content, #contact form, .problem-item, .solution-item, .price-item, .flow-item, .feature-item, .voice-item, .vision-content {
+        padding: 25px; /* Further reduced padding */
+    }
+
+    #lp-hero {
+        padding: 30px 0; /* Further reduced padding */
+    }
+
+    .lp-hero-content h2 {
+        font-size: 2em; /* Further reduced font size */
+    }
+
+    .lp-hero-content p {
+        font-size: 1em; /* Further reduced font size */
+    }
+
+    #lp-problems li, #lp-features li {
+        padding: 12px; /* Further reduced padding */
+    }
+
+    .floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+
+    .floating-btn i {
+        font-size: 1em;
+    }
+}
