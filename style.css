@@ -44,7 +44,7 @@ a:hover {
 
 .btn {
     display: inline-block;
-    background: linear-gradient(45deg, #00f0ff, #ff007f);
+    background: linear-gradient(45deg, #00FF00, #00CC00); /* Neon green gradient */
     color: #fff;
     padding: 10px 22px; /* Slightly reduced padding */
     border-radius: 4px; /* Slightly sharper corners */
@@ -52,13 +52,13 @@ a:hover {
     margin-top: 18px; /* Slightly reduced margin */
     font-weight: bold;
     letter-spacing: 1.2px; /* Slightly increased */
-    box-shadow: 0 0 12px rgba(0, 240, 255, 0.4); /* Slightly softer shadow */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Matching green shadow */
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: linear-gradient(45deg, #ff007f, #00f0ff);
-    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6); /* Slightly softer shadow */
+    background: linear-gradient(45deg, #00CC00, #00FF00); /* Reverse gradient on hover */
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.7); /* Stronger green shadow on hover */
     transform: translateY(-2px); /* Slightly reduced lift */
 }
 
@@ -106,10 +106,10 @@ a:hover {
     100% { box-shadow: 0 0 4px rgba(0, 240, 255, 0.4); }
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.6); }
-    70% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(0, 240, 255, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+@keyframes pulse_green {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+    70% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(0, 255, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
 }
 
 /* Header */
@@ -285,6 +285,8 @@ section h2 {
 }
 
 .price-item ul {
+    list-style: none;
+    padding: 0;
     margin-top: 18px; /* Slightly reduced margin */
 }
 
@@ -293,6 +295,7 @@ section h2 {
 }
 
 .note {
+    color: #888;
     font-size: 0.85em; /* Slightly smaller */
     margin-top: 25px; /* Slightly reduced margin */
 }
@@ -327,11 +330,15 @@ section h2 {
     border-left: 3px solid #00f0ff; /* Thinner border */
 }
 
+.voice-item {
+    text-align: center;
+}
+
 .voice-img {
     width: 70px; /* Slightly smaller */
     height: 70px; /* Slightly smaller */
     margin-bottom: 12px; /* Slightly reduced margin */
-    border: 2px solid #ff007f; /* Thinner border */
+    border: 2px solid #ff007f;
 }
 
 .voice-text {
@@ -423,6 +430,7 @@ section h2 {
     }
 
     .floating-btn i {
-        font-size: 1em;
+        margin-right: 10px;
+        font-size: 1.1em;
     }
 }
