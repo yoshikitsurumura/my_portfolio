@@ -121,6 +121,15 @@ header {
     border-bottom: 1.5px solid #00f0ff; /* Thinner border */
     box-shadow: 0 4px 15px rgba(0, 240, 255, 0.15); /* Softer shadow */
     animation: fadeIn 0.8s ease-out; /* Slightly faster animation */
+    position: relative; /* For positioning the header image */
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px; /* Adjust as needed */
+    opacity: 0.8; /* Slightly transparent */
 }
 
 .header-top {
