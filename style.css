@@ -23,14 +23,6 @@ body {
     z-index: 10;
 }
 
-/* Hero section container override */
-#hero .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 30px; /* 左右に少しだけ余白を残します */
-    box-sizing: border-box;
-}
-
 h1, h2, h3 {
     color: #00f0ff; /* Neon blue accent */
     text-shadow: 0 0 6px rgba(0, 240, 255, 0.4); /* Slightly softer shadow */
@@ -234,7 +226,7 @@ header nav a[href*="contact"]:hover {
     text-align: center;
     color: white;
     overflow: hidden;
-    padding: 120px 0; /* 上下の余白で高さを調整 */
+    padding: 180px 0; /* 上下の余白を増やして縦長に調整 */
 }
 
 #hero-video {
@@ -251,20 +243,21 @@ header nav a[href*="contact"]:hover {
 .hero-content {
     position: relative;
     z-index: 1;
+    padding: 50px 0; /* 上下の余白を追加 */
 }
 
 .hero-content h2 {
     color: #fff;
-    font-size: 3em;
-    margin-bottom: 18px;
-    line-height: 1.3;
+    font-size: 3.5em; /* 少し大きく */
+    margin-bottom: 20px; /* 余白を調整 */
+    line-height: 1.15;
 }
 
 .hero-content p {
-    font-size: 1.3em;
-    margin-bottom: 25px;
+    font-size: 1.5em; /* 少し大きく */
+    margin-bottom: 30px; /* 余白を調整 */
     color: #eee;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Profile Section */
