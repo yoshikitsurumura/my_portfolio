@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yoshikitsurumura.github.io/my_portfolio/sitemap.xml
