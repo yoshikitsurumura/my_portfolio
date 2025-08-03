@@ -848,15 +848,16 @@ footer {
 .floating-btn {
     position: fixed;
     bottom: 25px;
-    right: 25px;
+    right: calc(50% - 550px + 25px); /* 画面中央からコンテンツの右端までの距離 + ボタンとコンテンツの間の余白 */
+    left: auto; /* leftをautoに戻す */
     background: linear-gradient(45deg, #00f0ff, #ff007f);
     color: white;
-    padding: 12px 18px; /* Slightly reduced padding */
+    padding: 12px 18px;
     border-radius: 25px;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    font-size: 1em; /* Slightly smaller */
+    font-size: 1em;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -871,7 +872,15 @@ footer {
 }
 
 .floating-btn i {
-    font-size: 1.1em; /* Slightly smaller */
+    font-size: 1.1em;
+}
+
+/* レスポンシブ対応：画面幅が狭い場合は右端に固定 */
+@media (max-width: 1150px) {
+    .floating-btn {
+        right: 25px;
+        left: auto;
+    }
 }
 
 /* Service/Achievement Grid Layout Fix */
