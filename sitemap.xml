@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yoshikitsurumura.github.io/my_portfolio/</loc>
+   <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yoshikitsurumura.github.io/my_portfolio/lp_chatbot.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yoshikitsurumura.github.io/my_portfolio/lp_automation.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yoshikitsurumura.github.io/my_portfolio/lp_webapp.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yoshikitsurumura.github.io/my_portfolio/thanks.html</loc>
+    <priority>0.5</priority>
+  </url>
+</urlset>
