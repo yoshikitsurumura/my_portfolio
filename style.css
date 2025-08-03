@@ -23,6 +23,14 @@ body {
     z-index: 10;
 }
 
+/* Hero section container override */
+#hero .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px; /* 左右に少しだけ余白を残します */
+    box-sizing: border-box;
+}
+
 h1, h2, h3 {
     color: #00f0ff; /* Neon blue accent */
     text-shadow: 0 0 6px rgba(0, 240, 255, 0.4); /* Slightly softer shadow */
@@ -222,24 +230,22 @@ header nav a[href*="contact"]:hover {
 
 /* Hero Section */
 #hero {
-    padding: 60px 0;
+    position: relative;
     text-align: center;
-}
-
-.hero-video-container {
-    width: 100%;
-    max-width: 1100px; /* containerのmax-widthと合わせる */
-    margin: 0 auto 30px auto; /* 下に余白を追加 */
-    border-radius: 10px;
+    color: white;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    line-height: 0; /* 稀に発生する下の余白を防ぐ */
+    padding: 120px 0; /* 上下の余白で高さを調整 */
 }
 
 #hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
 }
 
 .hero-content {
@@ -248,16 +254,16 @@ header nav a[href*="contact"]:hover {
 }
 
 .hero-content h2 {
-    color: #fff; /* 文字色を白に */
-    font-size: 2.5em; /* 少し調整 */
+    color: #fff;
+    font-size: 3em;
     margin-bottom: 18px;
     line-height: 1.3;
 }
 
 .hero-content p {
-    font-size: 1.2em; /* 少し調整 */
+    font-size: 1.3em;
     margin-bottom: 25px;
-    color: #eee; /* 文字色を明るいグレーに */
+    color: #eee;
     line-height: 1.6;
 }
 
