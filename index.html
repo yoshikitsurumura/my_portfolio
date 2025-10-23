@@ -5,10 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CraneAI | AIと業務効率化で未来を創る</title>
     <meta name="description" content="AIと業務効率化でビジネスを革新。チャットボット、自動化ツール、Webアプリ開発で生産性向上を支援。無料相談受付中。">
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="AIチャットボット,業務自動化,Webアプリ開発,Python,Flask,GAS,業務効率化,生産性向上,鶴村佳輝">
+    <meta name="author" content="鶴村佳輝">
+    <meta property="og:title" content="CraneAI | AIと業務効率化で未来を創る">
+    <meta property="og:description" content="AIと業務効率化でビジネスを革新。チャットボット、自動化ツール、Webアプリ開発で生産性向上を支援。無料相談受付中。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craneai.jp">
+    <meta property="og:image" content="https://craneai.jp/images/CRANEAI.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CraneAI | AIと業務効率化で未来を創る">
+    <meta name="twitter:description" content="AIと業務効率化でビジネスを革新。チャットボット、自動化ツール、Webアプリ開発で生産性向上を支援。">
+    <meta name="twitter:image" content="https://craneai.jp/images/CRANEAI.png">
+    <link rel="canonical" href="https://craneai.jp">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/performance.js" defer></script>
     <link rel="icon" href="images/CRANEAI.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f0ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CraneAI">
     <meta name="google-site-verification" content="7fdee4998db822c1" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "鶴村佳輝",
+        "jobTitle": "AI・業務効率化コンサルタント",
+        "description": "AIと業務効率化でビジネスを革新するコンサルタント",
+        "url": "https://craneai.jp",
+        "sameAs": [
+            "https://github.com/yoshikitsurumura",
+            "https://x.com/atamahakidashi"
+        ],
+        "knowsAbout": [
+            "AIチャットボット開発",
+            "業務自動化",
+            "Webアプリケーション開発",
+            "Python",
+            "Flask",
+            "Google Apps Script"
+        ],
+        "offers": {
+            "@type": "Service",
+            "name": "AI・業務効率化サービス",
+            "description": "AIチャットボット開発、業務自動化ツール開発、Webアプリケーション開発"
+        }
+    }
+    </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -25,12 +81,17 @@
                 <div class="header-social">
                     <a href="https://github.com/yoshikitsurumura" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://x.com/atamahakidashi" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
-                    <a href="javascript:void(0)" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <p>教育現場の知見 × AI技術。<br>成果に繋がる業務改善を。</p>
             <nav>
-                <ul>
+                <button class="mobile-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
                     <li><a href="#services">Services</a></li>
                     <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#profile">Profile</a></li>
@@ -45,7 +106,7 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content-wrapper">
-                <video autoplay muted loop id="hero-video">
+                <video autoplay muted loop id="hero-video" aria-label="AIと業務効率化を表現する動画">
                     <source src="images/hero-video-2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -63,19 +124,19 @@
             <h2>提供<span class="highlight">サービス</span></h2>
             <div class="service-grid">
                 <div class="service-item">
-                    <h3>AI<span class="no-break">チャットボット</span>開発</h3>
-                    <p>最新のGemini APIやRAG（Retrieval-Augmented Generation）技術を駆使し、高精度なAIチャットボットを開発。LINEやWebサイトと連携し、24時間365日の顧客対応、社内FAQの自動化、個別最適化された教育支援などを実現します。</p>
-                    <a href="ai-chatbot-development.html" class="btn-small">詳細を見る</a>
+                    <h3>業務改善DX<span class="no-break">／RAG構築</span></h3>
+                    <p>生成AIと業務データを掛け合わせた<span class="no-break">RAG（Retrieval-Augmented Generation）</span>基盤を構築し、現場の<span class="no-break">業務改善DX</span>を推進。Google Workspace／Microsoft 365連携、ノーコード自動化、ログ設計までワンストップで支援します。</p>
+                    <a href="pages/business-automation-tool.html" class="btn-small">詳細を見る</a>
                 </div>
                 <div class="service-item">
-                    <h3>業務自動化<span class="no-break">ツール開発</span></h3>
-                    <p>Google Apps Script (GAS)によるスプレッドシート連携や、Pythonを使ったWebスクレイピング・API連携、RPAツール(UiPath等)の導入支援、n8n等のiPaaS活用まで、お客様の業務に最適な自動化ソリューションをオーダーメイドで構築します。</p>
-                    <a href="business-automation-tool.html" class="btn-small">詳細を見る</a>
+                    <h3>AI<span class="no-break">チャットボット開発</span></h3>
+                    <p>Gemini／GPTとDiscord・LINEなどのチャネルを連携させ、24時間稼働の<span class="no-break">AIチャットボット</span>を設計・開発。プロンプト設計、回答ガードレール、会話ログ分析まで整備し、運用改善を高速化します。</p>
+                    <a href="pages/ai-chatbot-development.html" class="btn-small">詳細を見る</a>
                 </div>
                 <div class="service-item">
-                    <h3>Webアプリケーション<span class="no-break">開発</span></h3>
-                    <p>軽量なPythonフレームワークであるFlaskと、SQLiteやPostgreSQL等の最適なデータベースを組み合わせ、セキュアで直感的に使えるWebアプリケーションを開発。採用管理システム等の実績を元に、複雑なデータ管理や業務プロセスを効率化します。</p>
-                    <a href="web-app-development.html" class="btn-small">詳細を見る</a>
+                    <h3>汎用<span class="no-break">Webアプリケーション開発</span></h3>
+                    <p>Python（Flask／FastAPI）とPostgreSQL等を用いて、業務プロセスを可視化する<span class="no-break">Webアプリケーション開発</span>を実施。API／外部SaaS連携、GitHub Actionsでの運用自動化まで一気通貫で対応します。</p>
+                    <a href="pages/web-app-development.html" class="btn-small">詳細を見る</a>
                 </div>
             </div>
         </div>
@@ -86,16 +147,16 @@
             <h2>主な<span class="highlight">実績</span></h2>
             <div class="achievement-grid">
                 <div class="achievement-item">
-                    <h3>採用管理CLI & Webアプリケーション</h3>
-                    <p>Python (CLI) およびFlask (Web) で開発した、SQLiteデータベースと連携する候補者情報の一元管理・ステータス追跡システム。</p>
+                    <h3>金融サロン向けDiscord AIチャットボット</h3>
+                    <p>Gemini API × Google Apps Script × Discordで構築。35個の金融ナレッジベースを整備し、投資助言防止のガードレール機能を実装。月額100円の低コストで24時間稼働、自動回答率90%を達成。</p>
                 </div>
                 <div class="achievement-item">
-                    <h3>英語コーチングAI Bot (Discord)</h3>
-                    <p>Googleスプレッドシートをナレッジベースとした、Discord連携AIチャットボット。sentence-transformersによる意味検索・複数回答提示機能を実装。</p>
+                    <h3>Google / Microsoft 365統合ツール開発</h3>
+                    <p>AIエージェントプラットフォーム「Patto AI」向けに、Google Workspace（Calendar/Docs/Sheets/Drive/Gmail）とMicrosoft 365（Outlook/OneDrive/SharePoint/Teams）の統合機能を実装。OAuth認証フロー、TypeScript + Bun + Honoのモノレポ構成で開発。</p>
                 </div>
                 <div class="achievement-item">
-                    <h3>LINE AIチャットボット</h3>
-                    <p>Gemini APIを活用した、LINE Messaging API連携のAIチャットボット。特定業種向け情報提供に特化し、Renderでデプロイ。</p>
+                    <h3>採用管理システム & 業務自動化ツール</h3>
+                    <p>CSV + Pythonによる採用管理システム構築。入出力スキーマ定義、バリデーション、集計、レポート生成まで一括化。教育業界では、Excel（VBA/マクロ）を用いたDX推進で生徒数126%、季節講習売上202%向上を実現。</p>
                 </div>
             </div>
         </div>
@@ -106,16 +167,16 @@
             <h2>私の<span class="highlight">プロフィール</span></h2>
             <div class="profile-content">
                 <div class="profile-img-container">
-                    <img src="images/CRANEAIprof.png" alt="鶴村佳輝のプロフィール写真" class="profile-img">
+                    <img src="images/tsurumurayoshiki_white_bg.png" alt="鶴村佳輝のプロフィール写真 - AIと業務効率化コンサルタント" class="profile-img" loading="lazy">
                 </div>
                 <div class="profile-text">
                     <p><strong>鶴村佳輝（つるむら よしき）</strong></p>
-                    <p>神戸大学工学部卒業後、同大学大学院を経て教育現場にてマネジメント職を経験。教務全般、人材育成、業務効率化ツールの構築などに従事し、現場の課題解決の重要性を痛感しました。</p>
-                    <p>私がAIと業務効率化の道に進んだきっかけは、教育現場で目の当たりにした「非効率」でした。生徒一人ひとりに向き合う時間を増やしたい、教育者がもっと本質的な業務に集中できる環境を作りたい。そんな想いから、独学でプログラミングとAIを学び始めました。「非エンジニアでもAIとスクリプトを駆使して開発できる」ことを証明し、同じような課題を抱える方々の力になりたいと強く願っています。</p>
-                    <p>現在はAIと業務効率化に特化した個人事業主／フリーランスとして活動中。最終的には「完全AI主導の業務改善システム開発者」として、SaaS開発や受託案件獲得を目指しています。</p>
+                    <p>神戸大学工学部卒業後、同大学大学院を経て株式会社立志にて約4年間、副教室長として教室運営・進捗管理・教材企画・講師育成に携わりました。Excelやスプレッドシートを用いた進捗管理の仕組み化により、生徒数は前年度比126%アップ、季節講習販売実績は前年度比202%を達成しました。</p>
+                    <p>私がAIと業務効率化の道に進んだきっかけは、教育現場で目の当たりにした「非効率」でした。生徒一人ひとりに向き合う時間を増やしたい、教育者がもっと本質的な業務に集中できる環境を作りたい。そんな想いから、2024年より業務効率化やAIツールの可能性に着目し、副業を開始。2025年より独立し、AIを使った業務ツールやチャットボットの開発に注力しています。</p>
+                    <p>現在は、Python／Node.js／TypeScriptを中心に、FastAPI／Flask、GitHub Actions、Docker、REST API／Webhooksなどの技術スタックを扱い、Google Workspace／Microsoft 365連携の実装にも従事。最近では、GeminiとGASとDiscordを組み合わせたチャットボットを構築し、プロンプト設計・回答ガードレール・ログ分析を整備しました。</p>
                     <p><strong>好きな言葉:</strong> 「為せば成る」どんな困難な課題でも、必ず解決策はあると信じています。</p>
                     <p><strong>趣味:</strong> 読書、プログラミング、新しいAIツールの探求</p>
-                    <p><strong>使用経験のある技術・ツール:</strong> Python, JavaScript, HTML/CSS, Git, GitHub, VSCode, Google Apps Script, OpenAI API, など</p>
+                    <p><strong>使用経験のある技術・ツール:</strong> Python（FastAPI, Flask）, Node.js, TypeScript, JavaScript, HTML/CSS, Git, GitHub, VSCode, Docker, Google Apps Script, Gemini API, ChatGPT API, LINE Messaging API, Discord API, Google Workspace連携, Microsoft 365連携</p>
                 </div>
             </div>
         </div>
@@ -137,10 +198,13 @@
             <h2><span class="highlight">お問い合わせ</span></h2>
             <p class="contact-description">AIを活用した業務改善、自動化ツールの開発、Webアプリケーション開発など、お気軽にご相談ください。</p>
             <form action="https://script.google.com/macros/s/AKfycbxdzSL9eQ6j37nxcFMGOTmevhzRdIwr2L46FfnVqRU5hSSd7MCXFb0fvUD2qwV7c0TRGw/exec" method="POST">
-                <input type="text" name="name" placeholder="お名前" required>
-                <input type="email" name="email" placeholder="メールアドレス" required>
-                <textarea name="message" placeholder="お問い合わせ内容" rows="5" required></textarea>
-                <button type="submit" class="btn">送信</button>
+                <label for="name" class="sr-only">お名前</label>
+                <input type="text" id="name" name="name" placeholder="お名前" required aria-label="お名前を入力してください">
+                <label for="email" class="sr-only">メールアドレス</label>
+                <input type="email" id="email" name="email" placeholder="メールアドレス" required aria-label="メールアドレスを入力してください">
+                <label for="message" class="sr-only">お問い合わせ内容</label>
+                <textarea id="message" name="message" placeholder="お問い合わせ内容" rows="5" required aria-label="お問い合わせ内容を入力してください"></textarea>
+                <button type="submit" class="btn" aria-label="お問い合わせフォームを送信">送信</button>
             </form>
             <div class="social-links">
                 <p>SNSでも情報発信中！</p>
@@ -162,5 +226,88 @@
     <a href="#contact" class="floating-btn">
         <i class="fas fa-envelope"></i> 無料相談はこちら
     </a>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    navMenu.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+        
+        // Analytics event tracking
+        function trackEvent(action, category, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: category,
+                    event_label: label
+                });
+            }
+        }
+        
+        // Track CTA clicks
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const buttonText = this.textContent.trim();
+                trackEvent('click', 'CTA', buttonText);
+            });
+        });
+        
+        // Track form submissions
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                trackEvent('submit', 'Contact', 'Contact Form');
+            });
+        }
+        
+        // Track social media clicks
+        document.querySelectorAll('.social-links a, .header-social a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const platform = this.getAttribute('title') || 'Unknown';
+                trackEvent('click', 'Social Media', platform);
+            });
+        });
+        
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/assets/js/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

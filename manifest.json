@@ -1,0 +1,27 @@
+{
+  "name": "CraneAI - AIと業務効率化で未来を創る",
+  "short_name": "CraneAI",
+  "description": "AIと業務効率化でビジネスを革新。チャットボット、自動化ツール、Webアプリ開発で生産性向上を支援。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#00f0ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/CRANEAI.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/CRANEAI.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "ja",
+  "dir": "ltr"
+}
