@@ -390,7 +390,7 @@ header nav a[href*="contact"]:hover {
     text-align: center;
     color: white;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
 #hero-video {
@@ -407,19 +407,19 @@ header nav a[href*="contact"]:hover {
 .hero-content {
     position: relative;
     z-index: 1;
-    padding: 30px 0; /* 上下の余白を追加 */
+    padding: 10px 0; /* 上下の余白を最小化 */
 }
 
 .hero-content h2 {
     color: #fff;
     font-size: 3.5em; /* 少し大きく */
-    margin-bottom: 20px; /* 余白を調整 */
+    margin-bottom: 10px; /* 余白を最小化 */
     line-height: 1.15;
 }
 
 .hero-content p {
     font-size: 1.5em; /* 少し大きく */
-    margin-bottom: 30px; /* 余白を調整 */
+    margin-bottom: 15px; /* 余白を最小化 */
     color: #eee;
     line-height: 1.5;
 }
@@ -436,7 +436,7 @@ header nav a[href*="contact"]:hover {
     flex-wrap: nowrap;
     align-items: flex-start;
     gap: 40px;
-    margin: 30px 0;
+    margin: 10px 0;
     width: 100%;
 }
 
@@ -486,15 +486,15 @@ header nav a[href*="contact"]:hover {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .profile-img-container {
         flex: 0 0 auto;
         width: 80%;
         max-width: 350px;
         height: 350px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
-    
+
     .profile-text {
         width: 100%;
     }
@@ -505,21 +505,21 @@ header nav a[href*="contact"]:hover {
     .profile-content {
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 15px;
     }
-    
+
     .profile-img-container {
         flex: 0 0 auto;
         width: 200px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
-    
+
     .profile-text {
         width: 100%;
         padding: 0;
         text-align: center;
     }
-    
+
     .profile-text p {
         text-align: center;
     }
@@ -573,7 +573,7 @@ header nav a[href*="contact"]:hover {
 
 /* Sections */
 section {
-    padding: 40px 0; /* Reduced padding */
+    padding: 20px 0; /* Minimized padding */
 }
 
 /* LPセクション間隔調整 */
@@ -663,7 +663,7 @@ section h2 {
 /* Removed conflicting media queries for 3-column layout */
 
 #contact {
-    padding: 80px 0;
+    padding: 40px 0;
     background: #2a2a4a;
     position: relative;
     overflow: hidden;
@@ -796,7 +796,7 @@ section h2 {
 
 /* Chatbot Hero Section */
 #lp-hero.chatbot-hero {
-    padding: 60px 0;  /* Restore default padding */
+    padding: 30px 0;  /* Minimized padding */
 }
 
 #lp-hero.chatbot-hero .lp-hero-wrapper {
@@ -836,7 +836,7 @@ section h2 {
 
 /* LP Hero Section */
 #lp-hero {
-    padding: 60px 0;
+    padding: 30px 0;
     background: #1a1a2e;
     position: relative;
     overflow: hidden;
