@@ -51,7 +51,13 @@
         <div class="container">
             <h2>記事一覧</h2>
             <div class="blog-grid" id="blog-container">
-                <!-- ここに記事が動的に読み込まれます -->
+                <div class="blog-item">
+                    <h3>【AIと業務効率化の専門家】非エンジニア出身だからこそできる、現場に寄り添うDX支援とは</h3>
+                    <p class="article-date">2025年10月24日</p>
+                    <p>はじめまして、鶴村佳輝と申します。AI・業務効率化コンサルタントとして、「CraneAI」という屋号で活動しています。この記事では、私がなぜこの仕事をしているのか、どのような想いでクライアントと向き合っているのか...</p>
+                    <a href="pages/self-introduction-blog.html" class="btn-small">記事を読む</a>
+                </div>
+                <!-- 他の記事はスプレッドシート連携後に表示されます -->
             </div>
         </div>
     </section>
@@ -62,53 +68,6 @@
             <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const gasUrl = 'https://script.google.com/macros/s/AKfycbyU4hX9YRcEt-U5jTZP7nGOc7aw5t0mbRjdCuq6Swik1hOYW6Ad195DbkVWJ7Ag_nzp/exec';
-            const container = document.getElementById('blog-container');
-
-            container.innerHTML = '<p>記事を読み込んでいます...</p>';
-
-            fetch(gasUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    container.innerHTML = ''; // ローディング表示をクリア
-                    if (data && data.length > 0) {
-                        data.forEach(article => {
-                            const articleElement = document.createElement('div');
-                            articleElement.classList.add('blog-item');
-
-                            // 日付のフォーマット
-                            const date = new Date(article.date);
-                            const formattedDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
-
-                            // 本文を100文字に制限
-                            const snippet = article.content.length > 100 ? article.content.substring(0, 100) + '...' : article.content;
-
-                            articleElement.innerHTML = `
-                                <h3>${article.title}</h3>
-                                <p class="article-date">${formattedDate}</p>
-                                <p>${snippet}</p>
-                                <a href="article.html?id=${article.id}" class="btn-small">記事を読む</a>
-                            `;
-                            container.appendChild(articleElement);
-                        });
-                    } else {
-                        container.innerHTML = '<p>記事が見つかりませんでした。</p>';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching articles:', error);
-                    container.innerHTML = '<p>記事の読み込み中にエラーが発生しました。</p>';
-                });
-        });
-    </script>
 
 </body>
 </html>
