@@ -433,7 +433,7 @@ header nav a[href*="contact"]:hover {
 
 .profile-content {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Changed from nowrap to wrap */
     align-items: flex-start;
     gap: 40px;
     margin: 30px 0;
@@ -441,7 +441,8 @@ header nav a[href*="contact"]:hover {
 }
 
 .profile-img-container {
-    flex: 0 0 300px;
+    flex: 1 1 300px; /* Allow shrinking and growing */
+    max-width: 350px; /* Set a max-width */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -455,14 +456,14 @@ header nav a[href*="contact"]:hover {
 }
 
 .profile-img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 100%; /* Make image responsive */
+    height: auto;
+    object-fit: cover; /* Changed from contain to cover for better fit */
     display: block;
 }
 
 .profile-text {
-    flex: 1;
+    flex: 2 1 500px; /* Allow more space for text */
     background: rgba(26, 26, 46, 0.7);
     padding: 20px;
     border-radius: 10px;
@@ -480,48 +481,29 @@ header nav a[href*="contact"]:hover {
     font-weight: bold;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for Profile section */
 @media (max-width: 900px) {
     .profile-content {
         flex-direction: column;
         align-items: center;
+        gap: 30px;
     }
     
     .profile-img-container {
-        flex: 0 0 auto;
         width: 80%;
-        max-width: 350px;
-        height: 350px;
-        margin-bottom: 30px;
+        max-width: 300px; /* Adjusted max-width */
+        height: auto; /* Let height be auto */
+        margin-bottom: 0; /* Remove margin-bottom as gap is used */
     }
     
     .profile-text {
         width: 100%;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
-    .profile-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-    
-    .profile-img-container {
-        flex: 0 0 auto;
-        width: 200px;
-        margin-bottom: 15px;
-    }
-    
-    .profile-text {
-        width: 100%;
-        padding: 0;
-        text-align: center;
+        padding: 15px; /* Add some padding back */
+        text-align: left; /* Revert to left align */
     }
     
     .profile-text p {
-        text-align: center;
+        text-align: left; /* Revert to left align */
     }
 }
 
@@ -595,7 +577,7 @@ section h2 {
 /* Grid Layouts for Cards */
 .service-grid, .achievement-grid, .three-column-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 40px;
     align-items: stretch;
@@ -623,11 +605,10 @@ section h2 {
 }
 
 .problem-item, .solution-item, .price-item, .flow-item, .feature-item, .voice-item {
-    flex: 1 1 calc(33.33% - 25px); /* 3列表示で、gapを考慮した幅 */
-    min-width: 280px; /* 最小幅を設定し、狭い画面での崩れを防ぐ */
-    max-width: calc(33.33% - 25px); /* 最大幅も設定 */
+    flex: 1 1 300px; /* ベースの幅を300pxに設定し、伸縮可能にする */
+    min-width: 280px;
     display: flex;
-    flex-direction: column; /* Internal content flows top-to-bottom */
+    flex-direction: column;
     padding: 25px;
     background-color: #2a2a4a;
     border-radius: 8px;
@@ -658,9 +639,6 @@ section h2 {
 .price-item .btn, .service-item .btn-small {
     margin-top: auto; /* Push button to the very bottom of the card */
 }
-
-/* Responsive adjustments for grid items */
-/* Removed conflicting media queries for 3-column layout */
 
 #contact {
     padding: 80px 0;
@@ -821,19 +799,6 @@ section h2 {
     border-radius: 10px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    #lp-hero.chatbot-hero .lp-hero-wrapper {
-        flex-direction: column;
-    }
-    
-    #lp-hero.chatbot-hero .lp-hero-video {
-        width: 100%;
-        max-width: 600px;
-        margin: 20px auto 0;
-    }
-}
-
 /* LP Hero Section */
 #lp-hero {
     padding: 60px 0;
@@ -898,6 +863,10 @@ section h2 {
     
     .lp-hero-content h2 {
         font-size: 2em;
+    }
+
+    .problem-item, .solution-item, .price-item, .flow-item, .feature-item, .voice-item {
+        flex-basis: calc(50% - 12.5px); /* 2列表示 */
     }
 }
 
@@ -980,20 +949,21 @@ section h2 {
     }
 
     /* Grid adjustments for mobile */
-    .service-grid, .achievement-grid {
+    .service-grid, .achievement-grid, .three-column-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .problem-grid, .solution-grid, .price-grid, .flow-grid, .feature-grid, .voice-grid {
         flex-direction: column;
+        gap: 20px;
     }
 
     .problem-item, .solution-item, .price-item, .flow-item, .feature-item, .voice-item {
-        flex: 1 1 100%;
+        flex-basis: 100%;
         min-width: auto;
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 }
 
@@ -1111,4 +1081,125 @@ footer {
 /* Service/Achievement Grid Layout Fix */
 .service-item, .achievement-item {
     min-width: 0;
+}
+
+/* Chatbot Styles */
+.chatbot-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+    background: #00f0ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.chatbot-toggler:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-toggler img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chatbot-window {
+    position: fixed;
+    bottom: 120px;
+    right: 35px;
+    width: 360px;
+    background: #1a1a2e;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+    border: 1.5px solid #00f0ff;
+    overflow: hidden;
+    z-index: 1000;
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: bottom right;
+}
+
+.chatbot-window.active {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.chatbot-header {
+    background: #00f0ff;
+    padding: 15px;
+    text-align: center;
+    color: #1a1a2e;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.chatbot-conversation {
+    height: 400px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chatbot-message {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.chatbot-message.user {
+    justify-content: flex-end;
+}
+
+.chatbot-message.bot .message-content {
+    background: #2a2a4a;
+    color: #e0e0e0;
+    border-radius: 10px 10px 10px 0;
+}
+
+.chatbot-message.user .message-content {
+    background: #00f0ff;
+    color: #1a1a2e;
+    border-radius: 10px 10px 0 10px;
+}
+
+.message-content {
+    padding: 10px 15px;
+    max-width: 80%;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #3a3a5a;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #3a3a5a;
+    border-radius: 5px;
+    background: #2a2a4a;
+    color: #e0e0e0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.chatbot-input button {
+    background: #00f0ff;
+    border: none;
+    padding: 0 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.2em;
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | CraneAI</title>
+    <meta name="description" content="AIと業務効率化に関する最新情報、技術解説、導入事例などを紹介するブログです。">
+    <meta name="keywords" content="AI, 業務効率化, ブログ, 技術解説, 導入事例, CraneAI">
+    <meta name="author" content="鶴村佳輝">
+    <meta property="og:title" content="Blog | CraneAI">
+    <meta property="og:description" content="AIと業務効率化に関する最新情報、技術解説、導入事例などを紹介するブログです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craneai.jp/blog.html">
+    <meta property="og:image" content="https://craneai.jp/images/CRANEAI.png">
+    <link rel="canonical" href="https://craneai.jp/blog.html">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1><a href="index.html">CraneAI</a></h1>
+                <div class="header-social">
+                    <a href="https://github.com/yoshikitsurumura" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/atamahakidashi" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <p>AIと業務効率化に関するブログ</p>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#achievements">Achievements</a></li>
+                    <li><a href="index.html#profile">Profile</a></li>
+                    <li><a href="index.html#vision">Vision</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="blog-list" class="section-bg">
+        <div class="container">
+            <h2>記事一覧</h2>
+            <div class="blog-grid" id="blog-container">
+                <!-- ここに記事が動的に読み込まれます -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yoshiki Tsurumura. All rights reserved.</p>
+            <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gasUrl = 'https://script.google.com/macros/s/AKfycbyU4hX9YRcEt-U5jTZP7nGOc7aw5t0mbRjdCuq6Swik1hOYW6Ad195DbkVWJ7Ag_nzp/exec';
+            const container = document.getElementById('blog-container');
+
+            container.innerHTML = '<p>記事を読み込んでいます...</p>';
+
+            fetch(gasUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    container.innerHTML = ''; // ローディング表示をクリア
+                    if (data && data.length > 0) {
+                        data.forEach(article => {
+                            const articleElement = document.createElement('div');
+                            articleElement.classList.add('blog-item');
+
+                            // 日付のフォーマット
+                            const date = new Date(article.date);
+                            const formattedDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+
+                            // 本文を100文字に制限
+                            const snippet = article.content.length > 100 ? article.content.substring(0, 100) + '...' : article.content;
+
+                            articleElement.innerHTML = `
+                                <h3>${article.title}</h3>
+                                <p class="article-date">${formattedDate}</p>
+                                <p>${snippet}</p>
+                                <a href="article.html?id=${article.id}" class="btn-small">記事を読む</a>
+                            `;
+                            container.appendChild(articleElement);
+                        });
+                    } else {
+                        container.innerHTML = '<p>記事が見つかりませんでした。</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching articles:', error);
+                    container.innerHTML = '<p>記事の読み込み中にエラーが発生しました。</p>';
+                });
+        });
+    </script>
+
+</body>
+</html>

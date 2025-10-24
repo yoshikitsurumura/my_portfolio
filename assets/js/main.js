@@ -199,7 +199,70 @@ class CraneAIAnimations {
     }
 }
 
-// Initialize animations when DOM is loaded
+// Initialize animations and chatbot when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new CraneAIAnimations();
+
+    // Chatbot toggle
+    const chatbotToggler = document.querySelector('.chatbot-toggler');
+    const chatbotWindow = document.querySelector('.chatbot-window');
+    const conversation = document.querySelector('.chatbot-conversation');
+    const input = document.querySelector('.chatbot-input input');
+    const sendButton = document.querySelector('.chatbot-input button');
+
+    if (chatbotToggler && chatbotWindow) {
+        chatbotToggler.addEventListener('click', function() {
+            chatbotWindow.classList.toggle('active');
+        });
+    }
+
+    const qa_data = {
+        "サービス": "AIチャットボット開発、業務自動化、Webアプリケーション開発などを提供しています。詳しくは<a href='index.html#services'>サービス一覧</a>をご覧ください。",
+        "料金": "料金プランは、お客様のご要望に応じて個別に見積もりいたします。詳しくは各サービスページをご覧ください。",
+        "実績": "金融サロン向けのAIチャットボットや、採用管理システムの開発などの実績があります。詳しくは<a href='index.html#achievements'>実績紹介</a>をご覧ください。",
+        "問い合わせ": "お問い合わせは<a href='index.html#contact'>こちら</a>のフォームからお願いします。",
+        "鶴村": "代表の鶴村佳輝は、AIと業務効率化の専門家です。詳しくは<a href='index.html#profile'>プロフィール</a>をご覧ください。",
+        "ありがとう": "どういたしまして！他にご質問はありますか？"
+    };
+
+    const displayMessage = (message, sender) => {
+        const messageWrapper = document.createElement('div');
+        messageWrapper.classList.add('chatbot-message', sender);
+        const messageContent = document.createElement('div');
+        messageContent.classList.add('message-content');
+        messageContent.innerHTML = message;
+        messageWrapper.appendChild(messageContent);
+        conversation.appendChild(messageWrapper);
+        conversation.scrollTop = conversation.scrollHeight;
+    };
+
+    const handleUserInput = () => {
+        const userInput = input.value.trim();
+        if (userInput === "") return;
+
+        displayMessage(userInput, 'user');
+        input.value = "";
+
+        let botResponse = "申し訳ありません、よく分かりませんでした。別の言葉で試していただけますか？";
+        for (const key in qa_data) {
+            if (userInput.toLowerCase().includes(key)) {
+                botResponse = qa_data[key];
+                break;
+            }
+        }
+
+        setTimeout(() => {
+            displayMessage(botResponse, 'bot');
+        }, 500);
+    };
+
+    if (sendButton && input) {
+        sendButton.addEventListener('click', handleUserInput);
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleUserInput();
+            }
+        });
+    }
 });
+
