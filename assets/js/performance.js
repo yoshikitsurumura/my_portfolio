@@ -119,3 +119,4 @@ class PerformanceOptimizer {
 document.addEventListener('DOMContentLoaded', () => {
     new PerformanceOptimizer();
 });
+

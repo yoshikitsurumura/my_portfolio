@@ -252,8 +252,8 @@ img {
 header {
     background: #1a1a2e;
     color: #fff;
-    padding-top: 0px; /* 余白をさらに削減 */
-    min-height: 50px; /* 高さをさらに削減 */
+    padding-top: 0px; 
+    min-height: 50px; 
     border-bottom: 1.5px solid #00f0ff;
     box-shadow: 0 4px 15px rgba(0, 240, 255, 0.15);
     animation: fadeIn 0.8s ease-out;
@@ -272,19 +272,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0px; /* 余白をなくす */
+    margin-bottom: 0px; 
 }
 
 header h1 {
     color: #fff;
     margin: 0;
-    font-size: 3em; /* ロゴサイズを大きく */
+    font-size: 3em; 
     text-align: left;
 }
 
 header p {
     text-align: center;
-    margin-top: 0px; /* 余白をさらに短く */
+    margin-top: 0px; 
     font-size: 1.1em;
     color: #aaa;
     line-height: 1.4;
@@ -306,7 +306,7 @@ header nav ul {
     padding: 0;
     list-style: none;
     text-align: center;
-    margin-top: 5px; /* 余白をさらに短く */
+    margin-top: 5px; 
 }
 
 header nav li {
@@ -407,19 +407,19 @@ header nav a[href*="contact"]:hover {
 .hero-content {
     position: relative;
     z-index: 1;
-    padding: 10px 0; /* 上下の余白を最小化 */
+    padding: 10px 0; 
 }
 
 .hero-content h2 {
     color: #fff;
-    font-size: 3.5em; /* 少し大きく */
-    margin-bottom: 10px; /* 余白を最小化 */
+    font-size: 3.5em; 
+    margin-bottom: 10px; 
     line-height: 1.15;
 }
 
 .hero-content p {
-    font-size: 1.5em; /* 少し大きく */
-    margin-bottom: 15px; /* 余白を最小化 */
+    font-size: 1.5em; 
+    margin-bottom: 15px; 
     color: #eee;
     line-height: 1.5;
 }
@@ -442,7 +442,7 @@ header nav a[href*="contact"]:hover {
 
 .profile-img-container {
     flex: 1 1 300px; /* Allow shrinking and growing */
-    max-width: 350px; /* Set a max-width */
+    max-width: 280px; /* Set a max-width */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -491,7 +491,7 @@ header nav a[href*="contact"]:hover {
 
     .profile-img-container {
         width: 80%;
-        max-width: 300px; /* Adjusted max-width */
+        max-width: 240px; /* Adjusted max-width */
         height: auto; /* Let height be auto */
         margin-bottom: 0; /* Remove margin-bottom as gap is used */
     }
@@ -511,13 +511,13 @@ header nav a[href*="contact"]:hover {
     width: 100%;
     margin-bottom: 25px;
     background-color: #000;
-    line-height: 0; /* 動画下の余分なスペースを削除 */
+    line-height: 0; 
 }
 
 .video-container video,
 .video-container iframe {
     width: 100%;
-    height: auto; /* アスペクト比を維持 */
+    height: auto; 
     display: block;
 }
 
@@ -558,16 +558,10 @@ section {
     padding: 20px 0; /* Minimized padding */
 }
 
-/* LPセクション間隔調整 */
+/* LP郢ｧｻ郢ｧｯ郢ｧｷ郢晢ｽｧ郢晢ｽｳ鬮｢鬥ｴ蝗磯坡ｿ隰ｨｴ */
 #lp-problems, #lp-solution, #lp-features, #lp-case-study, #lp-voice, #lp-price, #lp-flow, #lp-faq {
-    padding: 20px 0;
-}
-
-/* business-automation-tool.htmlのlp-problemsとlp-solutionの区切りを明確にする */
-#lp-problems {
-    border-bottom: 1px dashed #3a3a5a;
-    padding-bottom: 20px;
-    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
 }
 
 section h2 {
@@ -583,13 +577,13 @@ section h2 {
     align-items: stretch;
 }
 
-.problem-grid, .solution-grid, .price-grid, .flow-grid, .feature-grid, .voice-grid {
+.problem-grid, .solution-grid, .price-grid, .flow-grid, .feature-grid, .voice-item {
     display: flex;
     flex-wrap: wrap;
     gap: 25px; /* Consistent gap */
     margin-top: 40px;
     align-items: stretch; /* CRUCIAL for equal height cards */
-    justify-content: center; /* 中央寄せ */
+    justify-content: center; 
 }
 
 /* Card Item Styling */
@@ -605,8 +599,7 @@ section h2 {
 }
 
 .problem-item, .solution-item, .price-item, .flow-item, .feature-item, .voice-item {
-    flex: 1 1 300px; /* ベースの幅を300pxに設定し、伸縮可能にする */
-    min-width: 280px;
+    flex: 1 1 300px; 
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -625,7 +618,7 @@ section h2 {
 /* Ensure content inside cards helps with alignment */
 .service-item p, .achievement-item p, .problem-item p, .solution-item p, .feature-item p, .voice-item p {
     flex-grow: 1; /* Allow the main paragraph to grow, pushing content below it down */
-    margin-bottom: 15px; /* 段落の下に少し余白 */
+    margin-bottom: 15px; 
 }
 
 .price-item ul {
@@ -633,7 +626,7 @@ section h2 {
     text-align: left;
     padding-left: 20px; /* Use padding instead of margin */
     list-style-position: inside;
-    margin-bottom: 15px; /* リストの下に少し余白 */
+    margin-bottom: 15px; 
 }
 
 .price-item .btn, .service-item .btn-small {
@@ -866,7 +859,7 @@ section h2 {
     }
 
     .problem-item, .solution-item, .price-item, .flow-item, .feature-item, .voice-item {
-        flex-basis: calc(50% - 12.5px); /* 2列表示 */
+        flex-basis: calc(50% - 12.5px); 
     }
 }
 
@@ -933,8 +926,8 @@ section h2 {
     }
 
     .profile-img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
     #contact form {
@@ -984,11 +977,11 @@ section h2 {
 
 .case-study-video {
     width: 100%;
-    max-width: 800px; /* 動画の最大幅を設定 */
-    margin: 0 auto; /* 中央揃え */
+    max-width: 800px; 
+    margin: 0 auto; 
     background-color: #000;
     border-radius: 8px;
-    overflow: hidden; /* はみ出しを隠す */
+    overflow: hidden; 
 }
 
 .case-study-video video {
@@ -1043,8 +1036,8 @@ footer {
 .floating-btn {
     position: fixed;
     bottom: 25px;
-    right: calc(50% - 550px + 25px); /* 画面中央からコンテンツの右端までの距離 + ボタンとコンテンツの間の余白 */
-    left: auto; /* leftをautoに戻す */
+    right: calc(50% - 550px + 25px); 
+    left: auto; 
     background: linear-gradient(45deg, #00f0ff, #ff007f);
     color: white;
     padding: 12px 18px;
@@ -1070,7 +1063,6 @@ footer {
     font-size: 1.1em;
 }
 
-/* レスポンシブ対応：画面幅が狭い場合は右端に固定 */
 @media (max-width: 1150px) {
     .floating-btn {
         right: 25px;
