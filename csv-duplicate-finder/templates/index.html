@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CSV Duplicate Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 2rem;
+        }
+        .card-header h1 {
+            margin: 0;
+            font-weight: 600;
+        }
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .upload-area {
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            transition: all 0.3s;
+        }
+        .upload-area:hover {
+            background-color: #e9ecef;
+            border-color: #764ba2;
+        }
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+        .info-section h5 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        .info-section ul {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>📊 CSV Duplicate Finder</h1>
+                <p class="mb-0 mt-2">Upload a CSV file to identify duplicate rows</p>
+            </div>
+            <div class="card-body p-4">
+                <form method="POST" action="/upload" enctype="multipart/form-data">
+                    <div class="upload-area mb-4">
+                        <svg width="64" height="64" fill="currentColor" class="text-primary mb-3" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5h2.767l12-12H12.5a.5.5 0 0 1 0-1h15a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V2.717l-12 12H14.5a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+                            <path d="M14 7h-2.5a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5A.5.5 0 0 0 17.5 7H15V4a1 1 0 0 0-1-1h-1v1z"/>
+                        </svg>
+                        <input type="file" name="file" accept=".csv" class="form-control form-control-lg" required>
+                        <small class="text-muted d-block mt-2">Select a CSV file to analyze</small>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            🔍 Analyze CSV File
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="info-section">
+                    <h5>ℹ️ How it works:</h5>
+                    <ul class="list-unstyled">
+                        <li>✅ Upload a CSV file of any structure</li>
+                        <li>✅ The app identifies all duplicate rows based on all columns</li>
+                        <li>✅ View the original data and identified duplicates</li>
+                        <li>✅ Download a CSV file containing only the duplicate rows</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
