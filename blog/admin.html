@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ管理 | CraneAI</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: #0f0f1e;
+            color: #fff;
+        }
+        .admin-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #00f0ff;
+        }
+        .admin-header h1 {
+            color: #00f0ff;
+        }
+        .back-link {
+            padding: 10px 20px;
+            background: #00f0ff;
+            color: #0f0f1e;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            background: #00d4dd;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .tab-button {
+            padding: 12px 24px;
+            background: #1a1a2e;
+            border: 2px solid #00f0ff;
+            color: #00f0ff;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .tab-button.active {
+            background: #00f0ff;
+            color: #0f0f1e;
+        }
+        .tab-panel {
+            display: none;
+            background: #1a1a2e;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+        .form-field {
+            margin-bottom: 20px;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00f0ff;
+            font-weight: bold;
+        }
+        .form-field input,
+        .form-field textarea,
+        .form-field select {
+            width: 100%;
+            padding: 12px;
+            background: #0f0f1e;
+            border: 2px solid #00f0ff;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-field textarea {
+            min-height: 300px;
+            font-family: monospace;
+        }
+        .submit-btn {
+            padding: 12px 30px;
+            background: #00f0ff;
+            color: #0f0f1e;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .submit-btn:hover {
+            background: #00d4dd;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .alert.success {
+            background: #00ff88;
+            color: #0f0f1e;
+        }
+        .posts-grid {
+            display: grid;
+            gap: 20px;
+        }
+        .post-box {
+            background: #0f0f1e;
+            padding: 20px;
+            border: 2px solid #00f0ff;
+            border-radius: 8px;
+        }
+        .post-box h3 {
+            color: #00f0ff;
+            margin-bottom: 10px;
+        }
+        .post-meta {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .delete-btn {
+            padding: 8px 16px;
+            background: #ff4444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <div class="admin-header">
+            <h1><i class="fas fa-edit"></i> ブログ管理</h1>
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-home"></i> トップページに戻る
+            </a>
+        </div>
+
+        <div class="alert success" id="alertBox"></div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('create')">新規作成</button>
+            <button class="tab-button" onclick="openTab('list')">記事一覧</button>
+        </div>
+
+        <div id="create" class="tab-panel active">
+            <h2 style="color: #00f0ff; margin-bottom: 20px;">新しい記事を作成</h2>
+            <form id="blogForm">
+                <div class="form-field">
+                    <label>タイトル *</label>
+                    <input type="text" id="postTitle" required>
+                </div>
+                <div class="form-field">
+                    <label>カテゴリ *</label>
+                    <select id="postCategory" required>
+                        <option value="AI">AI</option>
+                        <option value="業務効率化">業務効率化</option>
+                        <option value="Web開発">Web開発</option>
+                        <option value="チュートリアル">チュートリアル</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label>タグ（カンマ区切り）</label>
+                    <input type="text" id="postTags" placeholder="例: Python, AI, 自動化">
+                </div>
+                <div class="form-field">
+                    <label>概要 *</label>
+                    <textarea id="postSummary" rows="3" required></textarea>
+                </div>
+                <div class="form-field">
+                    <label>本文（HTML） *</label>
+                    <textarea id="postContent" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-save"></i> 記事を保存
+                </button>
+            </form>
+        </div>
+
+        <div id="list" class="tab-panel">
+            <h2 style="color: #00f0ff; margin-bottom: 20px;">記事一覧</h2>
+            <div id="postsContainer" class="posts-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        const POSTS_KEY = 'craneai_blog_posts';
+
+        function getAllPosts() {
+            const data = localStorage.getItem(POSTS_KEY);
+            return data ? JSON.parse(data) : [];
+        }
+
+        function saveAllPosts(posts) {
+            localStorage.setItem(POSTS_KEY, JSON.stringify(posts));
+        }
+
+        function showAlert(message) {
+            const alert = document.getElementById('alertBox');
+            alert.textContent = message;
+            alert.style.display = 'block';
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 3000);
+        }
+
+        function openTab(tabName) {
+            const buttons = document.querySelectorAll('.tab-button');
+            const panels = document.querySelectorAll('.tab-panel');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            panels.forEach(panel => panel.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+            
+            if (tabName === 'list') {
+                displayPosts();
+            }
+        }
+
+        document.getElementById('blogForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const newPost = {
+                id: Date.now().toString(),
+                title: document.getElementById('postTitle').value,
+                category: document.getElementById('postCategory').value,
+                tags: document.getElementById('postTags').value.split(',').map(t => t.trim()).filter(t => t),
+                summary: document.getElementById('postSummary').value,
+                content: document.getElementById('postContent').value,
+                date: new Date().toISOString().split('T')[0],
+                author: '鶴村佳輝'
+            };
+            
+            const posts = getAllPosts();
+            posts.unshift(newPost);
+            saveAllPosts(posts);
+            
+            showAlert('記事を保存しました！');
+            this.reset();
+            
+            console.log('新規記事:', newPost);
+        });
+
+        function displayPosts() {
+            const posts = getAllPosts();
+            const container = document.getElementById('postsContainer');
+            
+            if (posts.length === 0) {
+                container.innerHTML = '<p style="color: #888;">まだ記事がありません。</p>';
+                return;
+            }
+            
+            container.innerHTML = posts.map(post => `
+                <div class="post-box">
+                    <h3>${post.title}</h3>
+                    <div class="post-meta">
+                        カテゴリ: ${post.category} | 日付: ${post.date}
+                    </div>
+                    <p>${post.summary}</p>
+                    <button class="delete-btn" onclick="removePost('${post.id}')">
+                        <i class="fas fa-trash"></i> 削除
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function removePost(id) {
+            if (!confirm('この記事を削除しますか？')) return;
+            
+            let posts = getAllPosts();
+            posts = posts.filter(p => p.id !== id);
+            saveAllPosts(posts);
+            
+            showAlert('記事を削除しました');
+            displayPosts();
+        }
+
+        console.log('ブログ管理システム起動');
+        console.log('記事数:', getAllPosts().length);
+    </script>
+</body>
+</html>

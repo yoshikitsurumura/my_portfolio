@@ -25,22 +25,37 @@ To set up and run this project locally, follow these steps:
     git clone https://github.com/yoshikitsurumura/my_portfolio.git
     cd my_portfolio
     ```
+
 2.  **Start a local web server:**
-    You can use Python's built-in HTTP server. Make sure you have Python installed.
+
+    **方法1: スクリプトを使用（推奨）**
+    
+    Windowsの場合、以下のいずれかをダブルクリック:
+    - `start-server.bat` (バッチファイル)
+    - `start-server.ps1` (PowerShellスクリプト)
+    
+    **方法2: コマンドラインから**
+    
+    PythonのHTTPサーバーを使用する場合:
     ```bash
-    python -m http.server 5500
+    python -m http.server 8000
     ```
-    (You can use any available port, e.g., 8000, 8080, 5500)
+    (ポート番号は任意: 8000, 8080, 5500など)
 
 3.  **Access the website:**
     Open your web browser and navigate to:
     ```
-    http://localhost:5500/index.html
+    http://localhost:8000/index.html
     ```
+    または
+    ```
+    http://localhost:8000/
+    ```
+    
     You can also access the specific LP pages:
-    -   `http://localhost:5500/pages/ai-chatbot-development.html`
-    -   `http://localhost:5500/pages/business-automation-tool.html`
-    -   `http://localhost:5500/pages/web-app-development.html`
+    -   `http://localhost:8000/pages/ai-chatbot-development.html`
+    -   `http://localhost:8000/pages/business-automation-tool.html`
+    -   `http://localhost:8000/pages/web-app-development.html`
 
 ## Contact
 

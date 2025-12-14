@@ -610,7 +610,7 @@ header nav a[href*="contact"]:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    align-items: stretch;
+    align-items: start; /* Changed from stretch to start for better alignment */
 }
 
 .profile-card {
@@ -622,6 +622,8 @@ header nav a[href*="contact"]:hover {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
+    min-height: 100%; /* Ensure cards have minimum height */
+    height: 100%; /* Make cards fill available space */
 }
 
 .profile-card:hover {
@@ -701,33 +703,38 @@ header nav a[href*="contact"]:hover {
 
 .timeline-content p {
     font-size: 0.95em;
-    line-height: 1.5;
+    line-height: 1.6; /* Slightly increased for better readability */
     color: #e0e0e0;
+    margin-bottom: 10px; /* Add margin between paragraphs */
 }
 
 /* Skills Grid */
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Increased gap for better spacing */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Better grid layout */
+    gap: 12px; /* Slightly reduced gap for more compact layout */
     margin-top: 20px;
-    justify-content: center; /* Ensure center alignment */
+    align-content: start; /* Align items to start */
     flex-grow: 1; /* Allow skills grid to grow */
 }
 
 .skill-badge {
     background-color: rgba(0, 240, 255, 0.15); /* Light neon blue background */
     color: #00f0ff;
-    padding: 10px 18px; /* 縦横の余白を調整 */
+    padding: 12px 16px; /* Improved padding for better balance */
     border-radius: 20px;
-    font-size: 2em; /* 文字サイズを少し調整してバランスを取る */
+    font-size: 0.95em; /* Fixed: Changed from 2em to reasonable size */
     font-weight: bold;
     border: 1px solid #00f0ff;
     box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
     transition: all 0.3s ease;
-    white-space: normal; /* テキストの自動改行を許可 */
-    text-align: center; /* 改行された場合に中央揃えにする */
-    line-height: 1.4; /* 行の高さを調整 */
+    white-space: nowrap; /* Prevent text wrapping for cleaner look */
+    text-align: center; /* Center align text */
+    line-height: 1.3; /* Adjusted line height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px; /* Ensure minimum height for consistency */
 }
 
 
@@ -775,6 +782,15 @@ header nav a[href*="contact"]:hover {
 @media (max-width: 900px) {
     .profile-detail-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns on mobile */
+        gap: 10px; /* Reduced gap on mobile */
+    }
+    
+    .profile-card {
+        height: auto; /* Allow cards to grow naturally on mobile */
     }
 }
 

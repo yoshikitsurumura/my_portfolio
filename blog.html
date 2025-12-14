@@ -51,13 +51,7 @@
         <div class="container">
             <h2>記事一覧</h2>
             <div class="blog-grid" id="blog-container">
-                <div class="blog-item">
-                    <h3>【AIと業務効率化の専門家】非エンジニア出身だからこそできる、現場に寄り添うDX支援とは</h3>
-                    <p class="article-date">2025年10月24日</p>
-                    <p>はじめまして、鶴村佳輝と申します。AI・業務効率化コンサルタントとして、「CraneAI」という屋号で活動しています。この記事では、私がなぜこの仕事をしているのか、どのような想いでクライアントと向き合っているのか...</p>
-                    <a href="pages/self-introduction-blog.html" class="btn-small">記事を読む</a>
-                </div>
-                <!-- 他の記事はスプレッドシート連携後に表示されます -->
+                <!-- 記事はJavaScriptで自動表示されます -->
             </div>
         </div>
     </section>
@@ -65,9 +59,36 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Yoshiki Tsurumura. All rights reserved.</p>
-            <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+            <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a> | <a href="blog/admin.html" class="footer-link" style="opacity: 0.5; font-size: 0.85em;">🔒 管理</a></p>
         </div>
     </footer>
 
+    <script>
+        // LocalStorageから記事を読み込んで表示
+        const POSTS_KEY = 'craneai_blog_posts';
+        
+        function loadBlogPosts() {
+            const container = document.getElementById('blog-container');
+            const data = localStorage.getItem(POSTS_KEY);
+            const posts = data ? JSON.parse(data) : [];
+            
+            if (posts.length === 0) {
+                container.innerHTML = '<div class="blog-item"><p>まだ記事がありません。</p></div>';
+                return;
+            }
+            
+            container.innerHTML = posts.map(post => `
+                <div class="blog-item">
+                    <h3>${post.title}</h3>
+                    <p class="article-date">${post.date}</p>
+                    <p>${post.summary}</p>
+                    <span class="btn-small" style="background: #00f0ff; color: #0f0f1e; padding: 8px 16px; border-radius: 5px; display: inline-block; margin-top: 10px;">記事を読む</span>
+                </div>
+            `).join('');
+        }
+        
+        // ページ読み込み時に記事を表示
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
+    </script>
 </body>
 </html>
