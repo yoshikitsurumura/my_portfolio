@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>業務自動化ツール開発 | 鶴村佳輝</title>
-    <meta name="description" content="繰り返しのデータ入力や集計作業に時間を奪われていませんか？GAS、Python、RPAなどを活用したカスタムツールで、面倒な業務を自動化し、ヒューマンエラーを削減します。あなたの会社の生産性を最大化するご提案をします。導入事例あり。">
+    <title>業務改善DX・RAG構築 | CraneAI</title>
+    <meta name="description" content="生成AI（Gemini/GPT）と業務データを掛け合わせたRAG構築、高精度AI-OCR、Google Workspace/Microsoft 365連携による業務自動化サービス。">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../images/chatbot_icon_new.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -24,23 +22,19 @@
         <div class="container">
             <div class="header-top">
                 <h1><a href="../index.html">CraneAI</a></h1>
-                <h2>業務自動化ツール開発</h2>
                 <div class="header-social">
                     <a href="https://github.com/yoshikitsurumura" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://x.com/atamahakidashi" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <p>生成AIと業務改善DXで、<span class="no-break">現場のボトルネックを可視化</span>します。</p>
+            <p>生成AI × 現場ナレッジで、<span class="no-break">ビジネスプロセスを再設計。</span></p>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#lp-features">Features</a></li>
-                    <li><a href="#lp-case-study">Case Study</a></li>
-                    <li><a href="#lp-voice">Testimonials</a></li>
-                    <li><a href="#lp-price">Pricing</a></li>
-                    <li><a href="#lp-flow">Process</a></li>
-                    <li><a href="#lp-faq">FAQ</a></li>
+                    <li><a href="#r-features">Services</a></li>
+                    <li><a href="#r-case">Case Study</a></li>
+                    <li><a href="#r-tech">Technology</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -51,275 +45,118 @@
         <div class="container">
             <div class="lp-hero-wrapper">
                 <div class="lp-hero-content">
-                    <h2><span class="highlight no-break">生成AIで業務改善DX。</span><br>RAG構築と自動化で、<br><span class="highlight no-break">現場をアップデート。</span></h2>
-                    <p>日々のスプレッドシート集計から外部SaaS連携まで、<span class="no-break">Python／GAS／RPA</span>を組み合わせたワークフローで自動化。<br>Google Workspace・Microsoft 365・Slack・Teamsの通知、帳票生成、<span class="no-break">RAGによるナレッジ活用</span>まで一社ずつ設計します。</p>
-                    <a href="#contact" class="btn hero-btn">無料相談・特別見積もりはこちら</a>
+                    <h2><span class="highlight no-break">現場の「手間」を技術でゼロに。</span><br>RAG・OCR・自動化の<br><span class="highlight no-break">統合ソリューション。</span></h2>
+                    <p>散在する社内ナレッジを<span class="no-break">RAG構築</span>で検索可能に。紙の帳票は<span class="no-break">AI-OCR</span>でデジタル化。<br>さらにGoogle Workspace / Microsoft 365連携で、データ入力から通知までを完全自動化します。</p>
+                    <a href="#contact" class="btn hero-btn">無料相談はこちら</a>
                 </div>
                 <div class="lp-hero-video">
                     <video autoplay muted loop playsinline>
                         <source src="../images/automation/business-automation-hero.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--
     <section id="lp-problems" class="section-bg">
         <div class="container">
-            <h2>もし、あなたがこんな悩みを抱えているなら…</h2>
-            <p class="sub-heading"><span class="no-break">生成AI×業務改善DX</span>で、全社のボトルネックを一気に解消します。</p>
-            <div class="problem-grid">
+            <h2>こんな「現場の悲鳴」はありませんか？</h2>
+            <div class="three-column-grid">
                 <div class="problem-item">
-                    <h3><i class="fas fa-clock"></i> 時間に追われる日々</h3>
-                    <p>毎日、毎週、同じようなデータ入力や集計作業に追われ、残業が増え、従業員の疲弊も。</p>
-                </div>
-                <div class="problem-item">
-                    <h3><i class="fas fa-exclamation-triangle"></i> ヒューマンエラーの多発</h3>
-                    <p>手作業によるミスが多く、確認作業に膨大な時間がかかっている。データの正確性に不安。</p>
+                    <h3><i class="fas fa-file-invoice"></i> 紙データの入力地獄</h3>
+                    <p>受給者証、請求書、アンケート…。非定型な紙の書類を目視で確認し、手入力でシステムへ打ち込む作業に追われている。</p>
                 </div>
                 <div class="problem-item">
-                    <h3><i class="fas fa-cogs"></i> 既存システムの限界</h3>
-                    <p>既存のシステムでは対応できない、細かな業務フローがある。API連携やRAG構築のノウハウがなく、非効率な作業が残る。</p>
+                    <h3><i class="fas fa-search"></i> ナレッジが見つからない</h3>
+                    <p>社内マニュアルや過去の質問対応ログが散在。必要な情報を探すのに時間がかかり、同じ質問が何度も飛び交う。</p>
                 </div>
                 <div class="problem-item">
-                    <h3><i class="fas fa-chart-line-down"></i> 成長の停滞</h3>
-                    <p>従業員の残業時間が増加し、生産性が低下している。新しい施策に手が回らず、ビジネスの成長が停滞。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    <section id="lp-problems-v2" class="section-bg">
-        <div class="container">
-            <h2>もし、あなたがこんな悩みを抱えているなら…</h2>
-            <p class="sub-heading"><span class="no-break">生成AI×業務改善DX</span>で、全社のボトルネックを一気に解消します。</p>
-            <div class="problem-grid-v2">
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-clock"></i> 時間に追われる日々</h3>
-                    <p>毎日、毎週、同じようなデータ入力や集計作業に追われ、残業が増え、従業員の疲弊も。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-exclamation-triangle"></i> ヒューマンエラーの多発</h3>
-                    <p>手作業によるミスが多く、確認作業に膨大な時間がかかっている。データの正確性に不安。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-cogs"></i> 既存システムの限界</h3>
-                    <p>既存のシステムでは対応できない、細かな業務フローがある。API連携やRAG構築のノウハウがなく、非効率な作業が残る。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-chart-line-down"></i> 成長の停滞</h3>
-                    <p>従業員の残業時間が増加し、生産性が低下している。新しい施策に手が回らず、ビジネスの成長が停滞。</p>
+                    <h3><i class="fas fa-sync-alt"></i> ツール間の転記作業</h3>
+                    <p>メールからスプレッドシートへ、チャットからSaaSへ。単純な「コピペ」作業がボトルネックになり、ヒューマンエラーも多発。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="lp-solution" class="section-bg">
+    <section id="r-features">
         <div class="container">
-            <h2>業務改善DXプラットフォームで、現場の判断を高速化。</h2>
-            <div class="three-column-grid">
-                <div class="column-item">
-                    <h3><i class="fas fa-rocket"></i> 作業時間の劇的な短縮</h3>
-                    <p>CSV整形・帳票出力・ダッシュボード更新など、<span class="no-break">Python＋GAS</span>で自動実行。PowerPointレポートも連動し、意思決定までのリードタイムを短縮します。</p>
+            <h2>CraneAIの<span class="highlight">ソリューション</span></h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3><i class="fas fa-eye highlight"></i> 高精度 AI-OCR開発</h3>
+                    <p>従来のOCRでは読み取れない「手書き」「非定型レイアウト」の帳票も、<span class="no-break">Gemini 2.5 Pro</span>のマルチモーダル能力で高精度にデジタル化。個人病院での公費受給者証読み取り実績あり。</p>
                 </div>
-                <div class="column-item">
-                    <h3><i class="fas fa-check-circle"></i> ヒューマンエラーをゼロに</h3>
-                    <p>構造化ログとアラート通知を組み合わせ、失敗時の再実行フローまで設計。<span class="no-break">業務品質と監査対応</span>を両立します。</p>
+                <div class="service-item">
+                    <h3><i class="fas fa-brain highlight"></i> RAG（検索拡張生成）構築</h3>
+                    <p>社内Wiki、PDF、日報ログをベクトルデータベース化。生成AIが自社のナレッジに基づいて回答する検索システムを構築。ハルシネーション（嘘）を抑える参照元提示機能も実装。</p>
                 </div>
-                <div class="column-item">
-                    <h3><i class="fas fa-dollar-sign"></i> コスト削減と生産性向上</h3>
-                    <p>現場起点でボトルネックを可視化し、<span class="no-break">RAGと自動化のハイブリッド</span>で改善。属人化を排除し、教育コストと残業時間を削減します。</p>
+                <div class="service-item">
+                    <h3><i class="fas fa-project-diagram highlight"></i> 業務フロー完全自動化</h3>
+                    <p>Python (FastAPI) / GAS を駆使し、Google Workspace・Microsoft 365・Slack・Chatwork等をAPI連携。トリガー検知からデータ処理、通知までをノーコードツール(n8n等)も交えて設計します。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="lp-features" class="section-bg">
+    <section id="r-case" class="section-bg">
         <div class="container">
-            <h2>CraneAIが提供する業務自動化ツールの<br><span class="highlight">圧倒的な機能と特徴</span></h2>
-            <div class="three-column-grid">
-                <div class="column-item">
-                    <h3>Google Apps Scriptによる即効性の高いDX</h3>
-                    <p>スプレッドシート、Gmail、カレンダーをノーコード連携。<span class="no-break">案件別メール通知／カレンダー自動登録／帳票PDF生成</span>を自動化し、現場の改善スピードを落としません。</p>
-                </div>
-                <div class="column-item">
-                    <h3>Python＋FastAPIでスケーラブルな業務基盤</h3>
-                    <p>CSV検証からREST API化まで、<span class="no-break">FastAPI／Flask</span>で堅牢な自動処理を構築。GitHub Actionsと連携し、テスト・デプロイまで自動化します。</p>
-                </div>
-                <div class="column-item">
-                    <h3>RPA×Power Automate／UiPath</h3>
-                    <p>クリック・ファイル操作などの定型作業をRPAで再現。<span class="no-break">Power Automate／UiPath</span>を最適化し、属人化したオペレーションを標準化します。</p>
-                </div>
-                <div class="column-item">
-                    <h3>RAGナレッジ設計とガードレール整備</h3>
-                    <p>FAQ・業務マニュアルを構造化し、<span class="no-break">RAG（Retrieval-Augmented Generation）</span>で生成AIへ安全に接続。回答ガードレール・履歴ログでリスクを抑止します。</p>
-                </div>
-                <div class="column-item">
-                    <h3>外部SaaS・基幹システムとのAPI連携</h3>
-                    <p>Google Workspace／Microsoft 365／Slack／Salesforce等とAPI連携し、<span class="no-break">双方向のデータ更新</span>を実現。システム間のデータ同期と監査ログも整備します。</p>
-                </div>
-                <div class="column-item">
-                    <h3>ノーコード・ローコードの内製化支援</h3>
-                    <p>n8nやAppSheetでプロトタイプを構築し、運用チームへの引き継ぎまでサポート。<span class="no-break">教育コストを抑えた内製化</span>を実現します。</p>
+            <h2><span class="highlight">導入事例:</span> 個人病院向けOCRシステム</h2>
+            <div class="profile-detail-grid">
+                <div class="profile-card" style="width: 100%;">
+                    <h3><i class="fas fa-hospital-alt highlight"></i> 公費受給者証の自動読み取り＆DB化</h3>
+                    <div style="text-align: left; margin-top: 20px;">
+                        <p><strong>課題:</strong> 患者様が持参する公費受給者証は自治体ごとにフォーマットが異なり、従来のOCRでは読み取り不可能。受付スタッフが毎回手入力しており、待ち時間の原因に。</p>
+                        <p style="margin-top: 15px;"><strong>解決策:</strong> <span class="highlight">Gemini 2.5 Pro API</span>を活用したAI-OCRシステムを開発。</p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
+                            <li>カメラで撮影した画像をAIが解析し、受給者番号・氏名・有効期限・負担区分を自動抽出。</li>
+                            <li>「信頼度スコア」を算出し、AIが自信がない箇所のみ人間が確認するフローを構築。</li>
+                            <li>読み取り結果を即座に電子カルテ連携用CSVとして出力。</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>技術スタック:</strong> Python (FastAPI), Gemini API, Docker, PostgreSQL</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="lp-case-study">
+    <section id="r-tech">
         <div class="container">
-            <h2><span class="highlight">導入事例:</span> 英語学習支援AI Bot（Discord）</h2>
-            <p class="sub-heading">Google Apps ScriptとAIを活用し、生徒様の自律的な学習を徹底サポート</p>
-            <div class="case-study-content">
-                <div class="video-container case-study-video">
-                    <video src="../images/automation/discord-eigo-chatbot.mp4" controls></video>
-                </div>
-                <p>このプロジェクトでは、英語コーチングサービスにおいて、<span class="no-break">生徒様が授業外で一人でも効果的に学習を進められる環境</span>の構築を目指しました。従来、講師が生徒一人ひとりに行っていた単語テストや進捗確認などの定型業務を、<span class="no-break">DiscordとGoogleスプレッドシートを連携させたAI Bot</span>によって自動化。生徒様は好きな時にBotと対話形式で学習でき、講師は個別の質問対応や学習計画の最適化といった、より付加価値の高い業務に集中できるようになりました。</p>
-                <p><strong>導入効果:</strong></p>
-                <ul>
-                    <li>生徒様が場所や時間を選ばずに<span class="highlight no-break">自律的に学習できる環境</span>を提供し、学習習慣の定着を促進。</li>
-                    <li>単語テストや進捗報告の自動化により、<span class="highlight no-break">講師の定型業務を大幅に削減</span>。</li>
-                    <li>蓄積された学習データを分析し、<span class="highlight no-break">生徒一人ひとりの弱点を可視化</span>。より的確な個別指導を実現しました。</li>
-                </ul>
+            <h2>使用<span class="highlight">技術スタック</span></h2>
+            <p>目的に応じて最適な技術を選定し、堅牢かつ保守性の高いシステムを構築します。</p>
+            <div class="skills-grid" style="justify-content: center; margin-top: 30px;">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Gemini API</span>
+                <span class="skill-badge">OpenAI API</span>
+                <span class="skill-badge">LangChain</span>
+                <span class="skill-badge">Pinecone (Vector DB)</span>
+                <span class="skill-badge">Google Apps Script</span>
+                <span class="skill-badge">Docker</span>
+                <span class="skill-badge">Google Cloud</span>
             </div>
-        </div>
-    </section>
-
-    <section id="lp-voice" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">お客様の声</span> - 導入された企業様からの評価</h2>
-            <div class="three-column-grid">
-                <div class="voice-item">
-                    <p class="voice-text">「毎日数時間かかっていたデータ集計作業が、鶴村さんに開発してもらったツールのおかげで数分で終わるようになりました。おかげで、他の重要な業務に集中できています。本当に感謝しています。」</p>
-                    <p class="voice-meta"><strong>お客様の声1</strong></p>
-                </div>
-                <div class="voice-item">
-                    <p class="voice-text">「RPA導入を検討していましたが、何から手をつけていいか分からず困っていました。鶴村さんが私たちの業務を丁寧に分析し、最適な自動化ツールを提案してくれたおかげで、スムーズに導入できました。」</p>
-                    <p class="voice-meta"><strong>お客様の声2</strong></p>
-                </div>
-                <div class="voice-item">
-                    <p class="voice-text">「ノーコードツールでここまでできるのかと驚きました。プログラミング知識がない私でも、簡単に運用できています。業務のボトルネックが解消され、チーム全体の生産性が上がりました。」</p>
-                    <p class="voice-meta"><strong>お客様の声3</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-price">
-        <div class="container">
-            <h2><span class="highlight">料金プラン</span> - あなたのビジネスに最適な選択を</h2>
-            <p class="sub-heading">まずは無料相談で、最適なプランをご提案いたします。</p>
-            <div class="three-column-grid">
-                <div class="price-item">
-                    <h3>ライトプラン</h3>
-                    <p>小規模な定型業務の自動化に。</p>
-                    <ul>
-                        <li>GASによるスプレッドシート自動化</li>
-                        <li>シンプルな通知・レポート作成</li>
-                        <li>初期設定サポート</li>
-                    </ul>
-                    <p class="price-estimate">5万円〜</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-                <div class="price-item">
-                    <h3>スタンダードプラン</h3>
-                    <p>複数の業務フロー、データ連携を含む自動化に。</p>
-                    <ul>
-                        <li>Pythonによるカスタムツール開発</li>
-                        <li>複数システム連携</li>
-                        <li>データ処理・集計自動化</li>
-                        <li>運用マニュアル作成</li>
-                    </ul>
-                    <p class="price-estimate">15万円〜</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-                <div class="price-item">
-                    <h3>エンタープライズプラン</h3>
-                    <p>大規模な業務プロセス全体の自動化、RPA導入支援など。</p>
-                    <ul>
-                        <li>業務フロー全体のコンサルティング</li>
-                        <li>RPAツール導入支援</li>
-                        <li>AI連携による高度な自動化</li>
-                        <li>継続的な保守・改善サポート</li>
-                    </ul>
-                    <p class="price-estimate">個別見積もり</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-            </div>
-            <p class="note">※上記金額は目安です。詳細はお問い合わせください。<br>お客様の課題と目標をヒアリングし、最適なソリューションをご提案します。</p>
-        </div>
-    </section>
-
-    <section id="lp-flow" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">導入までの流れ</span> - スムーズな業務自動化をサポート</h2>
-            <div class="flow-grid">
-                <div class="flow-item">
-                    <div class="flow-number">1</div>
-                    <h3>ヒアリング・業務分析</h3>
-                    <p>自動化したい業務内容、現在の課題、目標を詳細にお伺いし、最適な自動化範囲を特定します。現状分析から未来の姿まで、徹底的にすり合わせます。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">2</div>
-                    <h3>ツール設計・開発</h3>
-                    <p>分析結果に基づき、自動化ツールの設計、開発、実装を行います。透明性の高い開発プロセスで、進捗を共有します。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">3</div>
-                    <h3>テスト・導入支援</h3>
-                    <p>開発したツールの動作テストを行い、お客様の環境への導入をサポートします。納得がいくまで徹底的に。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">4</div>
-                    <h3>運用開始・効果測定</h3>
-                    <p>ツールの運用を開始し、自動化による効果を測定。必要に応じて改善提案を行い、長期的な成功を支援します。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-faq">
-        <div class="container">
-            <h2><span class="highlight">よくある質問</span> - あなたの疑問を解消します</h2>
-            <dl>
-                <dt>Q: どのような業務が自動化できますか？</dt>
-                <dd>A: 定型的なデータ入力、集計、レポート作成、メール送信、ファイル整理など、<span class="no-break">繰り返し発生する業務の多くが自動化可能</span>です。非定型業務もAI連携で対応できる場合があります。</dd>
-
-                <dt>Q: プログラミングの知識がなくても運用できますか？</dt>
-                <dd>A: はい、ご安心ください。お客様が<span class="no-break">プログラミング知識がなくても簡単に操作</span>できるよう、直感的な管理画面やマニュアルを提供します。</dd>
-
-                <dt>Q: 開発後のサポートはありますか？</dt>
-                <dd>A: はい、運用開始後のサポートも承っております。ツールの改善や機能追加など、<span class="no-break">長期的な視点でビジネスの成長を支援</span>します。お気軽にご相談ください。</dd>
-            </dl>
         </div>
     </section>
 
     <section id="contact" class="section-bg">
         <div class="container">
-            <h2><span class="highlight">今すぐ、無駄な作業から解放。</span>無料相談・特別見積もりはこちら</h2>
-            <p class="sub-heading">期間限定！今なら業務自動化に関する無料コンサルティングも実施中。</p>
-            <form action="https://script.google.com/macros/s/AKfycbxdzSL9eQ6j37nxcFMGOTmevhzRdIwr2L46FfnVqRU5hSSd7MCXFb0fvUD2qwV7c0TRGw/exec" method="POST">
-                <input type="text" name="name" placeholder="お名前" required>
-                <input type="email" name="email" placeholder="メールアドレス" required>
-                <textarea name="message" placeholder="お問い合わせ内容" rows="5" required></textarea>
+            <h2>業務の「自動化」について、<br>まずは無料相談から。</h2>
+            <p class="sub-heading">あなたの現場の課題をヒアリングし、最適なDXプランをご提案します。</p>
+            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
+                <label for="name" class="sr-only">お名前</label>
+                <input type="text" id="name" name="name" placeholder="お名前" required>
+                <label for="email" class="sr-only">メールアドレス</label>
+                <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                <label for="message" class="sr-only">お問い合わせ内容</label>
+                <textarea id="message" name="message" placeholder="現在の業務課題や、自動化したい内容についてお書きください。" rows="5" required></textarea>
                 <button type="submit" class="btn contact-btn">無料相談を申し込む</button>
             </form>
-            <p class="ps-text"><strong>追伸：</strong>この機会を逃さないでください。業務自動化は、<span class="no-break">生産性向上とコスト削減を実現</span>し、ビジネスを加速させるための最重要戦略です。今すぐ行動を起こし、あなたのビジネスを次のステージへ。</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 CraneAI. All rights reserved.</p>
-            <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+            <p><a href="../index.html">Home</a> | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
-
-    <!-- Floating CTA Button -->
-    <a href="#contact" class="floating-btn">
-        <i class="fas fa-envelope"></i> 無料相談はこちら
-    </a>
 </body>
 </html>

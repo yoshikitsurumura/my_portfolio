@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webアプリケーション開発 | 鶴村佳輝</title>
-    <meta name="description" content="Excelやスプレッドシートでのデータ管理に限界を感じていませんか？Python（Flask）とデータベースを活用したオーダーメイドのWebアプリで、煩雑な業務を効率化し、情報共有をスムーズにします。セキュアで使いやすいシステムを開発します。">
+    <title>Webアプリ開発・SaaS連携 | CraneAI</title>
+    <meta name="description" content="Python (FastAPI/Flask) / TypeScriptを用いたWebアプリケーション開発。Google/Microsoft OAuth連携、SaaS統合、業務ツールの内製化支援まで。">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../images/chatbot_icon_new.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -23,23 +22,19 @@
         <div class="container">
             <div class="header-top">
                 <h1><a href="../index.html">CraneAI</a></h1>
-                <h2>Webアプリケーション開発</h2>
                 <div class="header-social">
                     <a href="https://github.com/yoshikitsurumura" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://x.com/atamahakidashi" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <p>シンプルで使いやすいWebアプリで、業務プロセスを最適化します。</p>
+            <p>堅牢なバックエンド技術で、<span class="no-break">ビジネスロジックを具現化。</span></p>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#lp-features">Features</a></li>
-                    <li><a href="#lp-case-study">Case Study</a></li>
-                    <li><a href="#lp-voice">Testimonials</a></li>
-                    <li><a href="#lp-price">Pricing</a></li>
-                    <li><a href="#lp-flow">Process</a></li>
-                    <li><a href="#lp-faq">FAQ</a></li>
+                    <li><a href="#wa-features">Services</a></li>
+                    <li><a href="#wa-case">Case Study</a></li>
+                    <li><a href="#wa-tech">Technology</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -50,275 +45,112 @@
         <div class="container">
             <div class="lp-hero-wrapper">
                 <div class="lp-hero-content">
-                    <h2><span class="highlight no-break">複雑な業務をシンプルに。</span><br>オーダーメイドのWebアプリで、あなたのビジネスは<br><span class="highlight no-break">飛躍的に成長する。</span></h2>
-                    <p>もう、<span class="no-break">煩雑なデータ管理</span>や<span class="no-break">非効率な業務フロー</span>に悩む必要はありません。<br>あなたのビジネスに最適化されたWebアプリケーションが、<br>業務の「見える化」と効率化を実現し、成長を加速させます。</p>
-                    <a href="#contact" class="btn hero-btn">無料相談・特別見積もりはこちら</a>
+                    <h2><span class="highlight no-break">複雑な連携も、シンプルに。</span><br>Webアプリ開発・<br><span class="highlight no-break">SaaS統合開発。</span></h2>
+                    <p>Python (FastAPI / Flask) と TypeScript を駆使し、拡張性の高いWebアプリを構築。<br>Google Workspace や Microsoft 365 との<span class="no-break">OAuth認証連携</span>など、難易度の高いバックエンド開発を得意とします。</p>
+                    <a href="#contact" class="btn hero-btn">開発について相談する</a>
                 </div>
                 <div class="lp-hero-video">
-                            <video src="../images/webapp/web-app-hero.mp4" autoplay muted loop></video>
+                    <video autoplay muted loop playsinline>
+                        <!-- 適切なイメージ動画があれば差し替え -->
+                        <source src="../images/hero-video-2.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--
-    <section id="lp-problems" class="section-bg">
+    <section id="wa-features" class="section-bg">
         <div class="container">
-            <h2>もし、あなたがこんな悩みを抱えているなら…</h2>
-            <p class="sub-heading">オーダーメイドのWebアプリケーションが、その課題を根本から解決します。</p>
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <h3><i class="fas fa-database"></i> 煩雑なデータ管理</h3>
-                    <p>Excelやスプレッドシートでのデータ管理が煩雑で、ミスが発生しやすい。必要な情報を見つけるのに時間がかかる。</p>
+            <h2>CraneAIの<span class="highlight">開発領域</span></h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3><i class="fas fa-server highlight"></i> バックエンドAPI開発</h3>
+                    <p>FastAPI / Flask を用いたRESTful API設計・開発。非同期処理による高速化や、Pydanticによる厳格な型定義で、堅牢なシステム基盤を構築します。</p>
                 </div>
-                <div class="problem-item">
-                    <h3><i class="fas fa-cogs"></i> 既存システムとの不一致</h3>
-                    <p>既存のシステムでは、自社の業務フローに完全にフィットしない部分がある。カスタマイズも難しく、非効率な作業が残る。</p>
+                <div class="service-item">
+                    <h3><i class="fas fa-link highlight"></i> SaaS API・OAuth連携</h3>
+                    <p>Google / Microsoft / Slack / Notion などの外部SaaSとのAPI連携実装。特に複雑になりがちな<span class="no-break">OAuth 2.0 認証フロー</span>の実装に強みがあります。</p>
                 </div>
-                <div class="problem-item">
-                    <h3><i class="fas fa-share-alt"></i> 情報共有の壁</h3>
-                    <p>社内での情報共有がスムーズに行えず、業務のボトルネックになっている。リアルタイムでの情報連携が難しい。</p>
-                </div>
-                <div class="problem-item">
-                    <h3><i class="fas fa-dollar-sign"></i> 高額なシステム導入費用</h3>
-                    <p>新しいシステムを導入したいが、高額な費用や複雑な操作がネックになっている。投資対効果が見えにくい。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    <section id="lp-problems-v2" class="section-bg">
-        <div class="container">
-            <h2>もし、あなたがこんな悩みを抱えているなら…</h2>
-            <p class="sub-heading">オーダーメイドのWebアプリケーションが、その課題を根本から解決します。</p>
-            <div class="problem-grid-v2">
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-database"></i> 煩雑なデータ管理</h3>
-                    <p>Excelやスプレッドシートでのデータ管理が煩雑で、ミスが発生しやすい。必要な情報を見つけるのに時間がかかる。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-cogs"></i> 既存システムとの不一致</h3>
-                    <p>既存のシステムでは、自社の業務フローに完全にフィットしない部分がある。カスタマイズも難しく、非効率な作業が残る。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-share-alt"></i> 情報共有の壁</h3>
-                    <p>社内での情報共有がスムーズに行えず、業務のボトルネックになっている。リアルタイムでの情報連携が難しい。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-dollar-sign"></i> 高額なシステム導入費用</h3>
-                    <p>新しいシステムを導入したいが、高額な費用や複雑な操作がネックになっている。投資対効果が見えにくい。</p>
+                <div class="service-item">
+                    <h3><i class="fas fa-code-branch highlight"></i> CI/CD・DevOps</h3>
+                    <p>GitHub Actions によるテスト・デプロイ自動化、Dockerコンテナによる環境構築。開発スピードと品質を担保するモダンなDevOps環境を提供します。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="lp-solution">
+    <section id="wa-case">
         <div class="container">
-            <h2>Webアプリケーション導入で、<br>あなたのビジネスはこう変わる！</h2>
-            <div class="three-column-grid">
-                <div class="column-item">
-                    <h3><i class="fas fa-sync-alt"></i> 業務プロセスを最適化</h3>
-                    <p>お客様の業務フローに合わせて設計されたアプリで、無駄をなくし、効率的な作業を実現。<span class="no-break">生産性が飛躍的に向上</span>します。</p>
+            <h2><span class="highlight">開発事例:</span> SaaS統合 / 業務ツール</h2>
+            <div class="profile-detail-grid">
+                <div class="profile-card" style="width: 100%; margin-bottom: 30px;">
+                    <h3><i class="fas fa-plug highlight"></i> Google/Microsoft 統合モジュール開発</h3>
+                    <div style="text-align: left; margin-top: 20px;">
+                        <p><strong>プロジェクト:</strong> AIエージェントプラットフォーム「Patto AI」向け連携機能</p>
+                        <p><strong>内容:</strong> ユーザーのGoogle/Microsoftアカウントと連携し、カレンダー予定取得、メール送信、ファイル操作を行うバックエンド機能を実装。</p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
+                            <li><span class="highlight">TypeScript (Bun/Hono)</span> を採用し、モノレポ構成で開発。</li>
+                            <li>Gmail, Calendar, Drive, Outlook, Teams, OneDrive 等の複数APIを統一インターフェースで扱えるよう抽象化。</li>
+                            <li>アクセストークンのリフレッシュ処理や、APIレート制限へのリトライ処理を共通化。</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="column-item">
-                    <h3><i class="fas fa-chart-pie"></i> データの一元管理と可視化</h3>
-                    <p>散在していたデータを一箇所に集約し、必要な情報をいつでも、どこからでもアクセス可能に。<span class="no-break">経営判断のスピードが向上</span>します。</p>
-                </div>
-                <div class="column-item">
-                    <h3><i class="fas fa-user-friends"></i> 直感的で使いやすいUI/UX</h3>
-                    <p><span class="no-break">非エンジニアの方でも迷わず使える</span>、シンプルで直感的なインターフェースを設計。導入後の教育コストを最小限に抑えます。</p>
+
+                <div class="profile-card" style="width: 100%;">
+                    <h3><i class="fas fa-tasks highlight"></i> CSVベース採用管理システム</h3>
+                    <div style="text-align: left; margin-top: 20px;">
+                        <p><strong>プロジェクト:</strong> 求人媒体データ統合・管理ツール</p>
+                        <p><strong>内容:</strong> 異なる求人媒体から出力されるCSVデータを正規化し、ダッシュボードへ集約。</p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
+                            <li><span class="highlight">Python (Pandas)</span> で高速なデータ処理・クレンジング処理を実装。</li>
+                            <li>「誰でも使える」を重視し、設定ファイル(CSV)でマッピングルールを変更可能な設計に。</li>
+                            <li>入出力バリデーションとエラーログ出力を整備し、運用ミスを防止。</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="lp-features" class="section-bg">
+    <section id="wa-tech" class="section-bg">
         <div class="container">
-            <h2>CraneAIが提供するWebアプリケーションの<br><span class="highlight">圧倒的な機能と特徴</span></h2>
-            <div class="three-column-grid">
-                <div class="column-item">
-                    <h3>Python（Flask）による堅牢な開発</h3>
-                    <p><span class="no-break">安定性と拡張性の高いPythonとFlask</span>で、ビジネス要件に合わせたアプリケーションを構築。将来的な機能追加や改修にも柔軟に対応します。</p>
-                </div>
-                <div class="column-item">
-                    <h3>最適なデータベース連携</h3>
-                    <p>SQLite, PostgreSQLなど、お客様のデータ量や要件に応じた<span class="no-break">最適なデータベースを選定・連携</span>。データの整合性とパフォーマンスを保証します。</p>
-                </div>
-                <div class="column-item">
-                    <h3>セキュアなユーザー管理・認証機能</h3>
-                    <p><span class="no-break">ユーザーごとのアクセス権限設定</span>や、セキュアな認証システムを実装。大切な情報を不正アクセスから守ります。</p>
-                </div>
-                <div class="column-item">
-                    <h3>柔軟なデータ入出力・レポート機能</h3>
-                    <p>データの登録、検索、更新、削除はもちろん、CSVエクスポートやグラフ表示など、お客様のニーズに合わせた<span class="no-break">レポート機能も実装可能</span>です。</p>
-                </div>
-                <div class="column-item">
-                    <h3>あらゆるデバイスに対応するレスポンシブデザイン</h3>
-                    <p>PC、タブレット、スマートフォンなど、<span class="no-break">あらゆるデバイスから快適に利用できる</span>デザインを提供。場所を選ばずに業務を行えます。</p>
-                </div>
-                <div class="column-item">
-                    <h3>既存システムとのシームレスな連携</h3>
-                    <p>現在お使いの基幹システムやSaaSツールと連携し、<span class="no-break">データフローをスムーズにします。</span>手動でのデータ移行や入力作業をなくします。</p>
-                </div>
+            <h2>技術スタック</h2>
+            <div class="skills-grid" style="justify-content: center; margin-top: 30px;">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">FastAPI</span>
+                <span class="skill-badge">Flask</span>
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">SQLAlchemy</span>
+                <span class="skill-badge">PostgreSQL</span>
+                <span class="skill-badge">Docker</span>
+                <span class="skill-badge">GitHub Actions</span>
+                <span class="skill-badge">OAuth 2.0</span>
             </div>
         </div>
     </section>
 
-    <section id="lp-case-study">
+    <section id="contact">
         <div class="container">
-            <h2><span class="highlight">導入事例:</span> 採用管理Webアプリケーション</h2>
-            <p class="sub-heading">煩雑な採用業務をWebアプリで一元管理</p>
-            <div class="case-study-content">
-                <div class="video-container case-study-video">
-                    <video src="../images/webapp/recruitment-management-system-demo.mp4" controls></video>
-                </div>
-                <p>このプロジェクトでは、<span class="no-break">手作業や複数のツールに分散していた採用業務</span>を効率化するため、FlaskとSQLiteを用いたWebベースの採用管理システムを開発しました。候補者情報の登録、ステータス更新、検索機能を実装し、採用担当者の業務効率を大幅に向上させました。</p>
-                <p><strong>導入効果:</strong></p>
-                <ul>
-                    <li>候補者情報が<span class="highlight no-break">一元管理</span>され、情報共有がスムーズに。</li>
-                    <li>採用プロセスの<span class="no-break">「見える化」</span>により、進捗状況をリアルタイムで把握。</li>
-                    <li>データ入力ミスが減り、<span class="no-break">採用担当者の負担を大幅に軽減</span>。</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-voice" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">お客様の声</span> - 導入された企業様からの評価</h2>
-            <div class="three-column-grid">
-                <div class="voice-item">
-                    <p class="voice-text">「私たちの複雑な業務フローに完璧に合ったWebアプリを開発していただきました。Excelでの管理から解放され、業務効率が劇的に改善しました。鶴村さんのヒアリング力と提案力は素晴らしいです。」</p>
-                    <p class="voice-meta"><strong>お客様の声1</strong></p>
-                </div>
-                <div class="voice-item">
-                    <p class="voice-text">「『こんな機能が欲しかった』という私たちの要望を、期待以上の形で実現してくれました。デザインも直感的で使いやすく、社員からの評判も上々です。本当に頼んでよかったです。」</p>
-                    <p class="voice-meta"><strong>お客様の声2</strong></p>
-                </div>
-                <div class="voice-item">
-                    <p class="voice-text">「開発プロセスが非常にスムーズでした。こまめに進捗を報告してくれたので、安心して任せられました。アフターサポートもしっかりしていて、長く使っていけるシステムだと感じています。」</p>
-                    <p class="voice-meta"><strong>お客様の声3</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-price">
-        <div class="container">
-            <h2><span class="highlight">料金プラン</span> - あなたのビジネスに最適な選択を</h2>
-            <p class="sub-heading">まずは無料相談で、最適なプランをご提案いたします。</p>
-            <div class="three-column-grid">
-                <div class="price-item">
-                    <h3>エントリープラン</h3>
-                    <p>小規模なデータ管理、シンプルなWebアプリに。</p>
-                    <ul>
-                        <li>基本CRUD機能 (登録・参照・更新・削除)</li>
-                        <li>ユーザー認証機能</li>
-                        <li>SQLiteデータベース</li>
-                    </ul>
-                    <p class="price-estimate">15万円〜</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-                <div class="price-item">
-                    <h3>スタンダードプラン</h3>
-                    <p>複数ユーザーでの利用、レポート機能を含むWebアプリに。</p>
-                    <ul>
-                        <li>エントリープランの全機能</li>
-                        <li>複数ユーザー管理・権限設定</li>
-                        <li>データ検索・フィルタリング機能</li>
-                        <li>CSVエクスポート機能</li>
-                    </ul>
-                    <p class="price-estimate">30万円〜</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-                <div class="price-item">
-                    <h3>プロフェッショナルプラン</h3>
-                    <p>既存システム連携、大規模データ対応、カスタム機能など。</p>
-                    <ul>
-                        <li>お客様の要望に応じたフルカスタマイズ</li>
-                        <li>既存システムとのAPI連携</li>
-                        <li>PostgreSQLなどの大規模データベース対応</li>
-                        <li>継続的な保守・改善サポート</li>
-                    </ul>
-                    <p class="price-estimate">個別見積もり</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-            </div>
-            <p class="note">※上記金額は目安です。詳細はお問い合わせください。<br>お客様の課題と目標をヒアリングし、最適なソリューションをご提案します。</p>
-        </div>
-    </section>
-
-    <section id="lp-flow" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">導入までの流れ</span> - スムーズなWebアプリ導入をサポート</h2>
-            <div class="flow-grid">
-                <div class="flow-item">
-                    <div class="flow-number">1</div>
-                    <h3>ヒアリング・要件定義</h3>
-                    <p>お客様の業務内容、課題、システム化の目的を詳細にお伺いし、Webアプリケーションの要件を明確にします。現状分析から未来の姿まで、徹底的にすり合わせます。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">2</div>
-                    <h3>設計・開発</h3>
-                    <p>定義された要件に基づき、データベース設計、UI/UX設計、そしてアプリケーションの開発を行います。透明性の高い開発プロセスで、進捗を共有します。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">3</div>
-                    <h3>テスト・調整</h3>
-                    <p>開発したアプリケーションの動作テストを行い、お客様からのフィードバックを元に調整・改善を行います。納得がいくまで徹底的に。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">4</div>
-                    <h3>納品・運用開始</h3>
-                    <p>最終確認後、アプリケーションを納品し、運用を開始します。必要に応じて運用サポートも提供し、長期的な成功を支援します。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-faq">
-        <div class="container">
-            <h2><span class="highlight">よくある質問</span> - あなたの疑問を解消します</h2>
-            <dl>
-                <dt>Q: 開発期間はどのくらいですか？</dt>
-                <dd>A: ご要望の機能や複雑さによりますが、シンプルなWebアプリケーションであれば最短1ヶ月程度で開発可能です。詳細な期間はヒアリング後にお伝えします。</dd>
-
-                <dt>Q: どのような情報が必要ですか？</dt>
-                <dd>A: 業務フロー、管理したいデータの内容、既存システムとの連携要件などをお伺いします。データがない場合でも、作成支援が可能です。</dd>
-
-                <dt>Q: プログラミングの知識がなくても運用できますか？</dt>
-                <dd>A: はい、ご安心ください。お客様がプログラミング知識がなくても簡単に操作できるよう、直感的な管理画面やマニュアルを提供します。</dd>
-
-                <dt>Q: 開発後のサポートはありますか？</dt>
-                <dd>A: はい、運用開始後のサポートも承っております。ツールの改善や機能追加など、長期的な視点でビジネスの成長を支援します。お気軽にご相談ください。</dd>
-            </dl>
-        </div>
-    </section>
-
-    <section id="contact" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">今すぐ、ビジネスを加速。</span>無料相談・特別見積もりはこちら</h2>
-            <p class="sub-heading">期間限定！今ならWebアプリ導入に関する無料コンサルティングも実施中。</p>
-            <form action="https://script.google.com/macros/s/AKfycbxdzSL9eQ6j37nxcFMGOTmevhzRdIwr2L46FfnVqRU5hSSd7MCXFb0fvUD2qwV7c0TRGw/exec" method="POST">
-                <input type="text" name="name" placeholder="お名前" required>
-                <input type="email" name="email" placeholder="メールアドレス" required>
-                <textarea name="message" placeholder="お問い合わせ内容" rows="5" required></textarea>
-                <button type="submit" class="btn contact-btn">無料相談を申し込む</button>
+            <h2>システム開発のご相談はこちらから</h2>
+            <p class="sub-heading">技術選定から設計、実装までサポートいたします。</p>
+            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
+                <label for="name" class="sr-only">お名前</label>
+                <input type="text" id="name" name="name" placeholder="お名前" required>
+                <label for="email" class="sr-only">メールアドレス</label>
+                <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                <label for="message" class="sr-only">お問い合わせ内容</label>
+                <textarea id="message" name="message" placeholder="開発したいシステムの概要や、技術的な要件についてお書きください。" rows="5" required></textarea>
+                <button type="submit" class="btn contact-btn">相談を申し込む</button>
             </form>
-            <p class="ps-text"><strong>追伸：</strong>この機会を逃さないでください。Webアプリケーション導入は、<span class="no-break">生産効率化と競争力強化を実現</span>し、ビジネスを加速させるための最重要戦略です。今すぐ行動を起こし、あなたのビジネスを次のステージへ。</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 CraneAI. All rights reserved.</p>
-            <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+            <p><a href="../index.html">Home</a> | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
-
-    <!-- Floating CTA Button -->
-    <a href="#contact" class="floating-btn">
-        <i class="fas fa-envelope"></i> 無料相談はこちら
-    </a>
 </body>
 </html>

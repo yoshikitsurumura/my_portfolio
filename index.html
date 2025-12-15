@@ -117,7 +117,7 @@
         <div class="container">
             <div class="hero-content-wrapper">
                 <video autoplay muted loop id="hero-video" aria-label="AIと業務効率化を表現する動画">
-                    <source src="images/hero-video-2.mp4" type="video/mp4">
+                    <source src="images/hero-video-2.mp4?v=20241214" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="hero-content">
@@ -134,18 +134,18 @@
             <h2>提供<span class="highlight">サービス</span></h2>
             <div class="service-grid">
                 <div class="service-item">
-                    <h3>業務改善DX<span class="no-break">／RAG構築</span></h3>
-                    <p>生成AIと業務データを掛け合わせた<span class="no-break">RAG（Retrieval-Augmented Generation）</span>基盤を構築し、現場の<span class="no-break">業務改善DX</span>を推進。Google Workspace／Microsoft 365連携、ノーコード自動化、ログ設計までワンストップで支援します。</p>
+                    <h3>業務改善DX<span class="no-break">／RAG・OCR構築</span></h3>
+                    <p>生成AI（Gemini/GPT）と業務データを掛け合わせた<span class="no-break">RAG構築</span>や、高精度な<span class="no-break">AI-OCR開発</span>を提供。紙媒体のデジタル化から、社内ナレッジの検索基盤構築まで、現場の「手間」を技術でゼロにします。</p>
                     <a href="pages/business-automation-tool.html" class="btn-small">詳細を見る</a>
                 </div>
                 <div class="service-item">
                     <h3>AI<span class="no-break">チャットボット開発</span></h3>
-                    <p>Gemini／GPTとDiscord・LINEなどのチャネルを連携させ、24時間稼働の<span class="no-break">AIチャットボット</span>を設計・開発。プロンプト設計、回答ガードレール、会話ログ分析まで整備し、運用改善を高速化します。</p>
+                    <p>Discord / LINE / Slack 等と連携する高品質な<span class="no-break">AIチャットボット</span>を設計・開発。金融サロン等での導入実績があり、回答ガードレール、ログ分析、ハルシネーション対策まで完備した「安心して使える」Botを構築します。</p>
                     <a href="pages/ai-chatbot-development.html" class="btn-small">詳細を見る</a>
                 </div>
                 <div class="service-item">
-                    <h3>汎用<span class="no-break">Webアプリケーション開発</span></h3>
-                    <p>Python（Flask／FastAPI）とPostgreSQL等を用いて、業務プロセスを可視化する<span class="no-break">Webアプリケーション開発</span>を実施。API／外部SaaS連携、GitHub Actionsでの運用自動化まで一気通貫で対応します。</p>
+                    <h3>Webアプリ開発<span class="no-break">／SaaS連携</span></h3>
+                    <p>Python (FastAPI/Flask) / TypeScript を用いた<span class="no-break">Webアプリケーション開発</span>。Google Workspace / Microsoft 365 のOAuth認証連携や、採用管理システム等の業務ツール開発など、バックエンドからフロントまで一貫対応します。</p>
                     <a href="pages/web-app-development.html" class="btn-small">詳細を見る</a>
                 </div>
             </div>
@@ -154,19 +154,22 @@
 
     <section id="achievements">
         <div class="container">
-            <h2>主な<span class="highlight">実績</span></h2>
+            <h2>主要<span class="highlight">プロジェクト実績</span></h2>
             <div class="achievement-grid">
                 <div class="achievement-item">
-                    <h3>金融サロン向けDiscord AIチャットボット</h3>
-                    <p>Gemini API × Google Apps Script × Discordで構築。35個の金融ナレッジベースを整備し、投資助言防止のガードレール機能を実装。月額100円の低コストで24時間稼働、自動回答率90%を達成。</p>
+                    <h3>個人病院向け OCR自動処理システム</h3>
+                    <p class="tech-stack"><span class="skill-badge">Python</span> <span class="skill-badge">FastAPI</span> <span class="skill-badge">Gemini 2.5 Pro</span> <span class="skill-badge">Docker</span></p>
+                    <p style="text-align: left; margin-top: 15px;">公費受給者証の情報をカメラで読み取り、自動でデータベース化するシステムを構築。Gemini APIを用いた高度なプロンプトエンジニアリングにより、複雑なレイアウトの非定型帳票でも高精度な抽出を実現。医療現場の事務作業負担を大幅に削減。</p>
                 </div>
                 <div class="achievement-item">
-                    <h3>Google / Microsoft 365統合ツール開発</h3>
-                    <p>AIエージェントプラットフォーム「Patto AI」向けに、Google Workspace（Calendar/Docs/Sheets/Drive/Gmail）とMicrosoft 365（Outlook/OneDrive/SharePoint/Teams）の統合機能を実装。OAuth認証フロー、TypeScript + Bun + Honoのモノレポ構成で開発。</p>
+                    <h3>金融サロン向け Discord AI Bot</h3>
+                    <p class="tech-stack"><span class="skill-badge">Node.js</span> <span class="skill-badge">Gemini Flash 2.5</span> <span class="skill-badge">Discord API</span></p>
+                    <p style="text-align: left; margin-top: 15px;">投資サロン内での質問に自動回答するAI Botを開発。35件以上の専門ナレッジベースを整備し、投資助言に抵触しないよう厳格なガードレールを実装。月額100円以下の低コスト運用で、コミュニティ運営を24時間サポート。</p>
                 </div>
                 <div class="achievement-item">
-                    <h3>採用管理システム & 業務自動化ツール</h3>
-                    <p>CSV + Pythonによる採用管理システム構築。入出力スキーマ定義、バリデーション、集計、レポート生成まで一括化。教育業界では、Excel（VBA/マクロ）を用いたDX推進で生徒数126%、季節講習売上202%向上を実現。</p>
+                    <h3>Google / Microsoft 統合連携モジュール</h3>
+                    <p class="tech-stack"><span class="skill-badge">TypeScript</span> <span class="skill-badge">OAuth 2.0</span> <span class="skill-badge">Google/MS Graph API</span></p>
+                    <p style="text-align: left; margin-top: 15px;">AIエージェントサービス「Patto AI」向けの共通連携機能を実装。Gmail, Calendar, Drive, Outlook, Teams, OneDrive等へのOAuth認証フローとAPI接続を単一モジュール化。エラーハンドリングやリトライ処理も共通化し、開発効率を向上。</p>
                 </div>
             </div>
         </div>
@@ -174,17 +177,19 @@
 
     <section id="profile" class="section-bg">
         <div class="container">
-            <h2>私の<span class="highlight">プロフィール</span></h2>
+            <h2><span class="highlight">プロフィール</span></h2>
 
             <div class="profile-intro-split">
                 <div class="profile-img-container-left">
-                    <img src="images/tsurumurayoshiki_white_bg.png" alt="鶴村佳輝のプロフィール写真 - AIと業務効率化コンサルタント" class="profile-img" loading="lazy">
+                    <img src="images/tsurumurayoshiki_white_bg.png" alt="鶴村佳輝 - AIエンジニア" class="profile-img" loading="lazy">
                 </div>
                 <div class="profile-summary-right">
                     <h3>鶴村佳輝（つるむら よしき）</h3>
-                    <p>神戸大学工学部を卒業後、教育現場での経験を経て、AIと業務効率化の道へ。非エンジニアだからこそわかる「本当に使える」ソリューションを提供し、ビジネスの生産性向上を支援しています。</p>
-                    <p class="personal-quote">「為せば成る」どんな困難な課題でも、必ず解決策はあると信じています。</p>
-                    <p class="personal-hobby"><i class="fas fa-gamepad"></i> 趣味: 読書、プログラミング、新しいAIツールの探求</p>
+                    <p style="margin-bottom: 5px;">AIエンジニア / 業務改善コンサルタント</p>
+                    <p style="font-size: 0.9em; color: #aaa; margin-bottom: 15px;">1995年生まれ / 神戸大学 工学部卒</p>
+                    <p>「現場の泥臭い課題」を「最先端のAI技術」で解決するエンジニア。教育業界での教室運営経験（生徒数126%増、売上202%増達成）を持ち、現場目線での課題発見と解決が得意です。Pythonバックエンド開発からGenerative AIの社会実装まで幅広く対応します。</p>
+                    <p class="personal-quote">「技術は、人のためにあってこそ輝く」</p>
+                    <p class="personal-hobby"><i class="fas fa-code"></i> 得意: Python, TypeScript, 生成AI活用, 業務自動化</p>
                 </div>
             </div>
 
@@ -197,53 +202,48 @@
                         <div class="timeline-item">
                             <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
                             <div class="timeline-content">
-                                <h4>神戸大学工学部 卒業</h4>
-                                <p>同大学大学院に進学</p>
+                                <h4>神戸大学 工学部 応用化学科 卒業</h4>
+                                <p>2019年3月卒業。その後、同大学院 工学研究科へ進学。</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
                             <div class="timeline-content">
-                                <h4>大手教育塾 キャリアスタート</h4>
-                                <p>約4年間、副教室長として教室運営・進捗管理・教材企画・講師育成に携わる。Excelやスプレッドシートを用いた進捗管理の仕組み化により、生徒数は前年度比126%アップ、季節講習販売実績は前年度比202%を達成。</p>
+                                <h4>株式会社立志（教室運営管理）</h4>
+                                <p>2021年4月〜2025年6月。教室副室長として、教室運営・進捗管理・講師マネジメント（21名）に従事。Excel/VBA/GASを駆使した業務ツールを自作し、現場のDXを推進。生徒数・講習売上ともに大幅な成長を実現。</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
                             <div class="timeline-content">
-                                <h4>AI・業務効率化の道へ</h4>
-                                <p>教育現場での「非効率」を目の当たりにし、2024年より業務効率化やAIツールの可能性に着目し副業を開始。2025年より独立し、AIを使った業務ツールやチャットボットの開発に注力。</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon"><i class="fas fa-code"></i></div>
-                            <div class="timeline-content">
-                                <h4>現在の活動</h4>
-                                <p>Python／Node.js／TypeScriptを中心に、FastAPI／Flask、GitHub Actions、Docker、REST API／Webhooksなどの技術スタックを扱い、Google Workspace／Microsoft 365連携の実装にも従事。GeminiとGASとDiscordを組み合わせたチャットボットを構築し、プロンプト設計・回答ガードレール・ログ分析を整備。</p>
+                                <h4>フリーランス独立</h4>
+                                <p>2025年6月〜現在。<br>AI×業務効率化を軸に活動中。個人病院のDX支援、金融サロンのBot開発、AI SaaS企業の技術支援など、クライアントワークを中心に展開。</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="profile-card">
-                    <h3><i class="fas fa-tools highlight"></i> スキルセット</h3>
+                    <h3><i class="fas fa-tools highlight"></i> 技術スタック</h3>
                     <div class="skills-grid">
-                        <span class="skill-badge">Python (FastAPI, Flask)</span>
-                        <span class="skill-badge">Node.js</span>
-                        <span class="skill-badge">TypeScript</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">HTML/CSS</span>
-                        <span class="skill-badge">Git</span>
-                        <span class="skill-badge">GitHub</span>
-                        <span class="skill-badge">VSCode</span>
-                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge" style="border-color: #ff007f; color: #fff;">Python (FastAPI, Flask)</span>
+                        <span class="skill-badge" style="border-color: #ff007f; color: #fff;">TypeScript / Node.js</span>
+                        <span class="skill-badge">Gemini API / OpenAI API</span>
+                        <span class="skill-badge">LangChain / RAG</span>
                         <span class="skill-badge">Google Apps Script</span>
-                        <span class="skill-badge">Gemini API</span>
-                        <span class="skill-badge">ChatGPT API</span>
-                        <span class="skill-badge">LINE Messaging API</span>
-                        <span class="skill-badge">Discord API</span>
-                        <span class="skill-badge">Google Workspace連携</span>
-                        <span class="skill-badge">Microsoft 365連携</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Git / GitHub Actions</span>
+                        <span class="skill-badge">PostgreSQL / SQL</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">VBA / Excel Macro</span>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h4 style="color: #00f0ff; margin-bottom: 10px; font-size: 1.1em;">強み</h4>
+                        <ul style="list-style: none; padding: 0; text-align: left; color: #e0e0e0;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #00f0ff; margin-right: 8px;"></i>現場データのデジタル化・自動化設計</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #00f0ff; margin-right: 8px;"></i>AIの「ハルシネーション」を抑えた実用的なBot構築</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #00f0ff; margin-right: 8px;"></i>非エンジニアの方にも分かりやすい丁寧な折衝</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -278,7 +278,7 @@
         <div class="container">
             <h2><span class="highlight">お問い合わせ</span></h2>
             <p class="contact-description">AIを活用した業務改善、自動化ツールの開発、Webアプリケーション開発など、お気軽にご相談ください。</p>
-            <form action="https://script.google.com/macros/s/AKfycbxdzSL9eQ6j37nxcFMGOTmevhzRdIwr2L46FfnVqRU5hSSd7MCXFb0fvUD2qwV7c0TRGw/exec" method="POST">
+            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
                 <label for="name" class="sr-only">お名前</label>
                 <input type="text" id="name" name="name" placeholder="お名前" required aria-label="お名前を入力してください">
                 <label for="email" class="sr-only">メールアドレス</label>

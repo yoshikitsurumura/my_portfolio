@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIチャットボット開発 | 鶴村佳輝</title>
-    <meta name="description" content="顧客対応や社内からの問い合わせに追われていませんか？AIチャットボットが24時間365日対応を自動化。Gemini APIやRAG技術を活用し、LINEやWebサイトでの業務効率と顧客満足度を向上させます。具体的な導入事例も掲載中。">
-    <meta name="keywords" content="AIチャットボット,LINE連携,Webサイト連携,Gemini API,RAG技術,24時間対応,顧客対応自動化">
-    <meta property="og:title" content="AIチャットボット開発 | CraneAI">
-    <meta property="og:description" content="24時間365日対応するAIチャットボットで顧客対応を自動化。Gemini APIやRAG技術を活用した高精度なソリューション。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://craneai.jp/ai-chatbot-development.html">
-    <link rel="canonical" href="https://craneai.jp/ai-chatbot-development.html">
+    <title>AIチャットボット開発 | CraneAI</title>
+    <meta name="description" content="Discord/LINEと連携する高精度AIチャットボット開発。金融サロン導入実績あり。回答ガードレール、ハルシネーション対策、ログ分析まで完備した安心設計。">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../images/chatbot_icon_new.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -29,270 +22,138 @@
         <div class="container">
             <div class="header-top">
                 <h1><a href="../index.html">CraneAI</a></h1>
-                <h2>AIチャットボット開発</h2>
                 <div class="header-social">
                     <a href="https://github.com/yoshikitsurumura" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://x.com/atamahakidashi" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <p>あなたのビジネスに、<span class="no-break">24時間働くAIアシスタント</span>を。</p>
+            <p>24時間365日、<span class="no-break">コミュニティを活性化するAIパートナー。</span></p>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#lp-features">Features</a></li>
-                    <li><a href="#lp-case-study">Case Study</a></li>
-                    <li><a href="#lp-voice">Testimonials</a></li>
-                    <li><a href="#lp-price">Pricing</a></li>
-                    <li><a href="#lp-flow">Process</a></li>
-                    <li><a href="#lp-faq">FAQ</a></li>
+                    <li><a href="#cb-features">Features</a></li>
+                    <li><a href="#cb-case">Case Study</a></li>
+                    <li><a href="#cb-tech">Tech Stack</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="lp-hero" class="chatbot-hero">
+    <section id="lp-hero">
         <div class="container">
             <div class="lp-hero-wrapper">
                 <div class="lp-hero-content">
-                    <h2><span class="highlight no-break">顧客対応の未来を変える。</span><br> AIチャットボットで、あなたのビジネスは<br><span class="highlight no-break">24時間365日</span>進化する。</h2>
-                    <p>もう、<span class="no-break">問い合わせ対応に時間を奪われる</span>ことはありません。<br>AIが顧客の疑問に即座に答え、あなたは本来のコア業務に集中できます。<br>今すぐ、新しい顧客体験を創造しましょう。</p>
-                    <a href="#contact" class="btn hero-btn">無料相談・特別見積もりはこちら</a>
+                    <h2><span class="highlight no-break">「安心」して任せられる</span><br>高精度AIチャットボット。<br></h2>
+                    <p>Discord / LINE / Slack 上で動作するAIアシスタントを開発。<br>単なる自動応答だけでなく、<span class="no-break">厳格な回答ガードレール</span>と<span class="no-break">専門ナレッジベース</span>を組み合わせ、質の高いコミュニケーションを実現します。</p>
+                    <a href="#contact" class="btn hero-btn">開発について相談する</a>
                 </div>
                 <div class="lp-hero-video">
-                            <video src="../images/CHATBOTLP/ai-chatbot-hero.mp4" autoplay muted loop></video>
+                    <!-- チャットボットのデモ動画があれば差し替え -->
+                    <video autoplay muted loop playsinline>
+                        <source src="../images/hero-video-2.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--
-    <section id="lp-problems" class="section-bg">
+    <section id="cb-features" class="section-bg">
         <div class="container">
-            <h2>もし、あなたがこんな悩みを抱えているなら…</h2>
-            <p class="sub-heading">AIチャットボットが、その課題を根本から解決します。</p>
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <h3><i class="fas fa-clock"></i> 時間に追われる日々</h3>
-                    <p>顧客からの問い合わせ対応に追われ、本来の業務に集中できない。残業が増え、従業員の疲弊も。</p>
+            <h2>CraneAI Botの<span class="highlight">3つの強み</span></h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3><i class="fas fa-shield-alt highlight"></i> 厳格なガードレール設計</h3>
+                    <p>「投資助言は行わない」「競合他社の話題は避ける」など、ビジネスルールに基づいた<span class="no-break">回答制限（ガードレール）</span>をプロンプトレベルで実装。AIの暴走を防ぎます。</p>
                 </div>
-                <div class="problem-item">
-                    <h3><i class="fas fa-frown"></i> 顧客満足度の壁</h3>
-                    <p>人手不足で顧客対応が遅れがち。顧客満足度を上げたいのに、十分なサポートを提供できていない。</p>
+                <div class="service-item">
+                    <h3><i class="fas fa-database highlight"></i> 独自ナレッジの学習</h3>
+                    <p>過去のQ&A、マニュアル、規約などをベクトルデータベース化。RAG技術により、<span class="no-break">貴社独自の正確な情報</span>に基づいて回答します。</p>
                 </div>
-                <div class="problem-item">
-                    <h3><i class="fas fa-question-circle"></i> 情報の迷宮</h3>
-                    <p>FAQが多すぎて、顧客が知りたい情報にたどり着けない。電話やメールでの問い合わせが減らない。</p>
-                </div>
-                <div class="problem-item">
-                    <h3><i class="fas fa-dollar-sign"></i> 高まる運用コスト</h3>
-                    <p>24時間体制での顧客サポートを実現したいが、人件費やシステム導入コストが高く、踏み出せない。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    <section id="lp-problems-v2" class="section-bg">
-        <div class="container">
-            <h2>もし、あなたがこんな悩みを抱えているなら…</h2>
-            <p class="sub-heading">AIチャットボットが、その課題を根本から解決します。</p>
-            <div class="problem-grid-v2">
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-clock"></i> 時間に追われる日々</h3>
-                    <p>顧客からの問い合わせ対応に追われ、本来の業務に集中できない。残業が増え、従業員の疲弊も。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-frown"></i> 顧客満足度の壁</h3>
-                    <p>人手不足で顧客対応が遅れがち。顧客満足度を上げたいのに、十分なサポートを提供できていない。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-question-circle"></i> 情報の迷宮</h3>
-                    <p>FAQが多すぎて、顧客が知りたい情報にたどり着けない。電話やメールでの問い合わせが減らない。</p>
-                </div>
-                <div class="problem-item-v2">
-                    <h3><i class="fas fa-dollar-sign"></i> 高まる運用コスト</h3>
-                    <p>24時間体制での顧客サポートを実現したいが、人件費やシステム導入コストが高く、踏み出せない。</p>
+                <div class="service-item">
+                    <h3><i class="fas fa-coins highlight"></i> 圧倒的なコストパフォーマンス</h3>
+                    <p>最新のGemini Flash 2.5 モデル等を活用し、<span class="no-break">高速かつ低コスト</span>な運用を実現。月額数百円レベルからの運用も可能です。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="lp-features" class="section-bg">
+    <section id="cb-case">
         <div class="container">
-            <h2>AIチャットボット導入で、<br>あなたのビジネスはこう変わる！</h2>
+            <h2><span class="highlight">導入事例:</span> 金融オンラインサロン向けBot</h2>
+            <div class="profile-detail-grid">
+                <div class="profile-card" style="width: 100%;">
+                    <h3><i class="fab fa-discord highlight"></i> Discord コミュニティ自動応答Bot</h3>
+                    <div style="text-align: left; margin-top: 20px;">
+                        <p><strong>課題:</strong> 会員数増加に伴い、「サロンの使い方」や「基礎的な金融知識」に関する質問が重複し、オーナーの対応工数が圧迫されていた。</p>
+                        <p style="margin-top: 15px;"><strong>解決策:</strong> <span class="highlight">Node.js + Gemini API</span>を用いたDiscord Botを開発。</p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
+                            <li><strong>ナレッジ整備:</strong> 35件以上のFAQ、用語集を整備しRAG化。</li>
+                            <li><strong>ガードレール:</strong> 金融商品取引法に抵触する恐れのある「個別銘柄の推奨」などを絶対に行わないよう制御。</li>
+                            <li><strong>コスト最適化:</strong> Gemini 1.5 Flashを採用し、サーバーレス構成（またはVPS最小構成）で月額コストを100円以下に抑制。</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>成果:</strong> 基礎的な質問の<span class="highlight">90%を自動回答</span>。オーナーは付加価値の高い発信に集中可能に。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cb-tech" class="section-bg">
+        <div class="container">
+            <h2>対応プラットフォーム・技術</h2>
             <div class="three-column-grid">
                 <div class="column-item">
-                    <h3><i class="fas fa-chart-line"></i> 業務効率が劇的に向上</h3>
-                    <p>AIが定型的な問い合わせを自動で処理。従業員はより重要な業務に集中でき、生産性が飛躍的に向上します。</p>
+                    <h3>Integrations</h3>
+                    <div class="skills-grid" style="justify-content: center;">
+                        <span class="skill-badge"><i class="fab fa-discord"></i> Discord</span>
+                        <span class="skill-badge"><i class="fab fa-line"></i> LINE</span>
+                        <span class="skill-badge"><i class="fab fa-slack"></i> Slack</span>
+                        <span class="skill-badge">Chatwork</span>
+                    </div>
                 </div>
                 <div class="column-item">
-                    <h3><i class="fas fa-star"></i> 顧客満足度が最大化</h3>
-                    <p>24時間365日、顧客の疑問に即座に回答。待ち時間なく情報が得られることで、顧客体験が向上し、リピート率もアップ。</p>
+                    <h3>AI Models</h3>
+                    <div class="skills-grid" style="justify-content: center;">
+                        <span class="skill-badge">Gemini Pro / Flash</span>
+                        <span class="skill-badge">GPT-4o</span>
+                        <span class="skill-badge">Claude 3.5 Sonnet</span>
+                    </div>
                 </div>
                 <div class="column-item">
-                    <h3><i class="fas fa-database"></i> データに基づいた経営判断</h3>
-                    <p>チャットボットの会話データを分析し、顧客のニーズや傾向を把握。サービス改善や新商品開発に活かせます。</p>
+                    <h3>Backend</h3>
+                    <div class="skills-grid" style="justify-content: center;">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Google Apps Script</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="lp-case-study">
+    <section id="contact">
         <div class="container">
-            <h2><span class="highlight">導入事例:</span> 音声AIチャットボットによる問い合わせ対応</h2>
-            <p class="sub-heading">Webサイトに音声入力機能を統合し、ユーザー体験を革新</p>
-            <div class="case-study-content">
-                <div class="video-container case-study-video">
-                    <video src="../images/CHATBOTLP/voice-ai-chatbot-demo.mp4" controls></video>
-                </div>
-                <p>このプロジェクトでは、Webサイト訪問者が抱える「テキスト入力の手間」という課題を解決するため、音声認識・応答が可能なAIチャットボットを開発しました。ユーザーはマイクに向かって話すだけで質問でき、AIが即座に音声で回答します。これにより、PC操作に不慣れな方や、移動中で手が離せないユーザーでも、スムーズに情報収集が可能になります。</p>
-                <p><strong>導入効果:</strong></p>
-                <ul>
-                    <li>音声による直感的な操作で、<span class="highlight no-break">ユーザーの離脱率が低下</span>し、エンゲージメントが向上。</li>
-                    <li>問い合わせのハードルが下がり、<span class="highlight no-break">潜在的な顧客からのコンタクトが増加</span>。</li>
-                    <li>24時間自動で一次対応を完結させることで、<span class="highlight no-break">オペレーターの負担を大幅に軽減</span>し、より複雑な問題に集中できる環境を実現しました。</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-testimonials" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">お客様の声</span> - 導入された企業様からの評価</h2>
-            <div class="three-column-grid">
-                <div class="column-item">
-                    <p class="voice-text">「問い合わせ対応が本当に楽になりました。AIチャットボットが24時間365日、お客様の質問に答えてくれるので、夜間や休日の対応も安心です。おかげで、スタッフの負担が大幅に減りました。」</p>
-                    <p class="voice-meta"><strong>お客様の声1</strong></p>
-                </div>
-                <div class="column-item">
-                    <p class="voice-text">「導入前は、同じような質問に何度も答えるのが大変でした。鶴村さんのチャットボットは、FAQを的確に提示してくれるので、私たちの手間が省けるだけでなく、お客様もすぐに答えを見つけられるので満足度が高いです。」</p>
-                    <p class="voice-meta"><strong>お客様の声2</strong></p>
-                </div>
-                <div class="column-item">
-                    <p class="voice-text">「音声で質問できるのが画期的です。お客様からも『操作が簡単で使いやすい』と好評です。AIの回答精度も高く、複雑な質問にも対応してくれるので、本当に助かっています。」</p>
-                    <p class="voice-meta"><strong>お客様の声3</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-price">
-        <div class="container">
-            <h2><span class="highlight">料金プラン</span> - あなたのビジネスに最適な選択を</h2>
-            <p class="sub-heading">まずは無料相談で、最適なプランをご提案いたします。</p>
-            <div class="three-column-grid">
-                <div class="column-item price-item">
-                    <h3>基本プラン</h3>
-                    <p>小規模なFAQ対応、シンプルなチャットボット導入に。</p>
-                    <ul>
-                        <li>AIチャットボット基本機能</li>
-                        <li>LINE/Webサイト連携</li>
-                        <li>QAデータ登録サポート (〜50件)</li>
-                    </ul>
-                    <p class="price-estimate">10万円〜</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-                <div class="column-item price-item">
-                    <h3>標準プラン</h3>
-                    <p>より高度な機能、複数プラットフォーム連携に。</p>
-                    <ul>
-                        <li>基本プランの全機能</li>
-                        <li>複数プラットフォーム連携</li>
-                        <li>QAデータ登録サポート (〜200件)</li>
-                        <li>簡易データ分析レポート</li>
-                    </ul>
-                    <p class="price-estimate">20万円〜</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-                <div class="column-item price-item">
-                    <h3>カスタムプラン</h3>
-                    <p>RAG導入、外部API連携など、フルカスタマイズ対応。</p>
-                    <ul>
-                        <li>お客様の要望に応じたフルカスタマイズ</li>
-                        <li>RAG（Retrieval-Augmented Generation）導入</li>
-                        <li>既存システムとの連携</li>
-                        <li>継続的な運用サポート</li>
-                    </ul>
-                    <p class="price-estimate">個別見積もり</p>
-                    <a href="#contact" class="btn price-btn">このプランで相談する</a>
-                </div>
-            </div>
-            <p class="note">※上記金額は目安です。詳細はお問い合わせください。<br>お客様の課題と目標をヒアリングし、最適なソリューションをご提案します。</p>
-        </div>
-    </section>
-
-    <section id="lp-flow" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">導入までの流れ</span> - スムーズなAI導入をサポート</h2>
-            <div class="flow-grid">
-                <div class="flow-item">
-                    <div class="flow-number">1</div>
-                    <h3>ヒアリング・要件定義</h3>
-                    <p>お客様の課題、目的、ご要望を詳細にお伺いし、最適なチャットボットの要件を定義します。現状分析から未来の姿まで、徹底的にすり合わせます。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">2</div>
-                    <h3>設計・開発</h3>
-                    <p>定義された要件に基づき、AIチャットボットの設計、開発、実装を行います。透明性の高い開発プロセスで、進捗を共有します。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">3</div>
-                    <h3>テスト・調整</h3>
-                    <p>開発したチャットボットの動作テストを行い、お客様からのフィードバックを元に調整・改善を行います。納得がいくまで徹底的に。</p>
-                </div>
-                <div class="flow-item">
-                    <div class="flow-number">4</div>
-                    <h3>納品・運用開始</h3>
-                    <p>最終確認後、チャットボットを納品し、運用を開始します。必要に応じて運用サポートも提供し、長期的な成功を支援します。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="lp-faq">
-        <div class="container">
-            <h2><span class="highlight">よくある質問</span> - あなたの疑問を解消します</h2>
-            <dl>
-                <dt>Q: 開発期間はどのくらいですか？</dt>
-                <dd>A: ご要望の機能や複雑さによりますが、シンプルなチャットボットであれば最短2週間程度で開発可能です。詳細な期間はヒアリング後にお伝えします。</dd>
-
-                <dt>Q: どのようなデータが必要ですか？</dt>
-                <dd>A: FAQデータや、チャットボットに学習させたい情報をご提供いただきます。Googleスプレッドシート形式でのご提供がスムーズです。データがない場合でも、作成支援が可能です。</dd>
-
-                <dt>Q: プログラミングの知識がなくても運用できますか？</dt>
-                <dd>A: はい、ご安心ください。お客様がプログラミング知識がなくても簡単に操作できるよう、直感的な管理画面やマニュアルを提供します。</dd>
-
-                <dt>Q: 開発後のサポートはありますか？</dt>
-                <dd>A: はい、運用開始後のサポートも承っております。AIの精度向上や機能追加など、長期的な視点でビジネスの成長を支援します。お気軽にご相談ください。</dd>
-            </dl>
-        </div>
-    </section>
-
-    <section id="contact" class="section-bg">
-        <div class="container">
-            <h2><span class="highlight">今すぐ、未来の顧客体験を。</span>無料相談・特別見積もりはこちら</h2>
-            <p class="sub-heading">期間限定！今ならAI導入に関する無料コンサルティングも実施中。</p>
-            <form action="https://script.google.com/macros/s/AKfycbxdzSL9eQ6j37nxcFMGOTmevhzRdIwr2L46FfnVqRU5hSSd7MCXFb0fvUD2qwV7c0TRGw/exec" method="POST">
-                <input type="text" name="name" placeholder="お名前" required>
-                <input type="email" name="email" placeholder="メールアドレス" required>
-                <textarea name="message" placeholder="お問い合わせ内容" rows="5" required></textarea>
-                <button type="submit" class="btn contact-btn">無料相談を申し込む</button>
+            <h2>コミュニティ運営を、AIで加速させる。</h2>
+            <p class="sub-heading">Botの要件定義から導入まで、並走してサポートします。</p>
+            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
+                <label for="name" class="sr-only">お名前</label>
+                <input type="text" id="name" name="name" placeholder="お名前" required>
+                <label for="email" class="sr-only">メールアドレス</label>
+                <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                <label for="message" class="sr-only">お問い合わせ内容</label>
+                <textarea id="message" name="message" placeholder="導入したいプラットフォーム（LINE/Discord等）や、用途について簡単にお書きください。" rows="5" required></textarea>
+                <button type="submit" class="btn contact-btn">開発について相談する</button>
             </form>
-            <p class="ps-text"><strong>追伸：</strong>この機会を逃さないでください。AI導入は、競合との差別化を図り、ビジネスを加速させるための最重要戦略です。今すぐ行動を起こし、あなたのビジネスを次のステージへ。</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 CraneAI. All rights reserved.</p>
-            <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+            <p><a href="../index.html">Home</a> | <a href="#">Privacy Policy</a></p>
         </div>
     </footer>
-
-    <!-- Floating CTA Button -->
-    <a href="#contact" class="floating-btn">
-        <i class="fas fa-envelope"></i> 無料相談はこちら
-    </a>
 </body>
 </html>
