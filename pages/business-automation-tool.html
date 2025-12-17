@@ -9,13 +9,7 @@
     <link rel="icon" href="../images/chatbot_icon_new.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "spzmnhi5b6");
-    </script>
+    <script src="../assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,7 +24,12 @@
             </div>
             <p>生成AI × 現場ナレッジで、<span class="no-break">ビジネスプロセスを再設計。</span></p>
             <nav>
-                <ul>
+                <button class="mobile-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="#r-features">Services</a></li>
                     <li><a href="#r-case">Case Study</a></li>
@@ -100,8 +99,9 @@
 
     <section id="r-case" class="section-bg">
         <div class="container">
-            <h2><span class="highlight">導入事例:</span> 個人病院向けOCRシステム</h2>
+            <h2><span class="highlight">導入事例:</span> 業務自動化・DX</h2>
             <div class="profile-detail-grid">
+                <!-- 事例1: 個人病院OCR -->
                 <div class="profile-card" style="width: 100%;">
                     <h3><i class="fas fa-hospital-alt highlight"></i> 公費受給者証の自動読み取り＆DB化</h3>
                     <div style="text-align: left; margin-top: 20px;">
@@ -113,6 +113,21 @@
                             <li>読み取り結果を即座に電子カルテ連携用CSVとして出力。</li>
                         </ul>
                         <p style="margin-top: 15px;"><strong>技術スタック:</strong> Python (FastAPI), Gemini API, Docker, PostgreSQL</p>
+                    </div>
+                </div>
+
+                <!-- 事例2: SES業務自動化 -->
+                <div class="profile-card" style="width: 100%;">
+                    <h3><i class="fas fa-robot highlight"></i> SES求人情報の自動抽出＆Airtable登録</h3>
+                    <div style="text-align: left; margin-top: 20px;">
+                        <p><strong>課題:</strong> 求人情報がメールで届くたびに、担当者が手作業でDBへ転記。転記ミスや対応遅延がボトルネックになっていた。</p>
+                        <p style="margin-top: 15px;"><strong>解決策:</strong> <span class="highlight">メール受信Webhook + 生成AI</span>による自動登録システムを構築。</p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
+                            <li><strong>自動抽出:</strong> メール本文から「案件名・単価・スキル・開始時期」等をJSON形式でAI抽出。</li>
+                            <li><strong>精度向上:</strong> プロンプトエンジニアリングとバリデーションにより、表記揺れや例外パターンに対応。</li>
+                            <li><strong>一気通貫:</strong> Airtableへの自動登録から通知までを自動化し、工数をほぼゼロに。</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>技術スタック:</strong> Webhook, Gemini/OpenAI API, Python (FastAPI), Airtable API, Docker</p>
                     </div>
                 </div>
             </div>

@@ -16,6 +16,7 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "spzmnhi5b6");
     </script>
+    <script src="../assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,7 +31,12 @@
             </div>
             <p>堅牢なバックエンド技術で、<span class="no-break">ビジネスロジックを具現化。</span></p>
             <nav>
-                <ul>
+                <button class="mobile-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="#wa-features">Services</a></li>
                     <li><a href="#wa-case">Case Study</a></li>
@@ -45,14 +51,14 @@
         <div class="container">
             <div class="lp-hero-wrapper">
                 <div class="lp-hero-content">
-                    <h2><span class="highlight no-break">複雑な連携も、シンプルに。</span><br>Webアプリ開発・<br><span class="highlight no-break">SaaS統合開発。</span></h2>
+                    <h2><span class="highlight no-break">複雑な連携も、シンプルに。</span><br>Webアプリ開発</h2>
                     <p>Python (FastAPI / Flask) と TypeScript を駆使し、拡張性の高いWebアプリを構築。<br>Google Workspace や Microsoft 365 との<span class="no-break">OAuth認証連携</span>など、難易度の高いバックエンド開発を得意とします。</p>
                     <a href="#contact" class="btn hero-btn">開発について相談する</a>
                 </div>
                 <div class="lp-hero-video">
                     <video autoplay muted loop playsinline>
                         <!-- 適切なイメージ動画があれば差し替え -->
-                        <source src="../images/hero-video-2.mp4" type="video/mp4">
+                        <source src="../images/webapp/web-app-hero.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -84,10 +90,10 @@
             <h2><span class="highlight">開発事例:</span> SaaS統合 / 業務ツール</h2>
             <div class="profile-detail-grid">
                 <div class="profile-card" style="width: 100%; margin-bottom: 30px;">
-                    <h3><i class="fas fa-plug highlight"></i> Google/Microsoft 統合モジュール開発</h3>
+                    <h3><i class="fas fa-plug highlight"></i> 外部SaaS連携機能・認証基盤開発</h3>
                     <div style="text-align: left; margin-top: 20px;">
-                        <p><strong>プロジェクト:</strong> AIエージェントプラットフォーム「Patto AI」向け連携機能</p>
-                        <p><strong>内容:</strong> ユーザーのGoogle/Microsoftアカウントと連携し、カレンダー予定取得、メール送信、ファイル操作を行うバックエンド機能を実装。</p>
+                        <p><strong>プロジェクト:</strong> AIエージェントサービス向け OAuth認証・データ連携モジュール</p>
+                        <p><strong>内容:</strong> Google / Microsoft 365 アカウントとセキュアに連携し、カレンダー、メール、ドライブ等を操作するバックエンドAPIを実装。</p>
                         <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
                             <li><span class="highlight">TypeScript (Bun/Hono)</span> を採用し、モノレポ構成で開発。</li>
                             <li>Gmail, Calendar, Drive, Outlook, Teams, OneDrive 等の複数APIを統一インターフェースで扱えるよう抽象化。</li>

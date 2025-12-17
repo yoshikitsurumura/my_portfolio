@@ -16,6 +16,7 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "spzmnhi5b6");
     </script>
+    <script src="../assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,7 +31,12 @@
             </div>
             <p>24時間365日、<span class="no-break">コミュニティを活性化するAIパートナー。</span></p>
             <nav>
-                <ul>
+                <button class="mobile-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="#cb-features">Features</a></li>
                     <li><a href="#cb-case">Case Study</a></li>
@@ -52,7 +58,7 @@
                 <div class="lp-hero-video">
                     <!-- チャットボットのデモ動画があれば差し替え -->
                     <video autoplay muted loop playsinline>
-                        <source src="../images/hero-video-2.mp4" type="video/mp4">
+                        <source src="../images/CHATBOTLP/ai-chatbot-hero.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -81,8 +87,9 @@
 
     <section id="cb-case">
         <div class="container">
-            <h2><span class="highlight">導入事例:</span> 金融オンラインサロン向けBot</h2>
+            <h2><span class="highlight">導入事例:</span> AIチャットボット活用</h2>
             <div class="profile-detail-grid">
+                <!-- 事例1: 金融サロン -->
                 <div class="profile-card" style="width: 100%;">
                     <h3><i class="fab fa-discord highlight"></i> Discord コミュニティ自動応答Bot</h3>
                     <div style="text-align: left; margin-top: 20px;">
@@ -90,10 +97,23 @@
                         <p style="margin-top: 15px;"><strong>解決策:</strong> <span class="highlight">Node.js + Gemini API</span>を用いたDiscord Botを開発。</p>
                         <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
                             <li><strong>ナレッジ整備:</strong> 35件以上のFAQ、用語集を整備しRAG化。</li>
-                            <li><strong>ガードレール:</strong> 金融商品取引法に抵触する恐れのある「個別銘柄の推奨」などを絶対に行わないよう制御。</li>
-                            <li><strong>コスト最適化:</strong> Gemini 1.5 Flashを採用し、サーバーレス構成（またはVPS最小構成）で月額コストを100円以下に抑制。</li>
+                            <li><strong>コスト最適化:</strong> Gemini 1.5 Flashを採用し、月額コストを100円以下に抑制。</li>
                         </ul>
                         <p style="margin-top: 15px;"><strong>成果:</strong> 基礎的な質問の<span class="highlight">90%を自動回答</span>。オーナーは付加価値の高い発信に集中可能に。</p>
+                    </div>
+                </div>
+
+                <!-- 事例2: 燈心塾 -->
+                <div class="profile-card" style="width: 100%;">
+                    <h3><i class="fab fa-line highlight"></i> LINE 体験申込・問い合わせ自動応答BOT</h3>
+                    <div style="text-align: left; margin-top: 20px;">
+                        <p><strong>課題:</strong> 体験申込〜入会前の段階で「料金」「対象」「授業の流れ」「欠席対応」などの定型質問が集中し、対応が属人化していた。</p>
+                        <p style="margin-top: 15px;"><strong>解決策:</strong> <span class="highlight">Google Apps Script (GAS) + Gemini 2.5 Flash</span>を用いたLINE Botを開発。</p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
+                            <li><strong>一次案内自動化:</strong> 料金、スケジュール、入会導線などのFAQをAIが即座に回答。</li>
+                            <li><strong>ハイブリッド運用:</strong> AIが一次回答（宿題解説含む）を行い、講師が最終チェックするフローで品質を担保。</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>成果:</strong> 問い合わせ対応の工数を大幅削減しつつ、24時間即レス体制を実現。</p>
                     </div>
                 </div>
             </div>
