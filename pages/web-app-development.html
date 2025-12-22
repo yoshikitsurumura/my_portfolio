@@ -58,7 +58,7 @@
                 <div class="lp-hero-video">
                     <video autoplay muted loop playsinline>
                         <!-- 適切なイメージ動画があれば差し替え -->
-                        <source src="../images/webapp/web-app-hero.mp4" type="video/mp4">
+                        <source src="../images/web-app-hero.mp4?v=20241222" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -71,15 +71,30 @@
             <div class="service-grid">
                 <div class="service-item">
                     <h3><i class="fas fa-server highlight"></i> バックエンドAPI開発</h3>
-                    <p>FastAPI / Flask を用いたRESTful API設計・開発。非同期処理による高速化や、Pydanticによる厳格な型定義で、堅牢なシステム基盤を構築します。</p>
+                    <p style="text-align: center;">
+                        FastAPIによる高速なAPI構築。<br>
+                        非同期処理と厳格な型定義により、<br>
+                        保守性の高い堅牢なシステムを設計。<br>
+                        スケーラブルな基盤を提供します。
+                    </p>
                 </div>
                 <div class="service-item">
-                    <h3><i class="fas fa-link highlight"></i> SaaS API・OAuth連携</h3>
-                    <p>Google / Microsoft / Slack / Notion などの外部SaaSとのAPI連携実装。特に複雑になりがちな<span class="no-break">OAuth 2.0 認証フロー</span>の実装に強みがあります。</p>
+                    <h3><i class="fas fa-link highlight"></i> SaaS・OAuth連携</h3>
+                    <p style="text-align: center;">
+                        Google / MS等の外部連携を実装。<br>
+                        複雑なOAuth 2.0認証フローから<br>
+                        APIレート制限回避の設計まで対応。<br>
+                        セキュアな統合環境を構築します。
+                    </p>
                 </div>
                 <div class="service-item">
-                    <h3><i class="fas fa-code-branch highlight"></i> CI/CD・DevOps</h3>
-                    <p>GitHub Actions によるテスト・デプロイ自動化、Dockerコンテナによる環境構築。開発スピードと品質を担保するモダンなDevOps環境を提供します。</p>
+                    <h3><i class="fas fa-code-branch highlight"></i> モダンDevOps</h3>
+                    <p style="text-align: center;">
+                        Dockerによる環境の共通化と、<br>
+                        GitHub Actionsでの自動テスト。<br>
+                        高速なリリースサイクルを実現する<br>
+                        一貫した開発環境を構築します。
+                    </p>
                 </div>
             </div>
         </div>
@@ -89,28 +104,28 @@
         <div class="container">
             <h2><span class="highlight">開発事例:</span> SaaS統合 / 業務ツール</h2>
             <div class="profile-detail-grid">
-                <div class="profile-card" style="width: 100%; margin-bottom: 30px;">
-                    <h3><i class="fas fa-plug highlight"></i> 外部SaaS連携機能・認証基盤開発</h3>
+                <div class="profile-card">
+                    <h3><i class="fas fa-plug highlight"></i> SaaS・認証基盤開発</h3>
                     <div style="text-align: left; margin-top: 20px;">
-                        <p><strong>プロジェクト:</strong> AIエージェントサービス向け OAuth認証・データ連携モジュール</p>
-                        <p><strong>内容:</strong> Google / Microsoft 365 アカウントとセキュアに連携し、カレンダー、メール、ドライブ等を操作するバックエンドAPIを実装。</p>
-                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
-                            <li><span class="highlight">TypeScript (Bun/Hono)</span> を採用し、モノレポ構成で開発。</li>
-                            <li>Gmail, Calendar, Drive, Outlook, Teams, OneDrive 等の複数APIを統一インターフェースで扱えるよう抽象化。</li>
-                            <li>アクセストークンのリフレッシュ処理や、APIレート制限へのリトライ処理を共通化。</li>
+                        <p><strong>プロジェクト:</strong><br>AIエージェント向け認証モジュール</p>
+                        <p style="margin-top: 10px;">Google / Microsoft 365と連携し、ドライブやカレンダーを操作するバックエンドAPIを構築。</p>
+                        <ul style="margin-top: 15px; padding-left: 20px; color: #e0e0e0; font-size: 0.9em; line-height: 1.6;">
+                            <li>TypeScript(Hono)による高速実装</li>
+                            <li>複数SaaS APIのインターフェース統一</li>
+                            <li>トークン更新の自動化・例外処理</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="profile-card" style="width: 100%;">
-                    <h3><i class="fas fa-tasks highlight"></i> CSVベース採用管理システム</h3>
+                <div class="profile-card">
+                    <h3><i class="fas fa-tasks highlight"></i> CSVデータ管理システム</h3>
                     <div style="text-align: left; margin-top: 20px;">
-                        <p><strong>プロジェクト:</strong> 求人媒体データ統合・管理ツール</p>
-                        <p><strong>内容:</strong> 異なる求人媒体から出力されるCSVデータを正規化し、ダッシュボードへ集約。</p>
-                        <ul style="margin-top: 10px; padding-left: 20px; color: #e0e0e0;">
-                            <li><span class="highlight">Python (Pandas)</span> で高速なデータ処理・クレンジング処理を実装。</li>
-                            <li>「誰でも使える」を重視し、設定ファイル(CSV)でマッピングルールを変更可能な設計に。</li>
-                            <li>入出力バリデーションとエラーログ出力を整備し、運用ミスを防止。</li>
+                        <p><strong>プロジェクト:</strong><br>求人媒体データ正規化ツール</p>
+                        <p style="margin-top: 10px;">複数媒体の非定型CSVをPandasで瞬時にクレンジングし、分析可能な形式へ。運用ミスを未然に防ぐ仕組みを実装。</p>
+                        <ul style="margin-top: 15px; padding-left: 20px; color: #e0e0e0; font-size: 0.9em; line-height: 1.6;">
+                            <li>Python (Pandas) による高速処理</li>
+                            <li>直感的に操作できる簡易UI・設定</li>
+                            <li>バリデーションによる入力ミス防止</li>
                         </ul>
                     </div>
                 </div>
@@ -121,17 +136,34 @@
     <section id="wa-tech" class="section-bg">
         <div class="container">
             <h2>技術スタック</h2>
-            <div class="skills-grid" style="justify-content: center; margin-top: 30px;">
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">FastAPI</span>
-                <span class="skill-badge">Flask</span>
-                <span class="skill-badge">TypeScript</span>
-                <span class="skill-badge">Node.js</span>
-                <span class="skill-badge">SQLAlchemy</span>
-                <span class="skill-badge">PostgreSQL</span>
-                <span class="skill-badge">Docker</span>
-                <span class="skill-badge">GitHub Actions</span>
-                <span class="skill-badge">OAuth 2.0</span>
+            <div class="stack-categories" style="max-width: 800px; margin: 30px auto 0;">
+                <div class="stack-category">
+                    <h5><i class="fas fa-code"></i> Languages</h5>
+                    <div class="skills-grid">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">TypeScript</span>
+                        <span class="skill-badge">SQL</span>
+                    </div>
+                </div>
+                <div class="stack-category" style="margin-top: 20px;">
+                    <h5><i class="fas fa-layer-group"></i> Frameworks / Tools</h5>
+                    <div class="skills-grid">
+                        <span class="skill-badge">FastAPI</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Node.js (Hono)</span>
+                        <span class="skill-badge">SQLAlchemy / Pandas</span>
+                    </div>
+                </div>
+                <div class="stack-category" style="margin-top: 20px;">
+                    <h5><i class="fas fa-server"></i> Infra / DB / DevOps</h5>
+                    <div class="skills-grid">
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">OAuth 2.0 / API Auth</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -141,12 +173,9 @@
             <h2>システム開発のご相談はこちらから</h2>
             <p class="sub-heading">技術選定から設計、実装までサポートいたします。</p>
             <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
-                <label for="name" class="sr-only">お名前</label>
-                <input type="text" id="name" name="name" placeholder="お名前" required>
-                <label for="email" class="sr-only">メールアドレス</label>
-                <input type="email" id="email" name="email" placeholder="メールアドレス" required>
-                <label for="message" class="sr-only">お問い合わせ内容</label>
-                <textarea id="message" name="message" placeholder="開発したいシステムの概要や、技術的な要件についてお書きください。" rows="5" required></textarea>
+                <input type="text" id="name" name="name" placeholder="お名前" required aria-label="お名前">
+                <input type="email" id="email" name="email" placeholder="メールアドレス" required aria-label="メールアドレス">
+                <textarea id="message" name="message" placeholder="開発したいシステムの概要や、技術的な要件についてお書きください。" rows="5" required aria-label="お問い合わせ内容"></textarea>
                 <button type="submit" class="btn contact-btn">相談を申し込む</button>
             </form>
         </div>
@@ -154,8 +183,17 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 CraneAI. All rights reserved.</p>
-            <p><a href="../index.html">Home</a> | <a href="#">Privacy Policy</a></p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 CraneAI. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="https://github.com/yoshikitsurumura" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/yoshiki_tsumu" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
