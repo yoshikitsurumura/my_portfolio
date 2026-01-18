@@ -21,15 +21,14 @@
     <meta name="twitter:description" content="AIと業務効率化でビジネスを革新。チャットボット、自動化ツール、Webアプリ開発で生産性向上を支援。">
     <meta name="twitter:image" content="https://craneai.jp/images/CRANEAI.png">
     <link rel="canonical" href="https://craneai.jp">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/performance.js" defer></script>
     <link rel="icon" href="images/chatbot_icon_new.png" type="image/png">
     <link rel="apple-touch-icon" href="images/chatbot_icon_new.png">
     <link rel="manifest" href="config/manifest.json">
-    <meta name="theme-color" content="#0e0e1a">
+    <meta name="theme-color" content="#00f0ff">
     <meta name="robots" content="index,follow">
     <!-- Apple/Safari対応 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -91,8 +90,8 @@
                 <h1>CraneAI</h1>
                 <div class="header-social">
                     <a href="https://github.com/yoshikitsurumura" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://x.com/atamahakidashi" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/yoshiki-turumura-06aa002a3/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/atamahakidashi" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <p>現場の知見 × AI技術。<br>成果に繋がる業務改善を。</p>
@@ -145,7 +144,7 @@
                 </div>
                 <div class="service-item featured">
                     <div class="featured-badge">MOST REQUESTED</div>
-                    <h3>業務改善DX<span class="no-break">／RAG・AI-OCR構築</span></h3>
+                    <h3>業務改善DX<span class="no-break">／RAG・OCR構築</span></h3>
                     <p>
                         最新AIで貴社専用環境を構築。<br>
                         社内検索から自動入力まで対応。<br>
@@ -171,36 +170,41 @@
     <section id="achievements">
         <div class="container">
             <h2>主要<span class="highlight">プロジェクト実績</span></h2>
-            <div class="achievement-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                <!-- Existing Project 1 -->
+            <div class="achievement-grid">
                 <div class="achievement-item">
-                    <h3>個人病院向け<br>AI-OCR自動処理システム</h3>
-                    <p class="tech-stack"><span class="skill-badge">Python</span> <span class="skill-badge">FastAPI</span> <span class="skill-badge">Gemini 2.5 Pro</span></p>
-                    <p style="margin-top: 15px;">
-                        公費受給者証をカメラで自動読取。複雑な帳票もGemini APIで解析し、データベースへの自動登録を実装。医療現場の事務負担を軽減。
+                    <h3>個人病院向け<br>
+                        OCR自動処理システム</h3>
+                    <p class="tech-stack"><span class="skill-badge">Python</span> <span class="skill-badge">FastAPI</span> <span class="skill-badge">Gemini 2.5 Pro</span> <span class="skill-badge">Docker</span></p>
+                    <p style="text-align: center; margin-top: 15px;">
+                        公費受給者証をカメラで自動読取。<br>
+                        複雑な帳票もGemini APIで解析し、<br>
+                        データベースへの自動登録を実装。<br>
+                        医療現場の事務負担を軽減するための<br>
+                        システムを開発。
                     </p>
                 </div>
-                <!-- Existing Project 2 -->
                 <div class="achievement-item">
-                    <h3>金融サロン向け<br>Discord AI Bot</h3>
+                    <h3>金融サロン向け<br>
+                        Discord AI Bot</h3>
                     <p class="tech-stack"><span class="skill-badge">Node.js</span> <span class="skill-badge">Gemini Flash 2.5</span> <span class="skill-badge">Discord API</span></p>
-                    <p style="margin-top: 15px;">
-                        投資サロン内の質問にAIが自動回答。35件以上の独自ナレッジと厳格なガードレール機能を実装。月額100円以下の低コスト運用を実現。
+                    <p style="text-align: center; margin-top: 15px;">
+                        投資サロン内の質問にAIが自動回答。<br>
+                        35件以上の独自ナレッジを整備し、<br>
+                        厳格なガードレール機能を実装。<br>
+                        月額100円以下の低コスト運用にて、<br>
+                        24時間のコミュニティ運営を支えます。
                     </p>
                 </div>
-                
-                <!-- MERGED: AI-Driven Dev Workflow -->
                 <div class="achievement-item">
-                    <h3>AI-Driven<br>Dev Workflow</h3>
-                    <p class="tech-stack">
-                        <span class="skill-badge">Claude Code</span>
-                        <span class="skill-badge">Cursor</span>
-                        <span class="skill-badge">BugBot</span>
-                        <span class="skill-badge">Antigravity</span>
-                        <span class="skill-badge">Obsidian</span>
-                    </p>
-                    <p style="margin-top: 15px;">
-                        生成AIを開発プロセスに完全統合し、開発工数を30%削減。Claude CodeやAntigravityによる実装の半自動化、BugBot/Coderabbitによる自動レビュー、Obsidianでのナレッジ管理を体系化。自律型エージェント連携を含めた高度な開発運用（AI Ops）を実現。
+                    <h3>オンライン個別塾 <br>
+                        業務DX & LINE Bot</h3>
+                    <p class="tech-stack"><span class="skill-badge">GAS</span> <span class="skill-badge">LINE API</span> <span class="skill-badge">Gemini</span></p>
+                    <p style="text-align: center; margin-top: 15px;">
+                        LINE上のAIがコース案内を自動回答。<br>
+                        講師が最終選別する運用を設計し、<br>
+                        問い合わせ対応の効率化を追求。<br>
+                        GASとの連携で入会フローを改善し、<br>
+                        運用コストの最小化を実現しました。
                     </p>
                 </div>
             </div>
@@ -356,7 +360,7 @@
             <div class="social-links">
                 <p>SNSでも情報発信中！</p>
                 <a href="https://github.com/yoshikitsurumura" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/atamahakidashi" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://x.com/atamahakidashi" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                 <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
