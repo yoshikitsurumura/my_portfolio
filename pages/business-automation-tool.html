@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/contact-form.js" defer></script>
 </head>
 <body>
     <header>
@@ -205,7 +206,8 @@
         <div class="container">
             <h2>業務の「自動化」について、<br>まずは無料相談から。</h2>
             <p class="sub-heading">あなたの現場の課題をヒアリングし、最適なDXプランをご提案します。</p>
-            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
+            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST" data-thanks="thanks.html">
+                <input type="hidden" name="source" value="業務自動化ツール開発">
                 <input type="text" id="name" name="name" placeholder="お名前" required aria-label="お名前">
                 <input type="email" id="email" name="email" placeholder="メールアドレス" required aria-label="メールアドレス">
                 <textarea id="message" name="message" placeholder="現在の業務課題や、自動化したい内容についてお書きください。" rows="5" required aria-label="お問い合わせ内容"></textarea>

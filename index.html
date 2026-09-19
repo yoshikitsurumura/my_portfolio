@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/contact-form.js" defer></script>
     <script src="assets/js/performance.js" defer></script>
     <link rel="icon" href="images/chatbot_icon_new.png" type="image/png">
     <link rel="apple-touch-icon" href="images/chatbot_icon_new.png">
@@ -348,7 +349,8 @@
         <div class="container">
             <h2><span class="highlight">お問い合わせ</span></h2>
             <p class="contact-description">AIを活用した業務改善、自動化ツールの開発、Webアプリケーション開発など、お気軽にご相談ください。</p>
-            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
+            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST" data-thanks="pages/thanks.html">
+                <input type="hidden" name="source" value="トップページ">
                 <label for="name" class="sr-only">お名前</label>
                 <input type="text" id="name" name="name" placeholder="お名前" required aria-label="お名前を入力してください">
                 <label for="email" class="sr-only">メールアドレス</label>

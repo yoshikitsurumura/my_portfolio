@@ -17,6 +17,7 @@
         })(window, document, "clarity", "script", "spzmnhi5b6");
     </script>
     <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/contact-form.js" defer></script>
 </head>
 <body>
     <header>
@@ -172,7 +173,8 @@
         <div class="container">
             <h2>システム開発のご相談はこちらから</h2>
             <p class="sub-heading">技術選定から設計、実装までサポートいたします。</p>
-            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST">
+            <form action="https://script.google.com/macros/s/AKfycbxQHIMPXTk3biGle8Rqv5mNddmekbh2B7ZznxPdlyCGXagtW826fec384r1ggfdG1s_Rw/exec" method="POST" data-thanks="thanks.html">
+                <input type="hidden" name="source" value="Webアプリ開発">
                 <input type="text" id="name" name="name" placeholder="お名前" required aria-label="お名前">
                 <input type="email" id="email" name="email" placeholder="メールアドレス" required aria-label="メールアドレス">
                 <textarea id="message" name="message" placeholder="開発したいシステムの概要や、技術的な要件についてお書きください。" rows="5" required aria-label="お問い合わせ内容"></textarea>
