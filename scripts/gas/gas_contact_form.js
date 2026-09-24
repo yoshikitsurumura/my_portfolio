@@ -2,53 +2,84 @@
  * CraneAI ポートフォリオ お問い合わせフォーム処理
  * 
  * 設定方法:
- * 1. Google Apps Script (https://script.google.com) で新規プロジェクト作成
- * 2. このコードを貼り付け
- * 3. 「デプロイ」→「新しいデプロイ」→「ウェブアプリ」を選択
- * 4. 「アクセスできるユーザー」を「全員」に設定
- * 5. 生成されたURLをindex.htmlのformのaction属性に設定
+ * 1. config/gas_links.md の既存のお問い合わせ用プロジェクトを開く
+ * 2. 既存のお問い合わせ処理をこのコードで置き換える（doPost を重複させない）
+ * 3. 履歴を保存する場合はスクリプトプロパティ CONTACT_SPREADSHEET_ID に既存シートのIDを設定
+ * 4. 実行ユーザーが自分、公開範囲が全員の既存ウェブアプリであることを確認
+ * 5. 既存デプロイを新しいバージョンに更新して実行URLを維持する
+ * 詳しい復旧・確認手順: scripts/gas/README.md
  */
 
 function doPost(e) {
+  let contact;
   try {
-    const params = e.parameter;
-    const name = params.name || '名前未入力';
-    const email = params.email || 'メール未入力';
-    const message = params.message || '内容未入力';
-    const timestamp = new Date();
-    
-    // 1. スプレッドシートに記録（履歴管理用）
-    saveToSheet(timestamp, name, email, message);
-    
-    // 2. 自分宛てに通知メール送信
-    sendNotificationEmail(timestamp, name, email, message);
-    
-    // 3. サンクスページへリダイレクト
-    return HtmlService.createHtmlOutput(`
-      <html>
-        <head>
-          <meta http-equiv="refresh" content="0;url=https://yoshikitsurumura.github.io/my_portfolio/pages/thanks.html">
-        </head>
-        <body>
-          <p>リダイレクト中...</p>
-          <script>window.location.href='https://yoshikitsurumura.github.io/my_portfolio/pages/thanks.html';</script>
-        </body>
-      </html>
-    `);
-    
+    contact = validateContact(e);
   } catch (error) {
-    console.error('Error:', error);
-    return ContentService
-      .createTextOutput(JSON.stringify({ error: error.message }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return contactResult(false, '入力内容を確認し、お名前・有効なメールアドレス・お問い合わせ内容を入力してください。');
   }
+
+  const { name, email, message } = contact;
+  const timestamp = new Date();
+  // 記録先が未設定・権限切れでも、通知メールの送信は試みる。
+  try {
+    saveToSheet(timestamp, name, email, message);
+  } catch (error) {
+    console.error('Contact sheet write failed:', error);
+  }
+
+  try {
+    sendNotificationEmail(timestamp, name, email, message);
+  } catch (error) {
+    console.error('Contact email send failed:', error);
+    return contactResult(false, '通知メールを送信できませんでした。お手数ですが crane7112@gmail.com へ直接ご連絡ください。');
+  }
+
+  return contactResult(true, 'お問い合わせを送信しました。ご連絡ありがとうございます。');
+}
+
+function validateContact(e) {
+  const params = (e && e.parameter) || {};
+  const name = String(params.name || '').trim();
+  const email = String(params.email || '').trim();
+  const message = String(params.message || '').trim();
+  if (!name || name.length > 200 || !message || message.length > 10000 ||
+      email.length > 254 || !/^[^\s@<>,";]+@[^\s@<>,";]+\.[^\s@<>,";]+$/.test(email)) {
+    throw new Error('Invalid contact fields');
+  }
+  return { name, email, message };
+}
+
+function escapeContactHtml(value) {
+  return String(value).replace(/[&<>"']/g, function (char) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+  });
+}
+
+function contactResult(ok, message) {
+  // GAS の iframe 内での自動リダイレクトに依存せず、結果と遷移リンクを表示する。
+  const destination = ok ? 'pages/thanks.html' : '#contact';
+  return HtmlService.createHtmlOutput(`
+    <!doctype html>
+    <html lang="ja"><head><meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>${ok ? '送信完了' : '送信できませんでした'} | CraneAI</title>
+    </head><body style="font-family:sans-serif;max-width:600px;margin:48px auto;padding:24px;line-height:1.8">
+      <h1>${ok ? '送信完了' : '送信できませんでした'}</h1>
+      <p>${escapeContactHtml(message)}</p>
+      <a target="_top" href="https://yoshikitsurumura.github.io/my_portfolio/${destination}">サイトへ戻る</a>
+    </body></html>
+  `);
 }
 
 /**
  * スプレッドシートに問い合わせを記録
  */
 function saveToSheet(timestamp, name, email, message) {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheetId = PropertiesService.getScriptProperties().getProperty('CONTACT_SPREADSHEET_ID');
+  const ss = sheetId ? SpreadsheetApp.openById(sheetId) : SpreadsheetApp.getActiveSpreadsheet();
+  if (!ss) {
+    throw new Error('Set CONTACT_SPREADSHEET_ID in Script Properties to enable contact history.');
+  }
   let sheet = ss.getSheetByName('問い合わせ');
   
   // シートがなければ作成
@@ -58,7 +89,9 @@ function saveToSheet(timestamp, name, email, message) {
     sheet.getRange(1, 1, 1, 5).setFontWeight('bold').setBackground('#00f0ff');
   }
   
-  sheet.appendRow([timestamp, name, email, message, '未対応']);
+  // ユーザー入力を数式として評価させない。
+  const textCell = value => /^[=+@-]/.test(value) ? "'" + value : value;
+  sheet.appendRow([timestamp, textCell(name), textCell(email), textCell(message), '未対応']);
 }
 
 /**
@@ -95,9 +128,6 @@ ${message}
 
 このメールに返信するか、上記メールアドレスに直接連絡してください。
 
-スプレッドシートで管理:
-https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ※ このメールはCraneAIポートフォリオから自動送信されています
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -121,24 +151,24 @@ https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit
         <table style="width: 100%; color: #fff;">
           <tr>
             <td style="padding: 10px 0; color: #888; width: 120px;">👤 お名前:</td>
-            <td style="padding: 10px 0; font-weight: bold;">${name}</td>
+            <td style="padding: 10px 0; font-weight: bold;">${escapeContactHtml(name)}</td>
           </tr>
           <tr>
             <td style="padding: 10px 0; color: #888;">📧 メール:</td>
-            <td style="padding: 10px 0;"><a href="mailto:${email}" style="color: #00f0ff;">${email}</a></td>
+            <td style="padding: 10px 0;"><a href="mailto:${escapeContactHtml(email)}" style="color: #00f0ff;">${escapeContactHtml(email)}</a></td>
           </tr>
         </table>
         
         <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
           <p style="color: #888; margin-bottom: 10px;">💬 お問い合わせ内容:</p>
           <div style="background: #0f0f1e; padding: 15px; border-radius: 5px; line-height: 1.6;">
-            ${message.replace(/\n/g, '<br>')}
+            ${escapeContactHtml(message).replace(/\n/g, '<br>')}
           </div>
         </div>
       </div>
       
       <div style="text-align: center; padding-top: 20px;">
-        <a href="mailto:${email}" style="display: inline-block; background: #00f0ff; color: #0f0f1e; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        <a href="mailto:${escapeContactHtml(email)}" style="display: inline-block; background: #00f0ff; color: #0f0f1e; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
           📩 返信する
         </a>
       </div>
@@ -152,7 +182,8 @@ https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit
   `;
 
   GmailApp.sendEmail(recipient, subject, body, {
-    htmlBody: htmlBody
+    htmlBody: htmlBody,
+    replyTo: email
   });
 }
 
@@ -167,6 +198,9 @@ function testDoPost() {
       message: 'これはテストメッセージです。\n改行も含めてテストします。'
     }
   };
-  doPost(testEvent);
-  console.log('テスト完了！メールとスプレッドシートを確認してください。');
+  const result = doPost(testEvent);
+  if (!result.getContent().includes('<h1>送信完了</h1>')) {
+    throw new Error('送信テスト失敗。実行ログを確認してください。');
+  }
+  console.log('メール送信処理が完了しました。受信箱への到着を確認してください。');
 }
