@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CraneAI | AIと業務効率化で未来を創る</title>
     <meta name="description" content="AIと業務効率化でビジネスを革新。チャットボット、自動化ツール、Webアプリ開発で生産性向上を支援。無料相談受付中。">
-    <meta name="keywords" content="AIチャットボット,業務自動化,Webアプリ開発,Python,Flask,GAS,業務効率化,生産性向上,情報セキュリティ,ITインフラ,基本情報技術者,応用情報技術者,鶴村佳輝,AIコンサルタント,自動化ツール開発,Web開発サービス">
+    <meta name="keywords" content="AIチャットボット,業務自動化,Webアプリ開発,Python,Flask,GAS,業務効率化,生産性向上,RAG,AI-OCR,React,TypeScript,FastAPI,フルスタックエンジニア,インフラエンジニア,Windows Server,Active Directory,基本情報技術者,応用情報技術者,鶴村佳輝,AIコンサルタント,自動化ツール開発,Web開発サービス">
     <meta name="author" content="鶴村佳輝">
     <meta property="og:title" content="CraneAI | AIと業務効率化で未来を創る">
     <meta property="og:description" content="AIと業務効率化でビジネスを革新。チャットボット、自動化ツール、Webアプリ開発で生産性向上を支援。無料相談受付中。">
@@ -42,9 +42,10 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "鶴村佳輝",
-        "jobTitle": "AI・業務効率化コンサルタント",
-        "description": "AIと業務効率化でビジネスを革新するコンサルタント",
+        "jobTitle": "Full Stack Engineer / AI Engineer / Infrastructure Engineer",
+        "description": "生成AIを活用したアプリケーション開発を強みとするフルスタックエンジニア。開発からインフラ運用まで対応。",
         "url": "https://craneai.jp",
+        "alumniOf": {"@type": "CollegeOrUniversity", "name": "神戸大学"},
         "sameAs": [
             "https://github.com/yoshikitsurumura",
             "https://x.com/atamahakidashi"
@@ -56,13 +57,23 @@
             "Python",
             "Flask",
             "Google Apps Script",
-            "情報セキュリティ",
-            "ITインフラ・ネットワーク"
+            "RAG",
+            "AI-OCR",
+            "React",
+            "TypeScript",
+            "FastAPI",
+            "PostgreSQL",
+            "Windows Server",
+            "Active Directory",
+            "AWS",
+            "ネットワーク管理"
         ],
         "hasCredential": [
             {"@type": "EducationalOccupationalCredential", "name": "ITパスポート試験 合格", "recognizedBy": {"@type": "Organization", "name": "IPA（情報処理推進機構）"}},
             {"@type": "EducationalOccupationalCredential", "name": "基本情報技術者試験 合格", "recognizedBy": {"@type": "Organization", "name": "IPA（情報処理推進機構）"}},
-            {"@type": "EducationalOccupationalCredential", "name": "応用情報技術者試験 科目A 合格", "recognizedBy": {"@type": "Organization", "name": "IPA（情報処理推進機構）"}}
+            {"@type": "EducationalOccupationalCredential", "name": "応用情報技術者試験 科目A 合格", "recognizedBy": {"@type": "Organization", "name": "IPA（情報処理推進機構）"}},
+            {"@type": "EducationalOccupationalCredential", "name": "日商簿記3級"},
+            {"@type": "EducationalOccupationalCredential", "name": "TOEIC 700点"}
         ],
         "offers": {
             "@type": "Service",
@@ -101,7 +112,7 @@
                     <a href="https://www.linkedin.com/in/yoshiki-tsurumura/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <p>現場の知見 × AI技術。<br>成果に繋がる業務改善を。</p>
+            <p>AI × フルスタック × インフラ。<br>現場で使われるシステムを。</p>
             <nav>
                 <button class="mobile-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
                     <span></span>
@@ -112,7 +123,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#profile">Profile</a></li>
-                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#strengths">Strengths</a></li>
                     <li><a href="blog/">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -129,7 +140,7 @@
                 </video>
                 <div class="hero-content">
                     <h2><span class="highlight">ビジネスを革新する。</span><br>AIと業務効率化で<br><span class="highlight">よりスマートな未来へ。</span></h2>
-                    <p>多忙な現場で磨かれた「課題解決の視点」と、AIエンジニアの技術力を融合。<br>現場の痛みを知るプロとして、<br>導入して終わらない「本当に手が届く」解決策を。</p>
+                    <p>生成AIアプリ開発から、DB・インフラ運用まで。<br>業務要件の整理から設計・実装・運用改善まで<br>システム全体を見渡して、現場で使われる仕組みをつくります。</p>
                     <a href="#contact" class="btn">無料相談はこちら</a>
                 </div>
             </div>
@@ -179,40 +190,76 @@
             <h2>主要<span class="highlight">プロジェクト実績</span></h2>
             <div class="achievement-grid">
                 <div class="achievement-item">
-                    <h3>個人病院向け<br>
-                        OCR自動処理システム</h3>
-                    <p class="tech-stack"><span class="skill-badge">Python</span> <span class="skill-badge">FastAPI</span> <span class="skill-badge">Gemini 2.5 Pro</span> <span class="skill-badge">Docker</span></p>
-                    <p style="text-align: center; margin-top: 15px;">
-                        公費受給者証をカメラで自動読取。<br>
-                        複雑な帳票もGemini APIで解析し、<br>
-                        データベースへの自動登録を実装。<br>
-                        医療現場の事務負担を軽減するための<br>
-                        システムを開発。
-                    </p>
+                    <span class="project-no">01</span>
+                    <h3>生成AI・RAG<br>システム開発</h3>
+                    <p class="tech-stack"><span class="skill-badge">Python</span> <span class="skill-badge">FastAPI</span> <span class="skill-badge">Qdrant</span> <span class="skill-badge">LLM API</span> <span class="skill-badge">Whisper</span></p>
+                    <p class="project-desc">LLMとベクトルデータベースを組み合わせ、自然言語で情報を検索・応答するシステムを開発。</p>
+                    <ul class="project-list">
+                        <li>RAGを利用したナレッジ検索</li>
+                        <li>音声認識・音声合成を組み合わせたAI対話</li>
+                        <li>PythonによるバックエンドAPI開発</li>
+                        <li>LLM・外部API・DBの統合</li>
+                    </ul>
                 </div>
                 <div class="achievement-item">
-                    <h3>金融サロン向け<br>
-                        Discord AI Bot</h3>
-                    <p class="tech-stack"><span class="skill-badge">Node.js</span> <span class="skill-badge">Gemini Flash 2.5</span> <span class="skill-badge">Discord API</span></p>
-                    <p style="text-align: center; margin-top: 15px;">
-                        投資サロン内の質問にAIが自動回答。<br>
-                        35件以上の独自ナレッジを整備し、<br>
-                        厳格なガードレール機能を実装。<br>
-                        月額100円以下の低コスト運用にて、<br>
-                        24時間のコミュニティ運営を支えます。
-                    </p>
+                    <span class="project-no">02</span>
+                    <h3>AI-OCR・<br>業務システム開発</h3>
+                    <p class="tech-stack"><span class="skill-badge">React</span> <span class="skill-badge">TypeScript</span> <span class="skill-badge">Python</span> <span class="skill-badge">FastAPI</span> <span class="skill-badge">OCR</span></p>
+                    <p class="project-desc">紙帳票・画像からの情報抽出を自動化するAI-OCRシステムを開発。個人病院の受給者証読取などで活用。</p>
+                    <ul class="project-list">
+                        <li>Reactによるフロントエンド開発</li>
+                        <li>FastAPIによるバックエンド実装</li>
+                        <li>OCRによる帳票データの構造化</li>
+                        <li>入力・確認業務の効率化</li>
+                    </ul>
                 </div>
                 <div class="achievement-item">
-                    <h3>オンライン個別塾 <br>
-                        業務DX & LINE Bot</h3>
-                    <p class="tech-stack"><span class="skill-badge">GAS</span> <span class="skill-badge">LINE API</span> <span class="skill-badge">Gemini</span></p>
-                    <p style="text-align: center; margin-top: 15px;">
-                        LINE上のAIがコース案内を自動回答。<br>
-                        講師が最終選別する運用を設計し、<br>
-                        問い合わせ対応の効率化を追求。<br>
-                        GASとの連携で入会フローを改善し、<br>
-                        運用コストの最小化を実現しました。
-                    </p>
+                    <span class="project-no">03</span>
+                    <h3>チャットボット・<br>業務自動化</h3>
+                    <p class="tech-stack"><span class="skill-badge">Python</span> <span class="skill-badge">GAS</span> <span class="skill-badge">Cloudflare Workers</span> <span class="skill-badge">Webhook</span></p>
+                    <p class="project-desc">Discord・LINE・Gmailなど複数のプラットフォームを活用した業務自動化システムを開発。</p>
+                    <ul class="project-list">
+                        <li>Discord Botによる情報配信・業務支援</li>
+                        <li>LINE BotによるFAQ対応</li>
+                        <li>Gmailの自動分類・管理</li>
+                        <li>Webhook・外部API連携</li>
+                        <li>GASによる業務フロー自動化</li>
+                    </ul>
+                </div>
+                <div class="achievement-item">
+                    <span class="project-no">04</span>
+                    <h3>企業内インフラ・<br>基幹システム運用</h3>
+                    <p class="tech-stack"><span class="skill-badge">Windows Server</span> <span class="skill-badge">Active Directory</span> <span class="skill-badge">AWS EC2</span> <span class="skill-badge">IBM i</span> <span class="skill-badge">SQL</span></p>
+                    <p class="project-desc">企業の情報システム領域で、社内ネットワーク・サーバー・業務システムの運用と改善に従事。</p>
+                    <ul class="project-list">
+                        <li>Windows Server・Active Directoryの管理</li>
+                        <li>VPN・ネットワーク・端末管理</li>
+                        <li>AWS EC2・IIS環境の運用</li>
+                        <li>PostgreSQLのバージョン移行・Docker環境</li>
+                        <li>IBM i（AS/400）の基幹システム</li>
+                        <li>SQLによる業務データの抽出・分析</li>
+                        <li>LANSA・RDMLによる業務システムの開発・保守</li>
+                        <li>セキュリティ対策・障害調査</li>
+                    </ul>
+                </div>
+                <div class="achievement-item">
+                    <span class="project-no">05</span>
+                    <h3>教育業界の<br>DX・業務改善</h3>
+                    <p class="tech-stack"><span class="skill-badge">Excel / VBA</span> <span class="skill-badge">GAS</span> <span class="skill-badge">Python</span></p>
+                    <p class="project-desc">教育現場の業務改善を目的に、データ分析・業務自動化ツールを設計・導入。</p>
+                    <ul class="project-list">
+                        <li>Excel / VBA / GAS / Pythonによる業務自動化</li>
+                        <li>KPIの可視化・データ分析</li>
+                        <li>授業管理・成績管理業務の効率化</li>
+                        <li>教育現場へのAI・デジタルツール導入</li>
+                    </ul>
+                    <div class="project-metrics">
+                        <div><strong>140名</strong><span>最大導入規模の教室</span></div>
+                        <div><strong>202%</strong><span>季節講習売上（前年比）</span></div>
+                        <div><strong>126%</strong><span>生徒数（前年比）</span></div>
+                    </div>
+                    <p class="project-note">※担当した教育現場の実績であり、システム導入単独の効果を示すものではありません。</p>
+                    <p class="project-link"><a href="https://yoshikitsurumura.github.io/ToushinJuku/" target="_blank" rel="noopener">Web制作実績: ToushinJuku <i class="fas fa-external-link-alt"></i></a></p>
                 </div>
             </div>
         </div>
@@ -224,34 +271,27 @@
 
             <div class="profile-intro-split">
                 <div class="profile-img-container-left">
-                    <img src="images/tsurumurayoshiki_white_bg.png" alt="鶴村佳輝 - AIエンジニア" class="profile-img" loading="lazy">
+                    <img src="images/tsurumurayoshiki_white_bg.png" alt="鶴村佳輝 - フルスタックエンジニア / AIエンジニア" class="profile-img" loading="lazy">
                 </div>
                 <div class="profile-summary-right">
                     <h3>鶴村佳輝（つるむら よしき）</h3>
-                    <p style="margin-bottom: 5px;">AIエンジニア / 業務改善コンサルタント</p>
-                    <p style="font-size: 0.9em; color: #aaa; margin-bottom: 15px;">1995年生まれ / 神戸大学 工学部卒</p>
+                    <p style="margin-bottom: 5px;">Full Stack Engineer / AI Engineer / Infrastructure Engineer</p>
+                    <p style="font-size: 0.9em; color: #aaa; margin-bottom: 15px;">1995年生まれ / 神戸大学 工学部 応用化学科卒</p>
                     <div class="profile-summary-text">
                         <p>
-                            <i class="fas fa-lightbulb" style="color: #00f0ff; margin-right: 5px;"></i> <strong>現場のリアル × 最先端AI</strong><br>
-                            現場の「泥臭い課題」をAI技術で解決することに注力しています。<br>
-                            教室責任者として<strong>生徒数227%増、売上380%増</strong>を達成。<br>
-                            多忙な現場を自作アプリ（JS/GAS）で劇的に効率化した経験が原点です。
+                            <i class="fas fa-brain" style="color: #00f0ff; margin-right: 5px;"></i> <strong>生成AI × フルスタック開発</strong><br>
+                            生成AIを活用したアプリケーション開発を強みとするフルスタックエンジニア。<br>
+                            Python・TypeScript・Reactを中心としたWeb開発から、LLMを組み込んだ業務システム、API設計、DB構築まで幅広く対応。<br>
+                            ChatGPT・Claude・Geminiを活用した<strong>RAG・OCR・AIエージェント・業務自動化</strong>の設計・実装を得意としています。
                         </p>
                         <p style="margin-top: 15px;">
-                            <i class="fas fa-rocket" style="color: #ff007f; margin-right: 5px;"></i> <strong>確かな技術で、ビジネスを加速</strong><br>
-                            現在はAI実装とPythonによる開発を主軸に活動。<br>
-                            現場目線の「動く解決策」をスピーディーに提供し、<br>
-                            エンジニアと運営、両方の視点からビジネスの可能性を最大化します。
-                        </p>
-                        <p style="margin-top: 15px;">
-                            <i class="fas fa-shield-alt" style="color: #00f0ff; margin-right: 5px;"></i> <strong>「安全に動く」AI導入へ</strong><br>
-                            基本情報技術者・応用情報（科目A合格）で体系的なIT基礎を固め、<br>
-                            現在はセキュリティ・インフラ領域を重点的に強化中。<br>
-                            医療・金融など機密性の高い現場でも安心して使える仕組みづくりを目指しています。
+                            <i class="fas fa-server" style="color: #ff007f; margin-right: 5px;"></i> <strong>アプリからインフラまで</strong><br>
+                            現在は企業の情報システム領域で、Windows Server・Active Directory・VPN・ネットワーク管理などのインフラ業務に加え、基幹システムの開発・運用、データベースを活用した業務改善にも従事。<br>
+                            業務要件の整理から設計・実装・インフラ構築・運用改善まで、<strong>システム全体を俯瞰して対応</strong>できることが強みです。
                         </p>
                     </div>
-                    <p class="personal-quote">「技術は、人のためにあってこそ輝く」</p>
-                    <p class="personal-hobby"><i class="fas fa-code"></i> 得意: Python, JavaScript, 生成AI活用, 業務自動化, セキュアな業務システム設計</p>
+                    <p class="personal-quote">「AIを活用し、開発からインフラまで。<br>技術を組み合わせて、現場で使われるシステムをつくる。」</p>
+                    <p class="personal-hobby"><i class="fas fa-code"></i> 得意: 生成AIアプリ開発, Python / TypeScript / React, DB設計, インフラ運用</p>
                 </div>
             </div>
 
@@ -264,22 +304,29 @@
                         <div class="timeline-item">
                             <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
                             <div class="timeline-content">
-                                <h4>神戸大学 工学部 工学研究科</h4>
-                                <p>センサー材料の研究を専攻。未知の課題に対し仮説を立て、実験データをもとに検証・考察を繰り返す理系的な論理思考の基礎を徹底的に習得。<br>大学院進学後、これまでの知見を現場での課題解決に活かすべく、教育現場への道を選択。</p>
+                                <h4>神戸大学 工学部 応用化学科 卒業</h4>
+                                <p>同大学院 工学研究科 応用化学専攻に進学（中途退学）。センサー材料の研究を通じ、仮説を立てて実験データで検証・考察を繰り返す論理思考の基礎を習得。</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="timeline-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                             <div class="timeline-content">
-                                <h4>株式会社立志（教室運営・DX推進担当）</h4>
-                                <p>副室長として<strong>21名の組織マネジメント</strong>と教室運営に従事。現場の多忙な状況を打破するため、会社のIT化方針に合わせ、JS/GAS等を用いた実戦的な業務ツールを自ら設計・導入。<strong>生徒数227%増 / 講習売上380%増</strong>の達成にデジタルと運営の両面から寄与。</p>
+                                <h4>教育業界（教室運営・DX推進）</h4>
+                                <p>教室運営に従事しながら、Excel / VBA / GAS / Pythonで業務自動化・KPI可視化ツールを設計・導入。最大140名規模の教室で<strong>季節講習売上 前年比202% / 生徒数 前年比126%</strong>の実績に、デジタルと運営の両面から寄与。</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
                             <div class="timeline-content">
-                                <h4>フリーランス（AI導入支援 / 開発）</h4>
-                                <p>AI×業務効率化を軸に独立。個人病院のDX顧問として帳票抽出を自動化するほか、金融サロンのAI基盤構築、AI SaaS企業の技術支援など、戦略立案からプロトタイプ実装まで「現場で本当に動く解決策」をスピーディーに提供することを信条に活動中。<br>並行してセキュリティ・インフラ分野の学習と実践を進め、認証・権限設計や機密データの扱いまで含めた<strong>「安全に運用できるAI導入」</strong>に取り組んでいます。</p>
+                                <h4>AIアプリケーション開発 / 導入支援</h4>
+                                <p>生成AI・RAG・AI-OCR・チャットボットなど、LLMを組み込んだ業務システムを設計・開発。医療・金融コミュニティなどの現場で、要件整理から実装・運用まで対応。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fas fa-network-wired"></i></div>
+                            <div class="timeline-content">
+                                <h4>企業 情報システム領域（現在）</h4>
+                                <p>Windows Server・Active Directory・VPN・ネットワーク管理などのインフラ運用、AWS EC2・IIS環境、IBM i（AS/400）基幹システムの開発・保守、PostgreSQL移行、SQLによるデータ活用、セキュリティ対策・障害調査に従事。</p>
                             </div>
                         </div>
                     </div>
@@ -289,52 +336,88 @@
                     <h3><i class="fas fa-tools highlight"></i> 技術スタック</h3>
                     <div class="stack-categories">
                         <div class="stack-category">
-                            <h5><i class="fas fa-code"></i> Languages / Scripting</h5>
+                            <h5><i class="fas fa-brain"></i> AI / LLM Engineering</h5>
+                            <div class="skills-grid">
+                                <span class="skill-badge">OpenAI API</span>
+                                <span class="skill-badge">Claude</span>
+                                <span class="skill-badge">Gemini</span>
+                                <span class="skill-badge">Groq API</span>
+                                <span class="skill-badge">RAG / ベクトル検索</span>
+                                <span class="skill-badge">AIエージェント</span>
+                                <span class="skill-badge">Qdrant</span>
+                                <span class="skill-badge">Whisper</span>
+                                <span class="skill-badge">Google TTS</span>
+                                <span class="skill-badge">OCR / 文書解析</span>
+                                <span class="skill-badge">Claude Code</span>
+                                <span class="skill-badge">Codex CLI</span>
+                                <span class="skill-badge">Gemini CLI</span>
+                                <span class="skill-badge">プロンプト設計</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h5><i class="fas fa-desktop"></i> Frontend</h5>
+                            <div class="skills-grid">
+                                <span class="skill-badge">TypeScript</span>
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">React</span>
+                                <span class="skill-badge">HTML5 / CSS3</span>
+                                <span class="skill-badge">REST API連携</span>
+                                <span class="skill-badge">レスポンシブ開発</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h5><i class="fas fa-code"></i> Backend</h5>
                             <div class="skills-grid">
                                 <span class="skill-badge">Python</span>
-                                <span class="skill-badge">JavaScript</span>
-                                <span class="skill-badge">TypeScript</span>
-                                <span class="skill-badge">JAVA</span>
-                                <span class="skill-badge">PHP</span>
-                                <span class="skill-badge">SQL</span>
-                                <span class="skill-badge">VBA / Excel Macro</span>
-                            </div>
-                        </div>
-                        <div class="stack-category">
-                            <h5><i class="fas fa-brain"></i> AI / Ecosystem</h5>
-                            <div class="skills-grid">
-                                <span class="skill-badge">Gemini </span>
-                                <span class="skill-badge">RAG</span>
-                                <span class="skill-badge">ChatGPT</span>
-                                <span class="skill-badge">Claude</span>
-                                <span class="skill-badge">Prompt Engineering</span>
-                                <span class="skill-badge">Agent / Tool Use Design</span>
-                                <span class="skill-badge">LLM</span>
-                                <span class="skill-badge">Codex</span>
-                                <span class="skill-badge">Claude Code</span>
-                                <span class="skill-badge">Cusor</span>
-                            </div>
-                        </div>
-                        <div class="stack-category">
-                            <h5><i class="fas fa-layer-group"></i> Frameworks / Infra / DB</h5>
-                            <div class="skills-grid">
                                 <span class="skill-badge">FastAPI</span>
+                                <span class="skill-badge">Flask</span>
                                 <span class="skill-badge">Node.js</span>
-                                <span class="skill-badge">React</span>
-                                <span class="skill-badge">PostgreSQL / Supabase</span>
-                                <span class="skill-badge">Docker / WSL2</span>
-                                <span class="skill-badge">Git / GitHub Actions</span>
-                                <span class="skill-badge">REST API / Auth</span>
+                                <span class="skill-badge">Java</span>
+                                <span class="skill-badge">PHP</span>
+                                <span class="skill-badge">REST API設計</span>
+                                <span class="skill-badge">Webhook / 外部連携</span>
+                                <span class="skill-badge">認証・業務ロジック</span>
                             </div>
                         </div>
                         <div class="stack-category">
-                            <h5><i class="fas fa-shield-alt"></i> Security / Infra <span class="stack-now">強化中</span></h5>
+                            <h5><i class="fas fa-database"></i> Database</h5>
                             <div class="skills-grid">
-                                <span class="skill-badge">認証・認可設計</span>
-                                <span class="skill-badge">シークレット / APIキー管理</span>
-                                <span class="skill-badge">LLMガードレール設計</span>
-                                <span class="skill-badge">ネットワーク基礎 (TCP/IP)</span>
-                                <span class="skill-badge">Linux / コンテナ運用</span>
+                                <span class="skill-badge">PostgreSQL</span>
+                                <span class="skill-badge">MySQL</span>
+                                <span class="skill-badge">SQL Server</span>
+                                <span class="skill-badge">SQLite</span>
+                                <span class="skill-badge">SQL設計・集計</span>
+                                <span class="skill-badge">DB運用・移行</span>
+                                <span class="skill-badge">データ分析・レポート</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h5><i class="fas fa-network-wired"></i> Infrastructure / Network</h5>
+                            <div class="skills-grid">
+                                <span class="skill-badge">AWS (EC2)</span>
+                                <span class="skill-badge">Windows Server</span>
+                                <span class="skill-badge">Linux (Ubuntu)</span>
+                                <span class="skill-badge">Active Directory / GPO</span>
+                                <span class="skill-badge">VPN / LAN / VLAN / DHCP</span>
+                                <span class="skill-badge">AP・ネットワーク管理</span>
+                                <span class="skill-badge">IIS / Nginx</span>
+                                <span class="skill-badge">Docker</span>
+                                <span class="skill-badge">オンプレ / クラウド運用</span>
+                                <span class="skill-badge">キッティング / 端末管理</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h5><i class="fas fa-cogs"></i> Automation / Tools</h5>
+                            <div class="skills-grid">
+                                <span class="skill-badge">Git / GitHub</span>
+                                <span class="skill-badge">GAS</span>
+                                <span class="skill-badge">VBA</span>
+                                <span class="skill-badge">Excel / Sheets自動化</span>
+                                <span class="skill-badge">VS Code</span>
+                                <span class="skill-badge">Cursor</span>
+                                <span class="skill-badge">Windsurf</span>
+                                <span class="skill-badge">DBeaver / SSMS / pgAdmin</span>
+                                <span class="skill-badge">バッチ処理</span>
                             </div>
                         </div>
                     </div>
@@ -342,54 +425,66 @@
             </div>
 
             <div class="profile-card cert-card">
-                <h3><i class="fas fa-certificate highlight"></i> 保有資格</h3>
+                <h3><i class="fas fa-certificate highlight"></i> 資格</h3>
                 <ul class="cert-list">
                     <li class="cert-item">
-                        <span class="cert-level">Level 1</span>
-                        <span class="cert-name">ITパスポート試験</span>
-                        <span class="cert-status">合格</span>
-                    </li>
-                    <li class="cert-item">
-                        <span class="cert-level">Level 2</span>
-                        <span class="cert-name">基本情報技術者試験</span>
-                        <span class="cert-status">合格</span>
-                    </li>
-                    <li class="cert-item">
-                        <span class="cert-level">Level 3</span>
-                        <span class="cert-name">応用情報技術者試験</span>
+                        <span class="cert-level">IPA</span>
+                        <span class="cert-name">応用情報技術者試験（AP）</span>
                         <span class="cert-status partial">科目A 合格</span>
                     </li>
+                    <li class="cert-item">
+                        <span class="cert-level">IPA</span>
+                        <span class="cert-name">基本情報技術者試験（FE）</span>
+                        <span class="cert-status">合格</span>
+                    </li>
+                    <li class="cert-item">
+                        <span class="cert-level">IPA</span>
+                        <span class="cert-name">ITパスポート試験（IP）</span>
+                        <span class="cert-status">合格</span>
+                    </li>
+                    <li class="cert-item">
+                        <span class="cert-level">商工会議所</span>
+                        <span class="cert-name">日商簿記3級</span>
+                        <span class="cert-status">合格</span>
+                    </li>
+                    <li class="cert-item">
+                        <span class="cert-level">TOEIC</span>
+                        <span class="cert-name">TOEIC L&amp;R</span>
+                        <span class="cert-status">700点</span>
+                    </li>
                 </ul>
-                <p class="cert-now"><i class="fas fa-shield-alt"></i> <strong>NOW:</strong> セキュリティ・インフラ領域を重点強化中。<br>AIを「便利」なだけでなく「安全に運用できる」形で届けるための知識を積み上げています。</p>
-                <p class="cert-note">※ いずれもIPA（情報処理推進機構）実施の国家試験</p>
+                <p class="cert-now"><i class="fas fa-shield-alt"></i> <strong>NOW:</strong> 情報システム業務と並行し、セキュリティ・インフラ領域を重点強化中。</p>
             </div>
         </div>
     </section>
 
-    <section id="vision" class="section-bg">
+    <section id="strengths" class="section-bg">
         <div class="container">
-            <h2>私の<span class="highlight">ビジョン</span></h2>
-            <p class="vision-intro-text">AIとテクノロジーの力で、あらゆる業界の「現場」が抱える課題を解決し、<br>人々の創造性を解き放つ未来を創造します。</p>
+            <h2>私の<span class="highlight">強み</span></h2>
+            <p class="vision-intro-text">フロントエンド・バックエンド・AI・データベース・インフラを横断し、<br>技術の選定から実装・運用まで一貫して取り組んでいます。</p>
 
-            <div class="vision-grid">
+            <div class="vision-grid strengths-grid">
                 <div class="vision-card">
-                    <h3><i class="fas fa-lightbulb"></i> 現場の課題解決</h3>
-                    <p>教育現場での経験から、日々のルーティン業務に追われ、本来集中すべき「人」との関わりに時間を割けない現状を目の当たりにしてきました。AIを活用し、非効率を解消します。</p>
+                    <h3><i class="fas fa-layer-group"></i> AI × Full Stack</h3>
+                    <p>生成AIのAPI利用にとどまらず、フロントエンド・バックエンド・データベースを含めた実用的なAIアプリケーションを構築します。</p>
                 </div>
                 <div class="vision-card">
-                    <h3><i class="fas fa-rocket"></i> 創造性の解放</h3>
-                    <p>AIは単なるツールではなく、人々の創造性を解き放ち、より本質的な業務に集中できる未来を創るためのパートナーです。AIがサポートすることで、人はより価値ある仕事に専念できます。</p>
+                    <h3><i class="fas fa-server"></i> Application × Infra</h3>
+                    <p>アプリケーション開発とインフラ運用の両方を理解し、ネットワーク・サーバー・セキュリティを考慮したシステム設計に対応します。</p>
                 </div>
                 <div class="vision-card">
-                    <h3><i class="fas fa-handshake"></i> お客様目線のソリューション</h3>
-                    <p>非エンジニア出身だからこそ、技術的な専門用語を並べるのではなく、お客様の目線に立ち、本当に「使える」ソリューションを、分かりやすく、そして効果的に提供することをお約束します。</p>
+                    <h3><i class="fas fa-handshake"></i> Business × Engineering</h3>
+                    <p>教育現場の運営経験と企業の情報システム業務を通じて、現場の課題を整理し、実際の業務フローに合ったシステムを設計・改善します。</p>
+                </div>
+                <div class="vision-card">
+                    <h3><i class="fas fa-robot"></i> AI-Driven Development</h3>
+                    <p>Claude Code・Codex・GeminiなどのAI開発ツールを活用し、要件整理・設計・実装・検証までの開発プロセスを効率化します。</p>
                 </div>
             </div>
 
-            <p class="vision-outro-text">「完全AI主導の業務改善システム開発者」として、SaaS開発や受託案件を通じて、社会全体の生産性向上に貢献していきます。</p>
+            <p class="vision-outro-text">「AIを活用し、開発からインフラまで。<br>技術を組み合わせて、現場で使われるシステムをつくる。」</p>
         </div>
     </section>
-
     <section id="contact" class="section-bg">
         <div class="container">
             <h2><span class="highlight">お問い合わせ</span></h2>

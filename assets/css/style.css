@@ -2002,3 +2002,80 @@ ol {
     flex-basis: calc(100% - 80px);
   }
 }
+
+/* Projects */
+.achievement-item { position: relative; }
+.project-no {
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  color: #ff007f;
+  margin-bottom: 6px;
+}
+.project-desc { margin-top: 15px; text-align: left; }
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  text-align: left;
+}
+.project-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+.project-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00f0ff;
+}
+.project-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+  text-align: center;
+}
+.project-metrics div {
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 8px;
+  padding: 10px 4px;
+}
+.project-metrics strong {
+  display: block;
+  font-size: 1.4em;
+  color: #00f0ff;
+}
+.project-metrics span { font-size: 0.75em; color: #aaa; }
+.project-note { margin-top: 10px; font-size: 0.75em; color: #aaa; text-align: left; }
+.project-link { margin-top: 10px; text-align: left; font-size: 0.9em; }
+.project-link a { color: #00f0ff; }
+.strengths-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.achievement-item .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+.achievement-item .tech-stack .skill-badge {
+  display: inline-flex;
+  width: auto;
+  min-height: 0;
+  line-height: 1.4;
+  padding: 5px 12px;
+  font-size: 0.8em;
+}
+.strengths-grid .vision-card h3 {
+  font-size: 1.1em;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
