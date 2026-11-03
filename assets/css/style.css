@@ -1910,3 +1910,95 @@ ol {
 
 /* Skill badges are now unified */
 
+
+/* Certifications */
+.cert-card {
+  margin-top: 30px;
+}
+
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(0, 240, 255, 0.06);
+}
+
+.cert-level {
+  flex: 0 0 auto;
+  font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #1a1a2e;
+  background: #00f0ff;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.cert-name {
+  flex: 1 1 auto;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.cert-status {
+  flex: 0 0 auto;
+  font-weight: bold;
+  color: #00f0ff;
+}
+
+.cert-status.partial {
+  color: #ff007f;
+}
+
+.cert-now {
+  max-width: 640px;
+  margin: 22px auto 0;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.cert-now i {
+  color: #00f0ff;
+  margin-right: 4px;
+}
+
+.cert-note {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+.stack-now {
+  font-size: 0.7em;
+  color: #ff007f;
+  border: 1px solid #ff007f;
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .cert-item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .cert-name {
+    flex-basis: calc(100% - 80px);
+  }
+}
